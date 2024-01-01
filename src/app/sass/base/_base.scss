@@ -1,0 +1,52 @@
+:export{
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+
+  html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-size: 62.5%; //10px/16px = 62.50%->1rem = 10px
+    @media only screen and (max-width: $bp-hugest) {
+      font-size: 100%;
+    }
+    @media only screen and (max-width: $bp-huge) {
+      font-size: 80%;
+    }
+    @media only screen and (max-width: $bp-bigest) {
+      font-size: 70%;
+    }
+    @media only screen and (max-width: $bp-big) {
+      font-size: 60%;
+    }
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 50%;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 47%;
+    }
+    @media only screen and (max-width: $bp-small) {
+      font-size: 45%;
+    }
+  }
+
+  body {
+    font-family: $font-primary;
+    color: $color-primary-dark;
+    font-weight: 100;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* GENERAL ELEMENTS */
+  .section {
+    padding: 1rem 1rem;
+    display: grid;
+    // border-top: 1px solid #ddd;
+    // transition: transform 1s, opacity 1s;
+  }
+}

@@ -1,0 +1,98 @@
+$color-secondary: #0075C9;
+@mixin color-menu($color) {
+  color: $color;
+}
+:export{
+  .menu {
+    padding-bottom: 1rem;
+    padding-top: 1.5rem;
+    padding-right: 2rem;
+    padding-left: 1.3rem;
+    z-index: 1000;
+    width: 100%;
+    display: grid;
+    grid-template-columns: min-content 1fr min-content;
+  
+    @media only screen and (max-width: $bp-medium) {
+      grid-template-columns: min-content 1fr min-content;
+    }
+    grid-auto-flow: row;
+    grid-auto-rows: 5rem;
+    grid-gap: 1rem;
+    align-items: center;
+    &__sticky {
+      position: fixed;
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+  }
+  .navega {
+    list-style: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    display: grid;
+    grid-template-columns: repeat(4, 15rem);
+    grid-column-gap: 1rem;
+  
+    @media only screen and (max-width: $bp-largest) {
+      grid-template-columns: repeat(4, 25rem);
+    }
+    @media only screen and (max-width: $bp-large) {
+      grid-template-columns: repeat(4, 20rem);
+    }
+    @media only screen and (max-width: $bp-medium) {
+      grid-template-columns: repeat(4, 12.5rem);
+      font-size: 1.6rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      display: none;
+      overflow: hidden;
+    }
+    justify-items: center;
+    justify-content: center;
+    align-items: flex-end;
+  
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    &__item {
+      @include color-menu($color-primary);
+      font-weight: 500;
+    }
+    &__link:link,
+    &__link:visited {
+      font-size: 2.2rem;
+      font-weight: 500;
+      //@include color-menu($color-primary);
+      font-family: $font-primary;
+      text-transform: capitalize;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      padding: 1rem;
+  
+      transition: all 0.3s;
+    }
+    &__link:active,
+    &__link:hover {
+      transform: translateY(-0.5rem);
+      background-position: 105%;
+      //@include color-menu($color-secondary-dark);
+    }
+    &__link--dark:link,
+    &__link--dark:visited {
+      font-size: 2.2rem;
+      font-weight: 200;
+      @include color-menu($color-secondary);
+      font-family: $font-primary;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      padding: 1rem;
+      transition: all 0.2s;
+    }
+    &__link--dark:active,
+    &__link--dark:hover {
+      transform: translateY(-0.5rem);
+    }
+  }
+}
