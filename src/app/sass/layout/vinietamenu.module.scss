@@ -1,12 +1,12 @@
-$bp-large-2: 68.75em; //1100px/16
-$bp-large: 62.5em; //1000px/16
-$bp-medium-2: 56.25em; //900px/16
-$bp-medium: 50em; //800/16
-$bp-small: 37.5em; //600/16
-$bp-small-2: 31.25em; //500/16
-$bp-small-3: 25em; //400/16
-$bp-mini: 22.5em; //360/16
-$color-secondary-dark: #617af5;
+$bp_large_2: 68.75em; //1100px/16
+$bp_large: 62.5em; //1000px/16
+$bp_medium_2: 56.25em; //900px/16
+$bp_medium: 50em; //800/16
+$bp_small: 37.5em; //600/16
+$bp_small_2: 31.25em; //500/16
+$bp_small_3: 25em; //400/16
+$bp_mini: 22.5em; //360/16
+$color_secondary_dark: #617af5;
 
 .vinietamenu {
   &__list {
@@ -29,88 +29,88 @@ $color-secondary-dark: #617af5;
       padding: 0.3rem 0.3rem;
       margin-right: 5rem;
 
-      @media only screen and (max-width: $bp-large-2) {
+      @media only screen and (max-width: $bp_large_2) {
         //1100
         font-size: 3.8rem;
       }
-      @media only screen and (max-width: $bp-large) {
+      @media only screen and (max-width: $bp_large) {
         justify-self: end;
         font-size: 3.5rem;
       }
-      @media only screen and (max-width: $bp-medium-2) {
+      @media only screen and (max-width: $bp_medium_2) {
         justify-self: end;
         font-size: 3.2rem;
       }
-      @media only screen and (max-width: $bp-medium) {
+      @media only screen and (max-width: $bp_medium) {
         justify-self: end;
         font-size: 3rem;
       }
-      @media only screen and (max-width: $bp-small) {
+      @media only screen and (max-width: $bp_small) {
         justify-self: end;
         font-size: 2.8rem;
       }
-      @media only screen and (max-width: $bp-small-2) {
+      @media only screen and (max-width: $bp_small_2) {
         justify-self: end;
         font-size: 2.3rem;
       }
-      @media only screen and (max-width: $bp-small-3) {
+      @media only screen and (max-width: $bp_small_3) {
         justify-self: end;
         font-size: 1.6rem;
       }
-      @media only screen and (max-width: $bp-mini) {
+      @media only screen and (max-width: $bp_mini) {
         justify-self: end;
         font-size: 1.2rem;
       }
     }
     &--icon {
-      fill: $color-secondary-dark;
+      fill: $color_secondary_dark;
       height: 3rem;
       width: 3rem;
       margin: 1rem 1rem 1rem 1rem;
-      @media only screen and (max-width: $bp-large-2) {
+      @media only screen and (max-width: $bp_large_2) {
         //1100
         height: 2.8rem;
         width: 2.8rem;
         margin: 0.9rem 0.9rem 0.9rem 0.9rem;
       }
-      @media only screen and (max-width: $bp-large) {
+      @media only screen and (max-width: $bp_large) {
         height: 2.5rem;
         width: 2.5rem;
         margin: 0.8rem 0.8rem 0.8rem 0.8rem;
       }
-      @media only screen and (max-width: $bp-medium-2) {
+      @media only screen and (max-width: $bp_medium_2) {
         height: 2.3rem;
         width: 2.3rem;
         margin: 0.7rem 0.7rem 0.7rem 0.7rem;
       }
-      @media only screen and (max-width: $bp-medium) {
+      @media only screen and (max-width: $bp_medium) {
         height: 2.1rem;
         width: 2.1rem;
         margin: 0.7rem 0.7rem 0.7rem 0.7rem;
       }
-      @media only screen and (max-width: $bp-small) {
+      @media only screen and (max-width: $bp_small) {
         height: 2rem;
         width: 2rem;
         margin: 0.6rem 0.6rem 0.6rem 0.6rem;
       }
-      @media only screen and (max-width: $bp-small-2) {
+      @media only screen and (max-width: $bp_small_2) {
         height: 1.8rem;
         width: 1.8rem;
         margin: 0.5rem 0.5rem 0.5rem 0.5rem;
       }
-      @media only screen and (max-width: $bp-small-3) {
+      @media only screen and (max-width: $bp_small_3) {
         height: 1.3rem;
         width: 1.3rem;
         margin: 0.4rem 0.4rem 0.4rem 0.4rem;
       }
-      @media only screen and (max-width: $bp-mini) {
+      @media only screen and (max-width: $bp_mini) {
         height: 1.1rem;
         width: 1.1rem;
         margin: 0.3rem 0.3rem 0.3rem 0.3rem;
       }
     }
     &--iconmenu {
-      fill: $color-secondary-dark;
+      fill: $color_secondary_dark;
       height: 4rem;
       width: 4rem;
       margin-right: 1rem;
@@ -126,28 +126,28 @@ $color-secondary-dark: #617af5;
       text-overflow: ellipsis;
       overflow: hidden;
 
-      color: $color-secondary-dark;
-      @media only screen and (max-width: $bp-large-2) {
+      color: $color_secondary_dark;
+      @media only screen and (max-width: $bp_large_2) {
         //1100
         font-size: 2.8rem;
       }
-      @media only screen and (max-width: $bp-large) {
+      @media only screen and (max-width: $bp_large) {
         display: inline-block;
         justify-self: end;
         font-size: 2.5rem;
       }
-      @media only screen and (max-width: $bp-medium-2) {
+      @media only screen and (max-width: $bp_medium_2) {
         //900
         display: inline-block;
         justify-self: end;
         font-size: 2.2rem;
       }
-      @media only screen and (max-width: $bp-medium) {
+      @media only screen and (max-width: $bp_medium) {
         display: inline-block;
         justify-self: end;
         font-size: 2rem;
       }
-      @media only screen and (max-width: $bp-small) {
+      @media only screen and (max-width: $bp_small) {
         display: inline;
         justify-self: stretch;
         // Forzar una sola LINEA
@@ -156,13 +156,13 @@ $color-secondary-dark: #617af5;
         overflow: hidden;
         font-size: 2.8rem;
       }
-      @media only screen and (max-width: $bp-small-2) {
+      @media only screen and (max-width: $bp_small_2) {
         font-size: 2.6rem;
       }
-      @media only screen and (max-width: $bp-small-3) {
+      @media only screen and (max-width: $bp_small_3) {
         font-size: 2rem;
       }
-      @media only screen and (max-width: $bp-mini) {
+      @media only screen and (max-width: $bp_mini) {
         font-size: 1.8rem;
       }
     }

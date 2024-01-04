@@ -1,13 +1,13 @@
-$bp-medium: 50em; //800/16
-$bp-small: 37.5em; //600/16
-$bp-small-2: 31.25em; //500/16
-$bp-small-3: 25em; //400/16
-$bp-mini: 22.5em; //360/16
-$color-white: #fff;
-$color-black: #000;
-$color-grey-light-11: #f9fafb;
-$color-tertiary: #617af5;
-$color-primary: #FDC921; //#14e7d7;
+$bp_medium: 50em; //800/16
+$bp_small: 37.5em; //600/16
+$bp_small-2: 31.25em; //500/16
+$bp_small-3: 25em; //400/16
+$bp_mini: 22.5em; //360/16
+$color_white: #fff;
+$color_black: #000;
+$color_grey_light_11: #f9fafb;
+$color_tertiary: #617af5;
+$color_primary: #FDC921; //#14e7d7;
 
 .alcancetext {
   grid-column: center-start/center-end;
@@ -27,19 +27,19 @@ $color-primary: #FDC921; //#14e7d7;
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
-  @media only screen and (max-width: $bp-medium) {
+  @media only screen and (max-width: $bp_medium) {
     height: 35rem;
   }
-  @media only screen and (max-width: $bp-small) {
+  @media only screen and (max-width: $bp_small) {
     height: 30rem;
   }
-  @media only screen and (max-width: $bp-small-2) {
+  @media only screen and (max-width: $bp_small-2) {
     height: 25rem;
   }
-  @media only screen and (max-width: $bp-small-3) {
+  @media only screen and (max-width: $bp_small-3) {
     height: 22rem;
   }
-  @media only screen and (max-width: $bp-mini) {
+  @media only screen and (max-width: $bp_mini) {
     height: 20rem;
   }
 }
@@ -54,19 +54,19 @@ $color-primary: #FDC921; //#14e7d7;
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
-  @media only screen and (max-width: $bp-medium) {
+  @media only screen and (max-width: $bp_medium) {
     height: 35rem;
   }
-  @media only screen and (max-width: $bp-small) {
+  @media only screen and (max-width: $bp_small) {
     height: 30rem;
   }
-  @media only screen and (max-width: $bp-small-2) {
+  @media only screen and (max-width: $bp_small-2) {
     height: 25rem;
   }
-  @media only screen and (max-width: $bp-small-3) {
+  @media only screen and (max-width: $bp_small-3) {
     height: 22rem;
   }
-  @media only screen and (max-width: $bp-mini) {
+  @media only screen and (max-width: $bp_mini) {
     height: 20rem;
   }
 }
@@ -79,7 +79,7 @@ $color-primary: #FDC921; //#14e7d7;
 .navigation {
   display: none;
   overflow: hidden;
-  @media only screen and (max-width: $bp-medium) {
+  @media only screen and (max-width: $bp_medium) {
     display: inline-block;
     overflow-x: hidden;
     // float: left;
@@ -92,8 +92,8 @@ $color-primary: #FDC921; //#14e7d7;
   }
 
   &__button {
-    @media only screen and (max-width: $bp-medium) {
-      background-color: $color-white;
+    @media only screen and (max-width: $bp_medium) {
+      background-color: $color_white;
       height: 4rem;
       width: 4rem;
       position: fixed;
@@ -101,24 +101,24 @@ $color-primary: #FDC921; //#14e7d7;
       right: 2rem;
       border-radius: 50%;
       z-index: 2000;
-      box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+      box-shadow: 0 1.5rem 4rem rgba($color_black, 0.15);
       text-align: center;
       cursor: pointer;
     }
 
-    @media only screen and (max-width: $bp-small) {
+    @media only screen and (max-width: $bp_small) {
       top: 2.8rem;
       right: 1.4rem;
     }
-    @media only screen and (max-width: $bp-small-2) {
+    @media only screen and (max-width: $bp_small-2) {
       top: 2.8rem;
       right: 1.2rem;
     }
-    @media only screen and (max-width: $bp-small-3) {
+    @media only screen and (max-width: $bp_small-3) {
       top: 2.8rem;
       right: 1rem;
     }
-    @media only screen and (max-width: $bp-mini) {
+    @media only screen and (max-width: $bp_mini) {
       top: 2.8rem;
       right: 0.7rem;
     }
@@ -127,7 +127,7 @@ $color-primary: #FDC921; //#14e7d7;
     position: fixed;
     right: 2.2rem;
     top: 3.1rem;
-    background-image: radial-gradient($color-white, $color-grey-light-11);
+    background-image: radial-gradient($color_white, $color_grey_light_11);
     z-index: 1000;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
   }
@@ -162,7 +162,7 @@ $color-primary: #FDC921; //#14e7d7;
       font-size: 3rem;
       padding: 1rem 2rem;
       font-weight: 200;
-      color: $color-white;
+      color: $color_white;
       text-decoration: wavy;
       text-transform: uppercase;
       display: flex;
@@ -171,7 +171,7 @@ $color-primary: #FDC921; //#14e7d7;
         120deg,
         transparent 0%,
         transparent 50%,
-        $color-tertiary 75%
+        $color_tertiary 75%
       );
       background-size: 100%;
       transition: all 0.9s;
@@ -184,7 +184,7 @@ $color-primary: #FDC921; //#14e7d7;
     &:active {
       // Linea que se mueve
       background-position: 100%;
-      color: $color-white;
+      color: $color_white;
       transform: translateX(3rem);
     }
   }
@@ -208,7 +208,7 @@ $color-primary: #FDC921; //#14e7d7;
     &::after {
       width: 2.2rem;
       height: 2px;
-      background-color: $color-primary;
+      background-color: $color_primary;
       display: inline-block;
     }
 

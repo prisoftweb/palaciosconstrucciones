@@ -1,11 +1,11 @@
-$bp-medium: 50em; //800/16
-$bp-largest: 75em; //1200px
-$bp-large: 62.5em; //1000px/16
-$bp-small: 37.5em; //600/16
-$color-primary: #FDC921; //#14e7d7;
-$font-primary: "IBM+Plex+Sans", sans-serif;
-$color-secondary-dark: #617af5;
-$color-secondary: #0075C9;
+$bp_medium: 50em; //800/16
+$bp_largest: 75em; //1200px
+$bp_large: 62.5em; //1000px/16
+$bp_small: 37.5em; //600/16
+$color_primary: #FDC921; //#14e7d7;
+$font_primary: "IBM+Plex+Sans", sans-serif;
+$color_secondary_dark: #617af5;
+$color_secondary: #0075C9;
 
 @mixin color-menu($color) {
   color: $color;
@@ -21,7 +21,7 @@ $color-secondary: #0075C9;
   display: grid;
   grid-template-columns: min-content 1fr min-content;
 
-  @media only screen and (max-width: $bp-medium) {
+  @media only screen and (max-width: $bp_medium) {
     grid-template-columns: min-content 1fr min-content;
   }
   grid-auto-flow: row;
@@ -42,17 +42,17 @@ $color-secondary: #0075C9;
   grid-template-columns: repeat(4, 15rem);
   grid-column-gap: 1rem;
 
-  @media only screen and (max-width: $bp-largest) {
+  @media only screen and (max-width: $bp_largest) {
     grid-template-columns: repeat(4, 25rem);
   }
-  @media only screen and (max-width: $bp-large) {
+  @media only screen and (max-width: $bp_large) {
     grid-template-columns: repeat(4, 20rem);
   }
-  @media only screen and (max-width: $bp-medium) {
+  @media only screen and (max-width: $bp_medium) {
     grid-template-columns: repeat(4, 12.5rem);
     font-size: 1.6rem;
   }
-  @media only screen and (max-width: $bp-small) {
+  @media only screen and (max-width: $bp_small) {
     display: none;
     overflow: hidden;
   }
@@ -62,15 +62,15 @@ $color-secondary: #0075C9;
 
   transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   &__item {
-    @include color-menu($color-primary);
+    @include color-menu($color_primary);
     font-weight: 500;
   }
   &__link:link,
   &__link:visited {
     font-size: 2.2rem;
     font-weight: 500;
-    @include color-menu($color-primary);
-    font-family: $font-primary;
+    @include color-menu($color_primary);
+    font-family: $font_primary;
     text-transform: capitalize;
     text-decoration: none;
     display: block;
@@ -83,14 +83,14 @@ $color-secondary: #0075C9;
   &__link:hover {
     transform: translateY(-0.5rem);
     background-position: 105%;
-    @include color-menu($color-secondary-dark);
+    @include color-menu($color_secondary_dark);
   }
   &__link--dark:link,
   &__link--dark:visited {
     font-size: 2.2rem;
     font-weight: 200;
-    @include color-menu($color-secondary);
-    font-family: $font-primary;
+    @include color-menu($color_secondary);
+    font-family: $font_primary;
     text-transform: uppercase;
     text-decoration: none;
     display: block;
