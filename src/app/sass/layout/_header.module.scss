@@ -1,0 +1,33 @@
+//@import '../abstracts/variables.module';
+
+.header {
+  //background-color: $color-white;
+  // position: relative;
+  grid-column: full-start / medium-end;
+  // grid-row: 1 / span 2;
+  grid-column-gap: 0.1rem;
+
+  justify-content: center;
+  align-content: center;
+  &__picture {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: auto;
+    width: 100%;
+    background-blend-mode: normal;
+    overflow: hidden;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+  &__imagen {
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+    z-index: 1;
+    opacity: 1;
+    overflow: hidden;
+    filter: blur(0.3px) brightness(45%);
+  }
+}
