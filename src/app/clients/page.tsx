@@ -1,11 +1,9 @@
 import { getClients, getTestimonios } from "../api/RouteClients"
 import SliderClients from "@/components/clients/SliderClients";
 import SliderReviews from "@/components/clients/SliderReviews";
-import Header from "@/components/Header";
 import { getProjects } from "../api/RouteProyects";
-import SliderProjects from "@/components/clients/SliderProjects";
 
-export default async function Clients(){
+export default async function Clients({hola}: {hola:''}){
   
   let clients;
   try {
@@ -38,8 +36,7 @@ export default async function Clients(){
   }
   
   return(
-    <>
-      <Header />      
+    <>      
       <SliderClients clients={clients} />
       <SliderReviews reviews={reviews} />
     </>
