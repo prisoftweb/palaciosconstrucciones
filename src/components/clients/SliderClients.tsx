@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function SliderClients({clients}: {clients:any}){
   const [showClients, setShowClients] = useState<any[]>(clients);
   const [index, setIndex] = useState(0);
-  const [width, setWidth] = useState<number>(window.innerWidth);
+  const [width, setWidth] = useState<number>(0);
   const [numberClients, setNumberClients] = useState<number>(width<640? 1: (width<768? 2: (width<1024? 3: 4)));
   
   const handleResize = () => {
@@ -15,6 +15,7 @@ export default function SliderClients({clients}: {clients:any}){
   }
 
   useEffect(() => {
+    setWidth(window.innerWidth)
     window.addEventListener("resize", handleResize, false);
   }, [])
 
@@ -63,8 +64,6 @@ export default function SliderClients({clients}: {clients:any}){
 
   return(
     <>
-      {/* <h1 className="text-yellow-950 text-4xl mt-5 my-3 font-semibold">Nuestros clientes</h1>
-      <h2 className="text-slate-700">Nuestros clientes satisfechos con nuestros servicios de construccion</h2> */}
       <div className="flex items-center">
         <div className='w-20'>
           <ChevronLeftIcon onClick={Previous}

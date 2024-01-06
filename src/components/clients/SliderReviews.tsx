@@ -8,7 +8,7 @@ export default function SliderReviews({reviews}: {reviews:any}){
   const [showReviews, setShowReviews] = useState<any[]>(reviews);
   const [index, setIndex] = useState(0);
   
-  const [width, setWidth] = useState<number>(window.innerWidth);
+  const [width, setWidth] = useState<number>(0);
   const [numberReviews, setNumberReviews] = useState<number>(width<640? 1: (width<768? 2: (width<1024? 3: 4)));
   
   const handleResize = () => {
@@ -16,6 +16,7 @@ export default function SliderReviews({reviews}: {reviews:any}){
   }
 
   useEffect(() => {
+    setWidth(window.innerWidth);
     window.addEventListener("resize", handleResize, false);
   }, [])
 
