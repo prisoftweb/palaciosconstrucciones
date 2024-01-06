@@ -3,7 +3,7 @@ import SliderClients from "@/components/clients/SliderClients";
 import SliderReviews from "@/components/clients/SliderReviews";
 import { getProjects } from "../api/RouteProyects";
 
-export default async function Clients({hola}: {hola:''}){
+export default async function Clients(){
   
   let clients;
   try {

@@ -207,7 +207,7 @@ export default async function Home() {
         <h4 className={typography.heading4}>
           Nuestros clientes satisfechos con nuestros servicios de construccion
         </h4>  
-        <Clients hola='' />
+        <Clients />
       </section>
       <section id="section-contactanos" className="p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10">
         <h3 className={`${typography.subtitle} ${utilities.u_margin_top_md_}`}>
