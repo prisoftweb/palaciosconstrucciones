@@ -8,8 +8,23 @@ export default function SliderProjects({projects, idProject}: {projects:any, idP
   
   const [filter, setFilter] = useState<any[]>([]);
   const [index, setIndex] = useState(0);
-  const numberProjects = 4;
+  //const numberProjects = 4;
   const filtered = projects.filter((project:any) => project._id !== idProject)
+
+  const [width, setWidth] = useState<number>(window.innerWidth);
+  const [numberProjects, setNumberProjects] = useState<number>(width<640? 1: (width<768? 2: (width<1024? 3: 4)));
+  
+  const handleResize = () => {
+    setWidth(window.innerWidth);
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize, false);
+  }, [])
+
+  useEffect(() => {
+    setNumberProjects(width<640? 1: (width<768? 2: (width<1280? 3: 4)));
+  }, [width])
 
   useEffect(() => {
     const timer = setTimeout(() => {

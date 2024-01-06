@@ -1,0 +1,19 @@
+.iconotitulotexto {
+    // grid-column: center-start / center-end; // DESBOARADMIENTO y no RESPETA GRID PADRE
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    grid-gap: 1rem;
+    justify-items: center;
+  
+    &__imagen {
+      height: 8rem;
+      width: auto;
+      background-color: transparent;
+      overflow: hidden;
+      transition: all 1s;
+      &:hover {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  

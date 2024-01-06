@@ -1,8 +1,15 @@
-$font-primary: "IBM+Plex+Sans", sans-serif;
-$font-secondary: "Courgette", cursive;
-$color-grey-light-1: #393d42; // #f9fafb;
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Skranji:wght@400;700&display=swap');
+
+// $font-primary: "IBM+Plex+Sans", sans-serif;
+// $font-secondary: var(--font-skranji), system-ui;
+$font-primary: var(--font-ibmsans), sans-serif;
+$font-secondary: var(--font-koulen), sans-serif;
+
+// $font-secondary: "Courgette", cursive;
+$color-grey-light-1: #3C3C3B; // #f9fafb;
 $color-secondary: #0075C9;
-$color-grey-dark-1: #3C3C3B;
+$color-grey-dark-1: #0C1726;
 $color-secondary-dark: #617af5;
 $bp-medium: 50em; //800/16
 $bp-small: 37.5em; //600/16
@@ -31,7 +38,7 @@ $default-font-size-md: 1.8rem;
   font-weight: 400;
 }
 
-.heading-1 {
+.heading1 {
   @extend %heading;
   color: $color-grey-light-1;
   font-size: 5rem;
@@ -42,12 +49,11 @@ $default-font-size-md: 1.8rem;
   }
 }
 
-.heading-2 {
+.heading2 {
   word-wrap: normal;
   @extend %headingtit;
   font-size: 4rem;
-  line-height: 1.2;
-  text-transform: uppercase;
+  line-height: 1.2;  
   color: $color-grey-dark-1;
   font-weight: 400;
   text-align: left;
@@ -82,7 +88,7 @@ $default-font-size-md: 1.8rem;
   }
 }
 
-.heading-2_5 {
+.heading2_5 {
   @extend %headingtit;
   font-size: 3.5rem;
   line-height: 1.2;
@@ -101,7 +107,7 @@ $default-font-size-md: 1.8rem;
     }
   }
 }
-.heading-3 {
+.heading3 {
   @extend %heading;
   font-size: 2.8rem;
   color: $color-grey-dark-1;
@@ -124,7 +130,7 @@ $default-font-size-md: 1.8rem;
   }
 }
 
-.subtitle-2_5 {
+.subtitle2_5 {
   @extend %heading;
   display: inline;
   font-size: 4.3rem;
@@ -147,15 +153,16 @@ $default-font-size-md: 1.8rem;
     font-size: 2.4rem;
   }
 }
-.subtitle-4 {  
+.subtitle {  
   display: block;
-  font-size: 4.2rem;
-  color: $color-grey-dark-1;
+  font-size: 3.8rem;
+  color: $color-primary;
   text-transform: none;
   font-weight: 600;
+
   &--mini {
     font-size: 2.1rem;
-    color: $color-grey-dark-1;
+    color: $color-primary;
     text-transform: none;
     font-weight: 500;
     text-align: center;
@@ -169,13 +176,13 @@ $default-font-size-md: 1.8rem;
     font-size: 2.4rem;
   }
 }
-.subtitle-3 {
+.subtitle_thin {
   @extend %heading;
   display: block;
-  font-size: 2.8rem;
-  color: $color-grey-dark-1;
+  font-size: 3.8rem;
+  color: $color-primary;
   text-transform: none;
-  font-weight: 300;
+  font-weight: 100;
   &--mini {
     font-size: 2.1rem;
     color: $color-grey-dark-1;
@@ -192,24 +199,27 @@ $default-font-size-md: 1.8rem;
     font-size: 2.4rem;
   }
 }
-.heading-special-2 {
-  @extend %headingspe2;
-  color: $color-primary;
-  text-transform: uppercase;
-  color: $color-primary-dark;
-  text-align: center;
-  font-weight: 700;
-  font-size: 1.6rem;
-}
-.heading-special {
+.headingspecial2 {
   @extend %headingspe;
-  color: $color-primary;
+  color: $color-secondary;
   text-transform: none;
-  color: $color-secondary-dark;
+  // color: $color-primary-dark;
+  text-align: left;
   font-weight: 400;
   font-size: 2.2rem;
+  line-height: 1.2; 
+  letter-spacing: 3px;
 }
-.heading-4 {
+.headingspecial {
+  @extend %headingspe;
+  color: $color-secondary;
+  text-transform: none;
+  // color: $color-secondary-dark;
+  text-align: left;
+  font-weight: 400;
+  font-size: 2.6rem;
+}
+.heading4 {
   @extend %heading;
   font-size: 1.9rem;
   text-align: justify;

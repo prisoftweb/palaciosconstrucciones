@@ -71,8 +71,9 @@ $color_secondary: #0075C9;
   }
   &__logohead {
     grid-column: 1 / span 1;
-    grid-row: 1 / span 1;
-    width: auto;
+    grid-row: 1 / span 1;    
+    width: 18rem;
+    padding-top: 2rem;
   }
   &__logo-sm {
     // position: relative;
@@ -86,12 +87,12 @@ $color_secondary: #0075C9;
   }
   &__logobig {
     position: relative;
-    width: 18rem;
+    width: 10rem;
     left: 0;
   }
   &__logohuge {
     position: relative;
-    width: 18rem;
+    width: 15rem;
     left: 0;
     //z-index: 1999;
   }
@@ -141,7 +142,7 @@ $color_secondary: #0075C9;
       text-align: center;
       width: 12rem;
     }
-    @media only screen and (max-width: $bp-mini) {
+    @media only screen and (max-width: $bp_mini) {
       text-align: center;
       width: 10rem;
     }
@@ -155,6 +156,7 @@ $color_secondary: #0075C9;
   &__text {
     @media only screen and (max-width: $bp_small) {
       text-align: center;
+      font-size: 1rem;
     }
     font-size: 1.4rem;
     color: $color_grey_dark_1;
@@ -163,6 +165,7 @@ $color_secondary: #0075C9;
   &__copy {
     @media only screen and (max-width: $bp_small) {
       text-align: center;
+      font-size: 1rem;
     }
     font-size: 1.2rem;
     list-style: none;

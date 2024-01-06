@@ -11,12 +11,12 @@ export default function Header(){
     <>
       {/* <img srcSet="next.svg 1x, next.svg 2x" alt="next" /> */}
       {/* <header className="header"> */}
-      <header className={styles.header}>
-        <nav className={menu.menu}>
+      <header className={`${styles.header} fixed top-0 z-50 `}>
+        <nav className={`${menu.menu} bg-white opacity-80`}>
           {/* <a href="index.html" className="logo-box__logohead"> */}
           <a href="index.html" className={footer.logobox__logohead}>
             <img
-              srcSet="img/logo-palaciosconstrucciones-isologo.svg 1x, logo-palaciosconstrucciones-isologo.svg 2x"
+              srcSet="img/logo-palaciosconstrucciones-horizontal.svg 1x, logo-palaciosconstrucciones-horizontal.svg 2x"
               //className={footer.logo-box__logo}
               className={footer.logobox}
             />
@@ -29,7 +29,7 @@ export default function Header(){
               <a
                 // className="navegator__a navegator__a--notshow navegator__a--notshowmini"
                 className={`${menNav.navegator__a} ${menNav.navegator__a__notshow} ${menNav.navegator__a__notshowmini}`}
-                href="#section-musica"
+                href="#section-nosotros"
                 >Nosotros
               </a>
             </li>          
@@ -38,19 +38,19 @@ export default function Header(){
               <a
                 //className="navegator__a navegator__a--notshow"
                 className={`${menNav.navegator__a} ${menNav.navegator__a__notshow}`}
-                href="#section-instrumentos"
+                href="#section-servicios"
                 >Servicios
               </a>
             </li>
             <li className={menNav.navegator__item}>
               {/* <a className="navegator__a navegator__a--notshow" href="#section-equipo" */}
-              <a className={`${menNav.navegator__a} ${menNav.navegator__a__notshow}`} href="#section-equipo"
+              <a className={`${menNav.navegator__a} ${menNav.navegator__a__notshow}`} href="#section-proyectos"
                 >Proyectos
               </a>
             </li>
             <li className={menNav.navegator__item}>
               {/* <a className="navegator__a navegator__a--notshow" href="#section-costos" */}
-              <a className={`${menNav.navegator__a} ${menNav.navegator__a__notshow}`} href="#section-costos"
+              <a className={`${menNav.navegator__a} ${menNav.navegator__a__notshow}`} href="#section-clientes"
                 >Clientes
               </a>
             </li>
@@ -83,18 +83,18 @@ export default function Header(){
           <nav className={`${navigation} ${navigation.navigation__nav}`}>
             <ul className={`${menBurguer.naveburguer} ${menBurguer.naveburguer__list}`}>
               <li className={menBurguer.naveburguer__item}>
-                <a className={menBurguer.naveburguer__a} href="#section-musica">Nosotros</a>
+                <a className={menBurguer.naveburguer__a} href="#section-nosotros">Nosotros</a>
               </li>
               <li className={menBurguer.naveburguer__item}>
-                <a className={menBurguer.naveburguer__a} href="#section-instrumentos"
+                <a className={menBurguer.naveburguer__a} href="#section-servicios"
                   >Servicios
                 </a>
               </li>
               <li className={menBurguer.naveburguer__item}>
-                <a className={menBurguer.naveburguer__a} href="#section-equipo">Proyectos</a>
+                <a className={menBurguer.naveburguer__a} href="#section-proyectos">Proyectos</a>
               </li>
               <li className={menBurguer.naveburguer__item}>
-                <a className={menBurguer.naveburguer__a} href="#section-costos">Clientes</a>
+                <a className={menBurguer.naveburguer__a} href="#section-clientes">Clientes</a>
               </li>
               <li className={menBurguer.naveburguer__item}>
                 <a className={menBurguer.naveburguer__a} href="#section-contactanos"

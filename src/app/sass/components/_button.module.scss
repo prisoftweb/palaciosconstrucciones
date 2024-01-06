@@ -1,0 +1,88 @@
+$bp_large_2: 68.75em; //1100px/16
+$bp_large: 62.5em; //1000px/16
+$bp_medium_2: 56.25em; //900px/16
+$bp_medium: 50em; //800/16
+$bp_small: 37.5em; //600/16
+$bp_small_2: 31.25em; //500/16
+$bp_small_3: 25em; //400/16
+$bp_mini: 22.5em; //360/16
+$font-primary: var(--font-ibmsans), sans-serif;
+$color_secondary_dark: #0075C9;
+$color-grey-light-1: #3C3C3B; // #f9fafb;
+$color-grey-dark-1: #0C1726;
+
+%headingspe {
+    font-family: $font-primary;
+    font-weight: 100;
+  }
+
+  
+.button {
+    
+    &__normal {
+        @extend %headingspe;
+        color: $color-grey-dark-1;
+        border-style: solid;   
+        border-width: thin;
+        text-transform: uppercase;
+        border-color: $color_secondary_dark;
+        border-radius: 2.5rem;
+        z-index: 100;
+        display: flex;
+        flex-direction: row;
+        font-size: 1.8rem;
+
+        padding: 0.3rem 0.3rem;
+        width: 20rem;
+        justify-items: center;
+            
+
+        @media only screen and (max-width: $bp_large_2) {
+            //1100
+            font-size: 3.8rem;
+        }
+        @media only screen and (max-width: $bp_large) {
+            justify-self: end;
+            font-size: 3.5rem;
+        }
+        @media only screen and (max-width: $bp_medium_2) {
+            justify-self: end;
+            font-size: 3.2rem;
+        }
+        @media only screen and (max-width: $bp_medium) {
+            justify-self: end;
+            font-size: 3rem;
+        }
+        @media only screen and (max-width: $bp_small) {
+            justify-self: end;
+            font-size: 2.8rem;
+        }
+        @media only screen and (max-width: $bp_small_2) {
+            justify-self: end;
+            font-size: 2.3rem;
+        }
+        @media only screen and (max-width: $bp_small_3) {
+            justify-self: end;
+            font-size: 1.6rem;
+        }
+        @media only screen and (max-width: $bp_mini) {
+            justify-self: end;
+            font-size: 1.2rem;
+        }
+    }
+    &__text {
+        font-size: 1.8rem;
+        font-weight: 100;
+        text-decoration: none;
+        text-align: center;
+        text-justify: auto;
+        justify-content: center;
+        display: inline-block;
+        padding: .4rem;
+        padding-left: 1.8rem;
+        // Forzar una sola LINEA
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+}

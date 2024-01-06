@@ -1,12 +1,12 @@
-$bp-hugest: 218.75em; //3500px
-$bp-huge: 150em; //2400px
-$bp-bigest: 112.5em; //1800px
-$bp-big: 93.75em; //1500px
-$bp-largest: 75em; //1200px
-$bp-medium: 50em; //800/16
-$bp-small: 37.5em; //600/16
-$font-primary: "IBM+Plex+Sans", sans-serif;
-$color-primary-dark: #FDC921; // #45b8b0;
+$bp_hugest: 218.75em; //3500px
+$bp_huge: 150em; //2400px
+$bp_bigest: 112.5em; //1800px
+$bp_big: 93.75em; //1500px
+$bp_largest: 75em; //1200px
+$bp_medium: 50em; //800/16
+$bp_small: 37.5em; //600/16
+$font_primary: "IBM+Plex+Sans", sans-serif;
+$color_primary_dark: #FDC921; // #45b8b0;
 
 // *,
 // *::before,
@@ -20,32 +20,34 @@ $color-primary-dark: #FDC921; // #45b8b0;
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-size: 62.5%; //10px/16px = 62.50%->1rem = 10px
-  @media only screen and (max-width: $bp-hugest) {
+  @media only screen and (max-width: $bp_hugest) {
     font-size: 100%;
   }
-  @media only screen and (max-width: $bp-huge) {
+  @media only screen and (max-width: $bp_huge) {
     font-size: 80%;
   }
-  @media only screen and (max-width: $bp-bigest) {
+  @media only screen and (max-width: $bp_bigest) {
     font-size: 70%;
   }
-  @media only screen and (max-width: $bp-big) {
+  @media only screen and (max-width: $bp_big) {
     font-size: 60%;
   }
-  @media only screen and (max-width: $bp-largest) {
+  @media only screen and (max-width: $bp_largest) {
     font-size: 50%;
   }
-  @media only screen and (max-width: $bp-medium) {
+  @media only screen and (max-width: $bp_medium) {
     font-size: 47%;
   }
-  @media only screen and (max-width: $bp-small) {
+  @media only screen and (max-width: $bp_small) {
     font-size: 45%;
   }
 }
 
 .body {
-  font-family: $font-primary;
-  color: $color-primary-dark;
+  font-family: $font_primary;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  color: $color_primary_dark;
   font-weight: 100;
   line-height: 1.6;
   overflow-x: hidden;
