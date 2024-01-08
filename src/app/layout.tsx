@@ -48,7 +48,7 @@ export default function RootLayout({
     <html className={styles.html} lang="en">
       {/* <body className={inter.className}> */}
       {/* <body className={styles.html}> */}
-      <body className={`${styles.body} ${koulen.variable} ${ibmSans.variable} ${skranji.variable}` } >{children}
+      <body className={`${styles.body} ${koulen.variable} ${ibmSans.variable} ${skranji.variable}` } >
         <Suspense fallback={<Loading/>}>
           {children}
         </Suspense>
