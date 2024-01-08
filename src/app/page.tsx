@@ -7,6 +7,7 @@ import img from "@/app/sass/components/_imagen.module.scss";
 import button from '@/app/sass/components/_button.module.scss';
 import icontitutext from "@/app/sass/components/_iconotitulotexto.module.scss";
 import ListProyects from "@/components/projects/ListProjects";
+import ListSliders from "@/components/sliders/ListSliders";
 import Header from "@/components/Header";
 import FormContact from "@/components/contact/FormContact";
 import Clients from "./clients/page";
@@ -24,6 +25,7 @@ export default async function Home() {
   return (
     <>
       <Header />
+      <ListSliders />
       <section id="section-nosotros" className={`${utilities.u_margin_bottom_md} ${utilities.u_margin_top_lg} flex flex-col`}>
         <div className={`flex flex-col md:flex-row`}>
           <div className="shrink  flex flex-col lg:flex-row w-full lg:w-1/2  pr-10 mr-10">
