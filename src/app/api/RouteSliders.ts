@@ -1,14 +1,10 @@
 import axios from "axios";
 
-export async function getSliders(auth_token: string){
+export async function getSliders(){
   
   const url = `${process.env.NEXT_PUBLIC_API_URL}/api/v1/sliders`;
   
-  const sliders = await axios.get(url, {
-    headers: {
-      Authorization: `bearer ${auth_token}`,
-    }
-  })  
+  const sliders = await axios.get(url)  
   return sliders.data.data.data;
 }
 
