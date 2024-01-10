@@ -1,35 +1,25 @@
 "use client"
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { useState} from "react";
-// import { createCompany, updateCompany, createCompanyLogo, updateCompanyLogo } from "@/app/api/companies/route";
-// import { useRouter } from "next/navigation";
+import { useState, useEffect} from "react";
+import Input from '../Input';
+import Label from '../Label';
+import FormikErrors from '../FormikErrors';
+import Button from '../Button';
+import { createComment } from '@/app/api/RouteContacts';
 
-export default function FormContact({token, company}: 
-        {token:string, company: any}){
+export default function FormContact(){
 
-  const [file, setFile] : any = useState();
-
-//   const router = useRouter();
-
-  let nameC = ''; 
-  let emailC = ''; 
-  let phoneC = ''; 
-  let addressC = '';
-
-  if(company !== ''){
-    nameC = company.name;
-    emailC = company.email;
-    phoneC = company.phoneNumber? company.phoneNumber : '';
-    addressC = company.address;
-  }
-
+  //const [file, setFile] : any = useState();
+  
+  const [bandMessage, setBandMessage] = useState<boolean>(false);
+  const [message, setMessage]= useState<string>('');
   const formikPass = useFormik({
     initialValues: {
-      name: nameC,
-      email: emailC,
-      phone: phoneC,
-      address: addressC,
+      name: '',
+      email: '',
+      phone: '',
+      comments: '',
     }, 
     validationSchema: Yup.object({
       name: Yup.string()
@@ -38,188 +28,110 @@ export default function FormContact({token, company}:
                   .required('El email es obligatorio'),
       phone: Yup.string()
                   .required('El telefono es obligatorio'),
-      address: Yup.string()
-                  .required('La direccion es obligatoria'),
+      comments: Yup.string()
+                  .required('El comentario es obligatorio'),
     }),
     
     onSubmit: async valores => {            
-      const {email, name, address, phone} = valores;
+      const {email, name, comments, phone} = valores;
       
       const formData = new FormData();
       formData.append('name', name);
       formData.append('email', email);
-      formData.append('address', address);
-      formData.append('logo', file);
+      formData.append('comments', comments);
+      //formData.append('logo', file);
       formData.append('phoneNumber', phone);
 
-      const companyData = {
+      const commentsData = {
         name,
         email,
-        address,
-        phoneNumber: phone
-        // phoneNumber: {
-        //   "type": "trabajo",
-        //   phone
-        // },
+        message: comments,
+        phone
       }
-      
-      if(company === ''){
-        // try {
-        //   if(file){
-        //     let res = await createCompanyLogo(formData, token);
-        //     if(res === 201){
-        //       showToastMessage(`Compañia creada exitosamente!`);
-        //       setTimeout(() =>{
-        //         router.push('/companies')
-        //         //window.location.reload();
-        //       }, 1000)
-        //       setTimeout(() =>{
-        //         window.location.reload();
-        //       }, 2500)
-        //     }else{
-        //       showToastMessageError(res.toString());
-        //     }
-        //   }else{
-        //     let res = await createCompany(token, companyData);
-        //     if(res === 201) {
-        //       showToastMessage(`Compañia creada exitosamente!`);
-        //       setTimeout(() =>{
-        //         router.push('/companies')
-        //       }, 1000)
-        //       setTimeout(() => {
-        //         window.location.reload();
-        //       }, 2500);
-        //     } else {
-        //       showToastMessageError(res.toString());
-        //     }
-        //   }
-        // } catch (error) {
-        //   console.log(error);
-        // }
-      }else{
-        // try {
-        //   if(file){
-        //     let res = await updateCompanyLogo(token, company._id, formData);
-        //     if(res === 200){
-        //       showToastMessage(`Compañia actualizada exitosamente!`);
-        //       setTimeout(() =>{
-        //         router.push('/companies')
-        //       }, 1000)
-        //       setTimeout(() => {
-        //         window.location.reload();
-        //       }, 2500);
-        //     }else{
-        //       showToastMessageError(res.toString());
-        //     }
-        //   }else{
-        //     let res = await updateCompany(token, company._id, JSON.stringify(companyData));
-        //     if(res === 200){
-        //       showToastMessage(`Compañia actualizada exitosamente!`);
-        //       setTimeout(() =>{
-        //         router.push('/companies')
-        //       }, 2000)
-        //       setTimeout(() => {
-        //         window.location.reload();
-        //       }, 2500);
-        //     } else {
-        //       showToastMessageError(res.toString());
-        //     }
-        //   }
-        // } catch (error) {
-        //   console.log(error);
-        // }
+      try {
+        const res = await createComment(commentsData);
+        if(typeof(res)==='string'){
+          setMessage(res);
+          setBandMessage(true);
+        }else{
+          setMessage('Mensaje enviado, nosotros nos pondremos en contacto con usted');
+          setBandMessage(true);
+        }
+      } catch (error) {
+        setMessage('Lo sentimos ocurrio un problema al enviar su mensaje!');
+        setBandMessage(true);
       }                            
     },       
   });
+
+  useEffect(() => {
+    setInterval(() => {
+      setBandMessage(false);
+      setMessage('')
+    }, 4000)
+    
+  }, [bandMessage])
 
   return(
     <>      
       <form className="bg-white rounded shadow-md sm:px-8 pt-6 pb-8" 
         onSubmit={formikPass.handleSubmit}>
+          {bandMessage? <h1 className='text-xl text-green-500'>{message}</h1>: ''}
         <div className="flex justify-center flex-wrap">
-          <div className="w-full sm:w-1/2 min-w-max px-1 sm:px-5">
+          <div className="w-full lg:w-1/2 min-w-max px-1 sm:px-5">
             <div className="mb-4 text-gray-700">
-              <label className="block text-sm font-medium text-gray-500" htmlFor="name">
-                Nombre
-              </label>
-              <input 
-                className="shadow appearance-none border rounded w-full mt-2 py-4 px-3 text-base text-gray-500 leading-tight font-sans font-ligth focus:outline-none focus:shadow-outline"
-                id="name"
-                type="text"
-                placeholder="Nombre empresa"
-                autoFocus
+              <Label htmlFor='name' >Nombre</Label>
+              <Input id='name' type='text' placeholder='Deja tu nombre' 
                 value={formikPass.values.name}
                 onChange={formikPass.handleChange}
-                onBlur={formikPass.handleChange}>
-              </input>
+                onBlur={formikPass.handleChange}
+              />
             </div>
             {formikPass.touched.name && formikPass.errors.name ? (
-              <div className="my-2 bg-red-100 border-l-4 border-red-500 text-red-700 p-4">
-                <p>{formikPass.errors.name}</p>
-              </div>
+              <FormikErrors error={formikPass.errors.name} />
             ) : null}
             <div className="mb-4 text-gray-700">
-              <label className="block text-sm font-medium text-gray-500" htmlFor="email">
-                Email
-              </label>
-              <input 
-                className="shadow appearance-none border rounded w-full mt-2 py-4 px-3 text-base text-gray-500 leading-tight font-sans font-ligth focus:outline-none focus:shadow-outline"
-                id="email"
-                type="email"
-                placeholder="email@empresa.com"
+              <Label htmlFor='email'>Email</Label>
+              <Input id='email' type='email' placeholder='tucorreo@dominio.com'
                 value={formikPass.values.email}
                 onChange={formikPass.handleChange}
-                onBlur={formikPass.handleChange}>
-              </input>
+                onBlur={formikPass.handleChange}
+              />
             </div>
             {formikPass.touched.email && formikPass.errors.email ? (
-              <div className="my-2 bg-red-100 border-l-4 border-red-500 text-red-700 p-4">
-                <p>{formikPass.errors.email}</p>
-              </div>
+              <FormikErrors error={formikPass.errors.email}/>
             ) : null}
-            
           </div>
-          <div className="w-full sm:w-1/2 min-w-max px-1 sm:px-5">
-          <div className="mb-4 text-gray-700">
-              <label className="block text-sm font-medium text-gray-500" htmlFor="phone">
-                Telefono
-              </label>
-              <input 
-                className="shadow appearance-none border rounded w-full mt-2 py-4 px-3 text-base text-gray-500 leading-tight font-sans font-ligth focus:outline-none focus:shadow-outline"
-                id="phone"
-                type="text"
-                placeholder="444 4444 444"
+          <div className="w-full lg:w-1/2 min-w-max px-1 sm:px-5">
+            <div className="mb-4 text-gray-700">
+              <Label htmlFor='phone'>Telefono</Label>
+              <Input id='phone' type='text' placeholder='444 4444 444' 
                 value={formikPass.values.phone}
                 onChange={formikPass.handleChange}
-                onBlur={formikPass.handleChange}>
-              </input>
+                onBlur={formikPass.handleChange}
+              />
             </div>
             {formikPass.touched.phone && formikPass.errors.phone ? (
-              <div className="my-2 bg-red-100 border-l-4 border-red-500 text-red-700 p-4">
-                <p>{formikPass.errors.phone}</p>
-              </div>
+              <FormikErrors error={formikPass.errors.comments} />
             ) : null}
             <div className="mb-4 text-gray-700">
-              <label className="block text-sm font-medium text-gray-500" htmlFor="address">
-                Comentarios
-              </label>
-              <input 
-                className="shadow appearance-none border rounded w-full py-4 px-3 mt-2 text-base text-gray-500 leading-tight font-sans font-ligth focus:outline-none focus:shadow-outline"
-                id="address"
-                type="text"
-                placeholder="calle #?? colonia"
-                value={formikPass.values.address}
+              <Label htmlFor='comments'>Comentarios</Label>
+              <textarea name="comments" id="comments"
+                className='shadow appearance-none border rounded w-full py-4 px-3 mt-2 
+                  text-base md:text-2xl text-gray-500 leading-tight font-sans font-ligth 
+                  focus:outline-none focus:shadow-outline resize-none overflow-hidden'
+                placeholder="Dejanos tus comentarios"
+                value={formikPass.values.comments}
                 onChange={formikPass.handleChange}
-                onBlur={formikPass.handleChange}>
-              </input>
+                onBlur={formikPass.handleChange}
+              />
             </div>
-            {formikPass.touched.address && formikPass.errors.address ? (
-              <div className="my-2 bg-red-100 border-l-4 border-red-500 text-red-700 p-4">
-                <p>{formikPass.errors.address}</p>
-              </div>
+            {formikPass.touched.comments && formikPass.errors.comments ? (
+              <FormikErrors error={formikPass.errors.comments} />
             ) : null}            
           </div>
-        </div>        
+        </div>
+        <div className='flex justify-center mt-5'><Button type='submit'>Enviar</Button></div>
       </form>
     </>
   )

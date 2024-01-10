@@ -69,13 +69,13 @@ export default function ViewSlider({sliders}: {sliders:any}){
               style={{top:`${(index * heightText) + 10}px`}} 
               key={index}>{feature}</p>
           ))}
-          <p className={`absolute ${font.subtitle} text-lg md:text-xl lg:text-2xl xl:text-4xl left-10 sm:left-32 md:left-1/3 top-1/3 sm:top-1/2`}>{slider.title}</p>
+          <p className={`absolute ${font.subtitle} text-2xl xl:text-4xl left-10 sm:left-32 md:left-1/3 bottom-0 md:top-1/2`}>{slider.title}</p>
           <ChevronLeftIcon onClick={Previous}
-            className="absolute w-6 h-6 sm:w-8 sm:h-8 bg-slate-700 rounded-md hover:bg-slate-500 left-4 text-white cursor-pointer"
+            className="absolute w-6 h-6 sm:w-8 sm:h-8 lg:w-12 lg:h-12 xl:w-16 xl:h-16 bg-slate-700 rounded-md hover:bg-slate-500 left-4 text-white cursor-pointer"
             style={{top:`${heightArrow}px`}}
           />
           <ChevronRightIcon onClick={Next}
-            className="absolute w-6 h-6 sm:w-8 sm:h-8 bg-slate-700 rounded-md hover:bg-slate-500 right-4 text-white cursor-pointer"
+            className="absolute w-6 h-6 sm:w-8 sm:h-8 lg:w-12 lg:h-12 xl:w-16 xl:h-16 bg-slate-700 rounded-md hover:bg-slate-500 right-4 text-white cursor-pointer"
             style={{top:`${heightArrow}px`}}
           />
         </div>

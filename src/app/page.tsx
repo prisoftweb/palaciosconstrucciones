@@ -212,14 +212,14 @@ export default async function Home() {
         <Clients />
       </section>
       <section id="section-contactanos" className="p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10">
-        <h3 className={`${typography.subtitle} ${utilities.u_margin_top_md_}`}>
+        {/* <h3 className={`${typography.subtitle} ${utilities.u_margin_top_md_}`}>
           Contactanos
         </h3>
         <h3 className={`${typography.subtitle_thin} ${utilities.u_margin_bottom_sm}`}>
           Dejanos tus datos
-        </h3>        
+        </h3>         */}
         <div className={`${utilities.u_margin_bottom_md} flex flex-col sm:flex-row`}>
-          <div className="shrink  w-full md:w-1/3  pl-5 pr-10 mr-10">
+          <div className="shrink  w-full md:w-1/3 sm:mt-32  pl-5 pr-10 mr-10">
             <div className={footer.logobox}>
                 <a href="" className={footer.logobox__logohead}>
                     <img
@@ -245,7 +245,13 @@ export default async function Home() {
             </div>
         </div>
         <div className="shrink  w-full md:w-2/3  pr-10">
-            <FormContact token='' company={projects} />
+          <h3 className={`${typography.subtitle} ${utilities.u_margin_top_md_}`}>
+            Contactanos
+          </h3>
+          <h3 className={`${typography.subtitle_thin} ${utilities.u_margin_bottom_sm}`}>
+            Dejanos tus datos
+          </h3> 
+          <FormContact />
         </div>
         </div>
       </section>

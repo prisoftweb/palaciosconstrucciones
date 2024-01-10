@@ -11,7 +11,7 @@ export default function Header(){
     <>
       {/* <img srcSet="next.svg 1x, next.svg 2x" alt="next" /> */}
       {/* <header className="header"> */}
-      <header className={`${styles.header} fixed top-0 z-50 `}>
+      <header className={`${styles.header} fixed top-0 z-50 w-full `}>
         <nav className={`${menu.menu} bg-white opacity-80`}>
           {/* <a href="index.html" className="logo-box__logohead"> */}
           <a href="index.html" className={footer.logobox__logohead}>
@@ -29,7 +29,7 @@ export default function Header(){
               <a
                 // className="navegator__a navegator__a--notshow navegator__a--notshowmini"
                 className={`${menNav.navegator__a} ${menNav.navegator__a__notshow} ${menNav.navegator__a__notshowmini}`}
-                href="#section-nosotros"
+                href="/#section-nosotros"
                 >Nosotros
               </a>
             </li>          
@@ -38,13 +38,13 @@ export default function Header(){
               <a
                 //className="navegator__a navegator__a--notshow"
                 className={`${menNav.navegator__a} ${menNav.navegator__a__notshow}`}
-                href="#section-servicios"
+                href="/#section-servicios"
                 >Servicios
               </a>
             </li>
             <li className={menNav.navegator__item}>
               {/* <a className="navegator__a navegator__a--notshow" href="#section-equipo" */}
-              <a className={`${menNav.navegator__a} ${menNav.navegator__a__notshow}`} href="#section-proyectos"
+              <a className={`${menNav.navegator__a} ${menNav.navegator__a__notshow}`} href="/#section-proyectos"
                 >Proyectos
               </a>
             </li>
@@ -58,7 +58,7 @@ export default function Header(){
               <a
                 // className="navegator__a navegator__a--notshow navegator__a--notshow3"
                 className={`${menNav.navegator__a} ${menNav.navegator__a__notshow} ${menNav.navegator__a__notshow3}`}
-                href="#section-contactanos"
+                href="/#section-contactanos"
                 >Contáctanos
               </a>
             </li>
