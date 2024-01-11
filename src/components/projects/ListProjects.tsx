@@ -13,6 +13,7 @@ export default function ListProyects({projects}: {projects:any}){
   }
 
   useEffect(() => {
+    console.log('algo');
     setNavTab(
       <>
         <Tab changeTab={changeTab} index={1} option={option} text="TODOS" />
