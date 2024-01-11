@@ -96,7 +96,7 @@ export default function SliderServices({services}:{services:any}){
 
         <div className='grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 mt-10 w-full'>
           {showServices.map((service: any) => (
-            <div className={`p-3 cursor-pointer ${service._id===idService? 
+            <div key={service._id} className={`p-3 cursor-pointer ${service._id===idService? 
                     'bg-yellow-950': 'bg-white'}`} 
                 onClick={() => selectService(service._id)}
             >
