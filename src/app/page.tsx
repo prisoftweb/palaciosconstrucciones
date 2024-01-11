@@ -11,6 +11,7 @@ import ListSliders from "@/components/sliders/ListSliders";
 import Header from "@/components/Header";
 import FormContact from "@/components/contact/FormContact";
 import Clients from "./clients/page";
+import Refresh from "@/components/Refresh";
 
 export default async function Home() {
   let projects;
@@ -53,10 +54,10 @@ export default async function Home() {
               </p>
             </div>
             <img
-                  className={`${img.imagen} shrink w-full lg:w-2/5 ${utilities.u_margin_bottom_sm}` }
-                  src="img/vision-lg.jpg"
-                  alt="Vision"
-                />
+              className={`${img.imagen} shrink w-full lg:w-2/5 ${utilities.u_margin_bottom_sm}` }
+              src="img/vision-lg.jpg"
+              alt="Vision"
+            />
           </div>
         </div>
         <div className={`${button.button__normal} ${utilities.u_margin_bottom_sm}`}>
@@ -255,7 +256,7 @@ export default async function Home() {
         </div>
         </div>
       </section>
-      
+      <Refresh />
     </>
   )
 }
