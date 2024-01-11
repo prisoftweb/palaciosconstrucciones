@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { AcademicCapIcon, BuildingOffice2Icon, 
           BuildingStorefrontIcon, UserIcon, 
           AdjustmentsHorizontalIcon } from "@heroicons/react/24/solid";
+import font from '@/app/sass/base/_typography.module.scss'
 
 export default function Tab({option, changeTab, index, text}: 
                             {option:number, changeTab:Function, index:number, text:string}){
@@ -39,9 +40,12 @@ export default function Tab({option, changeTab, index, text}:
     }else{
       setTab(
         <div onClick={() => changeTab(index)}
+          // className={`p-1 mx-1 w-24 md:w-32 lg:w-40 xl:w-48 text-xs md:text-sm lg:text-base xl:text-lg mt-2 text-center cursor-pointer
+          //         ${option === index? 'text-yellow-950 border-b-2 border-yellow-950'
+          //         : 'text-slate-500'}`}>
           className={`p-1 mx-1 w-24 md:w-32 lg:w-40 xl:w-48 text-xs md:text-sm lg:text-base xl:text-lg mt-2 text-center cursor-pointer
                   ${option === index? 'text-yellow-950 border-b-2 border-yellow-950'
-                  : 'text-slate-500'}`}>
+                  : `${font.headerspecial}`}`}>
           {text}
         </div>
       )

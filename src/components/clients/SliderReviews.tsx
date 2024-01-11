@@ -2,6 +2,7 @@
 
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid"
 import { useEffect, useState } from "react"
+import typography from '@/app/sass/base/_typography.module.scss'
 //import Link from "next/link";
 
 export default function SliderReviews({reviews}: {reviews:any}){
@@ -76,8 +77,8 @@ export default function SliderReviews({reviews}: {reviews:any}){
           {showReviews.map((review: any) => (
             <div className='flex flex-col items-center' key={review._id}>
               <img src={review.photo} alt="logo" className="w-1/3 rounded-md" />
-              <p className="text-slate-700 text-sm">{review.name}</p>
-              <p className="text-slate-800">{review.review}</p>
+              <p className={`text-sm px-2 ${typography.heading4}`}>{review.name}</p>
+              <p className={`px-2 ${typography.heading4}`}>{review.review}</p>
             </div>
           ))}
         </div>
