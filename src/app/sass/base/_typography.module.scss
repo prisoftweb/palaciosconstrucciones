@@ -49,6 +49,16 @@ $default-font-size-md: 1.8rem;
   }
 }
 
+.heading2_card{
+  word-wrap: normal;
+  @extend %headingtit;
+  font-size: 2rem;
+  line-height: 1.2;  
+  color: $color-grey-dark-1;
+  font-weight: 400;
+  text-align: center;
+}
+
 .heading2 {
   word-wrap: normal;
   @extend %headingtit;
@@ -107,6 +117,15 @@ $default-font-size-md: 1.8rem;
     }
   }
 }
+
+.heading3_card{
+  @extend %heading;
+  font-size: 2rem;
+  color: $color-grey-dark-1;
+  font-weight: 200;
+  text-align: center
+}
+
 .heading3 {
   @extend %heading;
   font-size: 2.8rem;
@@ -153,6 +172,16 @@ $default-font-size-md: 1.8rem;
     font-size: 2.4rem;
   }
 }
+
+.subtitle_project{
+  display: block;
+  font-size: 1.8rem;
+  color: $color-primary;
+  text-transform: none;
+  font-weight: 600;
+  //text-align: center;
+}
+
 .subtitle {  
   display: block;
   font-size: 3.8rem;
@@ -219,6 +248,37 @@ $default-font-size-md: 1.8rem;
   font-weight: 400;
   font-size: 2.6rem;
 }
+.tabYellow {  
+  @extend %headingspe;
+  font-size: 1.6rem;
+  color: $color-primary;
+  text-transform: none;
+  text-align: center;
+  font-weight: 600;
+}
+.tabBlue {
+  @extend %headingspe;
+  color: $color-secondary;
+  text-transform: none;
+  // color: $color-secondary-dark;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.heading4_center {
+  @extend %heading;
+  font-size: 1.9rem;
+  text-align: center;
+  color: $color-grey-dark-1;
+  &--light {
+    color: $color-grey-light-1;
+  }
+  &--dark {
+    color: $color-grey-dark-1;
+  }
+}
+
 .heading4 {
   @extend %heading;
   font-size: 1.9rem;

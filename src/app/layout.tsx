@@ -6,7 +6,6 @@ import { Suspense } from 'react'
 import Loading from './loading'
 import Footer from '@/components/Footer'
 import styles from '@/app/sass/base/_base.module.scss';
-// import base from "@/app/sass/base/base.module.scss";
 
 // const inter = Inter({ subsets: ['latin'] })
 

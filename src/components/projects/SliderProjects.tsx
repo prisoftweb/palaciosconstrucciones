@@ -3,6 +3,7 @@
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid"
 import { useEffect, useState } from "react"
 import Link from "next/link";
+import font from '@/app/sass/base/_typography.module.scss'
 
 export default function SliderProjects({projects, idProject}: {projects:any, idProject:string}){
   
@@ -67,7 +68,7 @@ export default function SliderProjects({projects, idProject}: {projects:any, idP
 
   return(
     <>
-      <h1 className="text-yellow-950 text-4xl my-3 font-semibold">Otros proyectos</h1>
+      <h1 className={`${font.subtitle} text-4xl my-5 font-semibold`}>Otros proyectos</h1>
       <div className="flex items-center">
         <div className='w-20'>
           <ChevronLeftIcon onClick={Previous}
@@ -79,7 +80,7 @@ export default function SliderProjects({projects, idProject}: {projects:any, idP
             <Link key={project._id} href={`/${project._id}`}>
               <div className=''>
                 <img src={project.images[0].photo} alt="image" className="w-full" />
-                <p>{project.title}</p>
+                <p className={`${font.subtitle_project}`}>{project.title}</p>
               </div>
             </Link>
           ))}

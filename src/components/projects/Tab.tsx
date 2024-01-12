@@ -40,9 +40,12 @@ export default function Tab({option, changeTab, index, text}:
     }else{
       setTab(
         <div onClick={() => changeTab(index)}
+          // className={`p-1 mx-1 w-24 md:w-32 lg:w-40 xl:w-48 text-xs md:text-sm lg:text-base xl:text-lg mt-2 text-center cursor-pointer
+          //         ${option === index? 'text-yellow-950 border-b-2 border-yellow-950'
+          //         : 'text-slate-500'}`}>
           className={`p-1 mx-1 w-24 md:w-32 lg:w-40 xl:w-48 text-xs md:text-sm lg:text-base xl:text-lg mt-2 text-center cursor-pointer
-                  ${option === index? 'text-yellow-950 border-b-2 border-yellow-950'
-                  : 'text-slate-500'}`}>
+                  ${option === index? `${font.tabYellow} border-b-2 border-yellow-950`
+                  : `${font.tabBlue}`}`}>
           {/* // className={`p-1 mx-1 w-24 md:w-32 lg:w-40 xl:w-48 text-xs mt-2 text-center cursor-pointer
           //         ${option === index? `${font.subtitle} border-b-2 border-yellow-950 text-xs`
           //         : `${font.headingspecial}`}`}> */}
