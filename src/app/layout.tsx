@@ -13,6 +13,9 @@ import styles from '@/app/sass/base/_base.module.scss';
 export const metadata: Metadata = {
   title: 'Palacios construcciones',
   description: 'Servicios de construccion tablaroca, durock, plafones acabados en general y pintura',
+  icons: {
+    icon: ['/nuevoIcono.jpg?v=4']
+  },
 }
 const ibmSans = IBM_Plex_Sans({
   weight: ['100', '200', '300', '400'],
@@ -37,7 +40,6 @@ const koulen = Koulen({
   display: 'swap',
   variable: '--font-koulen',
 })
-
 
 export default function RootLayout({
   children,

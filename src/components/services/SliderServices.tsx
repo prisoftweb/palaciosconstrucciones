@@ -15,17 +15,17 @@ export default function SliderServices({services}:{services:any}){
   
   const [gallery, setGallery] = useState<JSX.Element>(<></>);
   const [idService, setIdService] = useState<string>(services[0].id);
-
+  const [nameService, setNameService] = useState<string>(services[0].name);
   const handleResize = () => {
     setWidth(window.innerWidth);
   }
 
   const updateGallery = async(idServ:string) => {
-    const res = await getImagesProjectsByService(services[0]._id);
+    const res = await getImagesProjectsByService(idServ);
     if(typeof(res)==='string'){
       setGallery(<p>{res}</p>)
     }else{
-      setGallery(<ShowImagesService images={res} />)
+      setGallery(<ShowImagesService images={res} service={nameService} />)
     }
   }
 
@@ -82,7 +82,8 @@ export default function SliderServices({services}:{services:any}){
     }
   }
 
-  const selectService = (idServ:string) => {
+  const selectService = (idServ:string, name:string) => {
+    setNameService(name);
     setIdService(idServ);
   }
 
@@ -98,7 +99,7 @@ export default function SliderServices({services}:{services:any}){
           {showServices.map((service: any) => (
             <div key={service._id} className={`p-3 cursor-pointer ${service._id===idService? 
                     'bg-yellow-950': 'bg-white'}`} 
-                onClick={() => selectService(service._id)}
+                onClick={() => selectService(service._id, service.name)}
             >
               <img src={service.logo} alt="logo" className="w-full" />
               <p className={`${font.heading2}`}>{service.name}</p>
