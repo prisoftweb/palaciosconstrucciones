@@ -1,0 +1,49 @@
+$bp_medium: 50em; //800/16
+$bp_small: 37.5em; //600/16
+$bp_small_2: 31.25em; //500/16
+$bp_small_3: 25em; //400/16
+$bp_mini: 22.5em; //360/16
+$font-primary: var(--font-ibmsans), sans-serif;
+$color_secondary_dark: #0075C9;
+$color_grey_dark_1: #0C1726;
+
+.imagentitulotextocard {
+    width: 100%;
+    box-shadow: 0 1rem 2rem rgba($color_grey_dark_1, 0.15);
+    border-radius: 3px;
+    padding: 1rem 1rem;
+    display: flex;
+    //justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    &__imagen {
+        height: 8rem;
+        width: auto;
+        background-color: transparent;
+        overflow: hidden;
+        
+        shape-outside: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        transform: translateX(-0.5rem);
+        @media only screen and (max-width: $bp_medium) {
+            height: 8rem;
+            width: auto;
+            justify-self: center;
+        }
+        @media only screen and (max-width: $bp_small) {
+            height: 8rem;
+            width: auto;
+            justify-self: center;
+        }
+        @media only screen and (max-width: $bp_mini) {
+            height: 6rem;
+            width: auto;
+            justify-self: center;
+        }
+        transition: all 1s;
+            &:hover {
+                transform: scale(1.5) ;
+        }
+    }
+}
+  

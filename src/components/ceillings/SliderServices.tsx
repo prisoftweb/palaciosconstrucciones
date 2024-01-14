@@ -3,8 +3,6 @@
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid"
 import { useEffect, useState } from "react"
 import font from '@/app/sass/base/_typography.module.scss'
-import { getImagesProjectsByService } from "@/app/api/RouteServices"
-import ShowImagesService from "./ShowImagesService"
 
 export default function SliderServices({services}:{services:any}){
   
@@ -13,30 +11,17 @@ export default function SliderServices({services}:{services:any}){
   const [width, setWidth] = useState<number>(0);
   const [numberServices, setNumberServices] = useState<number>(width<640? 1: (width<768? 2: (width<1024? 3: 4)));
   
-  const [gallery, setGallery] = useState<JSX.Element>(<></>);
   const [idService, setIdService] = useState<string>(services[0].id);
-  const [nameService, setNameService] = useState<string>(services[0].name);
   const handleResize = () => {
     setWidth(window.innerWidth);
-  }
-
-  const updateGallery = async(idServ:string) => {
-    const res = await getImagesProjectsByService(idServ);
-    if(typeof(res)==='string'){
-      setGallery(<p>{res}</p>)
-    }else{
-      setGallery(<ShowImagesService images={res} service={nameService} />)
-    }
   }
 
   useEffect(() => {
     setWidth(window.innerWidth)
     window.addEventListener("resize", handleResize, false);
-    updateGallery(services[0]._id);
   }, [])
 
   useEffect(() => {
-    updateGallery(idService);
   }, [idService])
 
   useEffect(() => {
@@ -82,8 +67,7 @@ export default function SliderServices({services}:{services:any}){
     }
   }
 
-  const selectService = (idServ:string, name:string) => {
-    setNameService(name);
+  const selectService = (idServ:string) => {
     setIdService(idServ);
   }
 
@@ -99,7 +83,7 @@ export default function SliderServices({services}:{services:any}){
           {showServices.map((service: any) => (
             <div key={service._id} className={`p-3 cursor-pointer ${service._id===idService? 
                     'bg-yellow-950': 'bg-white'}`} 
-                onClick={() => selectService(service._id, service.name)}
+                onClick={() => selectService(service._id)}
             >
               <img src={service.logo} alt="logo" className="w-full" />
               <p className={`${font.heading2}`}>{service.name}</p>
@@ -112,7 +96,6 @@ export default function SliderServices({services}:{services:any}){
             className="w-12 h-12 cursor-pointer text-yellow-950" />
         </div>
       </div>
-      {gallery}
     </>
   )
 }
