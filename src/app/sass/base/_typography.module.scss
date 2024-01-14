@@ -231,6 +231,20 @@ $default-font-size-md: 1.8rem;
     color: $color-grey-dark-1;
   }
 }
+.heading5 {
+  @extend %heading;
+  font-weight: 300;
+  font-size: 2.2rem;
+  text-align: justify;
+  color: $color-grey-dark-1;
+  &--light {
+    color: $color-grey-light-1;
+  }
+  &--dark {
+    color: $color-grey-dark-1;
+  }
+}
+
 
 .paragraph {
   transition: all 0.2s;

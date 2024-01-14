@@ -6,6 +6,7 @@ import footer from '@/app/sass/layout/_footer.module.scss';
 import img from "@/app/sass/components/_imagen.module.scss";
 import button from '@/app/sass/components/_button.module.scss';
 import icontitutext from "@/app/sass/components/_iconotitulotexto.module.scss";
+import base from "@/app/sass/base/_base.module.scss";
 import ListProyects from "@/components/projects/ListProjects";
 import ListSliders from "@/components/sliders/ListSliders";
 import Header from "@/components/Header";
@@ -24,10 +25,10 @@ export default async function Home() {
     return <h1>Error al consultar proyectos!!</h1>
   }
   return (
-    <>
+    <> 
       <Header />
       <ListSliders />
-      <section id="section-nosotros" className={`${utilities.u_margin_bottom_md} ${utilities.u_margin_top_lg} flex flex-col`}>
+      <section id="section-nosotros" className={`${utilities.u_margin_bottom_md} ${utilities.u_margin_top_lg} ${base.section} flex flex-col`}>
         <div className={`flex flex-col md:flex-row`}>
           <div className="shrink  flex flex-col lg:flex-row w-full lg:w-1/2  pr-10 mr-10">
             <div className="shrink  w-full lg:w-3/5  pl-5 pr-10 mr-10">
@@ -63,7 +64,7 @@ export default async function Home() {
         <div className={`${button.button__normal} ${utilities.u_margin_bottom_sm}`}>
             <a                            
             className={`${button.button__text}`}
-            href="/nosotros.html"              
+            href="/nosotros"              
             >Saber mas...
             </a>
         </div>
@@ -88,7 +89,7 @@ export default async function Home() {
             <div className={`${button.button__normal} ${utilities.u_margin_bottom_sm}`}>
               <a                            
                 className={`${button.button__text}`}
-                href="/nosotros.html"              
+                href="/nosotros"              
                 >Saber mas...
               </a>
             </div>
@@ -96,7 +97,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <section id="section-servicios" className={`${utilities.u_margin_bottom_md} flex flex-col sm:flex-row`}>
+      <section id="section-servicios" className={`${utilities.u_margin_bottom_md} ${base.section} flex flex-col sm:flex-row`}>
         <div className="shrink  w-full md:w-1/3  pl-5 pr-10 mr-10">
           <h3 className={`${typography.subtitle} ${utilities.u_margin_top_md_}`}>
             Nuestros
@@ -116,7 +117,7 @@ export default async function Home() {
           <div className={`${button.button__normal} ${utilities.u_margin_bottom_sm}`}>
             <a                            
               className={`${button.button__text}`}
-              href="/nosotros.html"              
+              href="/nosotros"              
               >Saber mas...
             </a>
           </div>
@@ -172,7 +173,7 @@ export default async function Home() {
             </div>
 
             <div className={icontitutext.iconotitulotexto}>
-              <a className="asinstyle" href="pintura.html">
+              <a className="asinstyle" href="/paintings">
                 <img
                   className={icontitutext.iconotitulotexto__imagen}
                   src="img/pintura.svg"
@@ -180,7 +181,7 @@ export default async function Home() {
                 />
               </a>
 
-              <a className="asinstyle" href="pintura.html">
+              <a className="asinstyle" href="/paintings">
                 <h2 className={`${typography.heading3} `}>Pintura</h2>
               </a>
 
@@ -191,7 +192,7 @@ export default async function Home() {
             </div>        
         </div>
       </section>
-      <section id="section-proyectos" className="p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10">        
+      <section id="section-proyectos" className={`p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10 ${base.section}`}>
         <h3 className={`${typography.subtitle} ${utilities.u_margin_top_md_}`}>
           Proyectos
         </h3>
