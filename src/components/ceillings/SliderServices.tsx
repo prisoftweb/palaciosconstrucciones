@@ -88,9 +88,8 @@ export default function SliderServices({services}:{services:any}){
             //         'bg-yellow-950': 'bg-white'}`} 
             //     onClick={() => selectService(service._id)}
             // >
-            <div key={service._id} className='p-3 bg-white'>
-              <img src={service.logo} alt="logo" className="w-full" />
-              <p className={`${font.heading2}`}>{service.name}</p>
+            // 
+            
 =======
             <div key={service._id} className={`p-3 cursor-pointer ${ittc.imagentitulotextocard} ${service._id===idService? 
                     'bg-yellow-950': 'bg-white'}`} 

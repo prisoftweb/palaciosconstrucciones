@@ -2,7 +2,7 @@ import { getProjects } from "./api/RouteProyects"
 import typography from "@/app/sass/base/_typography.module.scss";
 <<<<<<< HEAD
 import utilities from "@/app/sass/base/_utilities.module.scss";
-//import video from "@/app/sass/components/_video.module.scss";
+import video from "@/app/sass/components/_video.module.scss";
 =======
 import util from "@/app/sass/base/_utilities.module.scss";
 import video from "@/app/sass/components/_video.module.scss";
