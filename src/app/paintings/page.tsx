@@ -1,4 +1,6 @@
 import font from '@/app/sass/base/_typography.module.scss'
+import util from "@/app/sass/base/_utilities.module.scss";
+import base from "@/app/sass/base/_base.module.scss";
 import { getSliders } from '../api/RouteSliders';
 import ViewSlider from '@/components/sliders/ViewSlider';
 import Header from '@/components/Header';
@@ -37,20 +39,22 @@ export default async function Paintigns(){
     <>
       <Header />
       {slider}
-      <div className="flex flex-wrap">
-        <div className="w-full sm:w-2/3 p-5">
-          <p className={`${font.subtitle}`}>Aplicado de pinturas</p>
-          <p className={`${font.subtitle_thin}`}>Gran variedad de aplicados de tipos de pinturas</p>
-          <p className={`${font.headingspecial2}`}>APLICADO DE PINTURAS EN NAVES INDUSTRIALES, EPOXICA, DE ACEITE Y DE AGUA</p>
+      <section id="section-plafon" className={`p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10 ${base.section}`}>
+        <div className="flex flex-wrap">
+          <div className="w-full sm:w-2/3 p-5">
+            <p className={`${font.subtitle} ${util.u_margin_top_md_}`}>Aplicado de pinturas</p>
+            <p className={`${font.subtitle_thin} `}>Gran variedad de aplicados de tipos de pinturas</p>
+            <p className={`${font.headingspecial2}`}>APLICADO DE PINTURAS EN NAVES INDUSTRIALES, EPOXICA, DE ACEITE Y DE AGUA</p>
+          </div>
+          <div className="w-full sm:w-1/3 p-5">
+            <img src="/paint.png" alt="image paint" />
+          </div>
         </div>
-        <div className="w-full sm:w-1/3 p-5">
-          <img src="/paint.png" alt="image paint" />
-        </div>
-      </div>
-      <p className={`${font.heading2}`}>Puedes visitar nuestra galeria de imagenes de pinturas, 
-          en las cuales podras ver a detalle algunos de los proyectos
-          realizados a nuestros clientes, detalle de todo tipo de cortes y cambios en pintura.
-      </p>
+        <p className={`${font.heading2}`}>Puedes visitar nuestra galeria de imagenes de pinturas, 
+            en las cuales podras ver a detalle algunos de los proyectos
+            realizados a nuestros clientes, detalle de todo tipo de cortes y cambios en pintura.
+        </p>
+      </section>
       {showServices}
     </>
   )
