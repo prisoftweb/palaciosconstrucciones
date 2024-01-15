@@ -10,7 +10,7 @@ export default function Ours(){
         <>
         <img
             className={hg.headergrid__imagen}
-            srcset="img/personal-team-palacios.jpg 1x, img/personal-team-palacios.jpg 2x"
+            src="img/personal-team-palacios.jpg 1x, img/personal-team-palacios.jpg 2x"
             alt="Personal de palacios construcciones"
         />
         <section className={base.section}>
