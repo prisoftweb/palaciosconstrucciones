@@ -3,6 +3,7 @@
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid"
 import { useEffect, useState } from "react"
 import font from '@/app/sass/base/_typography.module.scss'
+import ittc from "@/app/sass/components/_imagentitulotextocard.module.scss";
 import { getImagesProjectsByService } from "@/app/api/RouteServices"
 import ShowImagesService from "./ShowImagesService"
 
@@ -96,13 +97,14 @@ export default function SliderServices({services}:{services:any}){
         </div>
 
         <div className='grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 mt-10 w-full'>
-          {showServices.map((service: any) => (
-            <div key={service._id} className={`p-3 cursor-pointer ${service._id===idService? 
+          {showServices.map((service: any) => (            
+            <div key={service._id} className={`p-3 cursor-pointer ${ittc.imagentitulotextocard} ${service._id===idService? 
                     'bg-yellow-950': 'bg-white'}`} 
                 onClick={() => selectService(service._id, service.name)}
             >
-              <img src={service.logo} alt="logo" className="w-full" />
-              <p className={`${font.heading2}`}>{service.name}</p>
+              <img className={`${ittc.imagentitulotextocard__imagen} w-full`}
+                src={service.logo} alt="logo"  />
+              <p className={`${font.heading5}`}>{service.name}</p>
             </div>
           ))}
         </div>

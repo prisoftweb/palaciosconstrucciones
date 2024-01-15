@@ -1,4 +1,6 @@
 import font from '@/app/sass/base/_typography.module.scss'
+import util from "@/app/sass/base/_utilities.module.scss";
+import base from "@/app/sass/base/_base.module.scss";
 import { getSliders } from '../api/RouteSliders';
 import ViewSlider from '@/components/sliders/ViewSlider';
 import Header from '@/components/Header';
@@ -50,22 +52,24 @@ export default async function Ceilings() {
     <>
       <Header />
       {slider}
-      <div className='flex flex-wrap mt-5'>
-        <div className='w-full md:w-1/2'>
-          <img src="/plafon.png" alt="ceilings image" />
+      <section id="section-plafon" className={`p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10 ${base.section}`}>
+        <div className='flex flex-wrap mt-5 items-center'>
+          <div className={`${util.u_margin_bottom_sm} w-full md:w-1/2 justify-end`}>
+            <img src="/plafon.png" alt="ceilings image" />
+          </div>
+          <div className={`${util.u_margin_bottom_sm} w-full md:w-1/2`}>
+            <p className={`${font.subtitle} ${util.u_margin_top_md_}`}>Plafones</p>
+            <p className={`${font.subtitle_thin}`}>Plafones en SLP</p>
+            <p className={`${font.headingspecial}`}>Diversidad de plafones ciegos, reticulados en San Luis Potos&Iacute;</p>
+            <p className={`${font.heading4}`}>Esquema del armado de un plafon ciego</p>
+          </div>
         </div>
-        <div className='w-full md:w-1/2'>
-          <p className={`${font.subtitle}`}>Plafones</p>
-          <p className={`${font.subtitle_thin}`}>Plafones en SLP</p>
-          <p className={`${font.headingspecial}`}>DIVERSIDAD DE PLAFONES CIEGOS, ARTICULADOS EN SAN LUIS POTOS&Iacute;</p>
-          <p className={`${font.heading4}`}>Esquema del armado de un plafon ciego</p>
-        </div>
-      </div>
-      <p className={`${font.heading4} mt-5`}>
-        Nuestro equipo de trabajo realiza todo tipo de plafones en diferentes obras, 
-        se pueden hacer en resibidores, habitaciones, hoteles, etc
-      </p>
-      {gallery}
+        <p className={`${font.heading4} ${util.u_margin_bottom_md}`}>
+          Nuestro equipo de trabajo realiza todo tipo de plafones en diferentes obras, 
+          se pueden hacer en resibidores, habitaciones, hoteles, etc
+        </p>
+        {gallery}
+      </section>
       {showServices}
     </>
   )
