@@ -1,12 +1,7 @@
 import { getProjects } from "./api/RouteProyects"
 import typography from "@/app/sass/base/_typography.module.scss";
-<<<<<<< HEAD
-import utilities from "@/app/sass/base/_utilities.module.scss";
-import video from "@/app/sass/components/_video.module.scss";
-=======
 import util from "@/app/sass/base/_utilities.module.scss";
 import video from "@/app/sass/components/_video.module.scss";
->>>>>>> refs/remotes/origin/main
 import footer from '@/app/sass/layout/_footer.module.scss';
 import img from "@/app/sass/components/_imagen.module.scss";
 import button from '@/app/sass/components/_button.module.scss';
