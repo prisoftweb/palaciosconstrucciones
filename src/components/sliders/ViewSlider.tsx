@@ -10,7 +10,7 @@ export default function ViewSlider({sliders}: {sliders:any}){
   const [slider, setSlider] = useState<any>(sliders[0]);
   const [width, setWidth] = useState<number>(0);
   const [heightArrow, setHeightArrow] = useState<number>(9);
-  const [heightText, setHeightText] = useState<number>(20);
+  const [heightText, setHeightText] = useState<number>(18);
 
   const handleResize = () => {
     setWidth(window.innerWidth);
@@ -65,11 +65,11 @@ export default function ViewSlider({sliders}: {sliders:any}){
         <div className="flex justify-center relative w-full">
           <img src={slider.image} alt="slider" className="w-full h-auto" />
           {slider.features.map((feature:string, index:number) => (
-            <p className={`w-2/3 absolute text-xs md:text-xl text-white font-bold ${font.heading4}`} 
-              style={{top:`${(index * heightText) + 10}px`}} 
+            <p className={`w-2/3 absolute ${font.subtitlespecial}`} 
+              style={{top:`${(index * heightText) + 20}px`}} 
               key={index}>{feature}</p>
           ))}
-          <p className={`absolute ${font.subtitle} text-2xl xl:text-4xl left-10 sm:left-32 md:left-1/3 bottom-0 md:top-1/2`}>{slider.title}</p>
+          <p className={`absolute ${font.titlespecial} bottom-0 top:1/5 lg:top-1/2`}>{slider.title}</p>
           <ChevronLeftIcon onClick={Previous}
             className="absolute w-6 h-6 sm:w-8 sm:h-8 lg:w-12 lg:h-12 xl:w-16 xl:h-16 bg-slate-700 rounded-md hover:bg-slate-500 left-4 text-white cursor-pointer"
             style={{top:`${heightArrow}px`}}

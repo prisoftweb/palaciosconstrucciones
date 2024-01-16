@@ -107,7 +107,7 @@ export default async function Home() {
           </h3>
           <h4 className={`${typography.headingspecial2} ${util.u_margin_bottom_sm}`}>
           Servicios de tablaroca y acabados
-          </h4>
+          </h4>xxw
           <h4 className={`${typography.heading4} ${util.u_margin_bottom_sm}`}>
           Servicios de acabados de la construccion en San Luis Potosi y en cualquier estado de la republica.
             <br /><br />Construccion de muros de tablaroca, durock, plafones ciegos, plafones reticulados y fachadas estructurales ademas de pisos, pasta texturizada y pintura industrial y residencial, etc.
