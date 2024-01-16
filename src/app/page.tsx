@@ -12,7 +12,6 @@ import ListSliders from "@/components/sliders/ListSliders";
 import Header from "@/components/Header";
 import FormContact from "@/components/contact/FormContact";
 import Clients from "./clients/page";
-import Refresh from "@/components/Refresh";
 
 export default async function Home() {
   let projects;
@@ -285,7 +284,6 @@ export default async function Home() {
         </div>
         </div>
       </section>
-      <Refresh />
     </>
   )
 }

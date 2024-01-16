@@ -83,14 +83,6 @@ export default function SliderServices({services}:{services:any}){
 
         <div className='grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 mt-10 w-full'>
           {showServices.map((service: any) => (
-<<<<<<< HEAD
-            // <div key={service._id} className={`p-3 cursor-pointer ${service._id===idService? 
-            //         'bg-yellow-950': 'bg-white'}`} 
-            //     onClick={() => selectService(service._id)}
-            // >
-            // 
-            
-=======
             <div key={service._id} className={`p-3 cursor-pointer ${ittc.imagentitulotextocard} ${service._id===idService? 
                     'bg-yellow-950': 'bg-white'}`} 
                 onClick={() => selectService(service._id)}
@@ -98,7 +90,6 @@ export default function SliderServices({services}:{services:any}){
               <img className={`${ittc.imagentitulotextocard__imagen} w-full`}
                 src={service.logo} alt="logo" />
               <p className={`${font.heading5}`}>{service.name}</p>
->>>>>>> refs/remotes/origin/main
             </div>
           ))}
         </div>
