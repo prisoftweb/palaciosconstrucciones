@@ -1,7 +1,52 @@
+$color_secondary: #0075C9;
+$bp_large: 62.5em; //1000px/16
+$bp_medium_2: 56.25em; //900px/16
+$bp_medium: 50em; //800/16
+$bp_small: 37.5em; //600/16
+
+
 .imagen {
   width: 28rem;
   height: 18rem;
   background-color: transparent;
+  overflow: hidden;
+  transition: all 1s;
+}
+
+.imagenvertical { 
+  height: 70rem;
+  background-color: transparent;
+  overflow: hidden;
+  filter: blur(1px) brightness(60%);
+  transition: all 1s;
+  @media only screen and (max-width: $bp_small) {
+    width: 100%;
+    height: auto;
+    justify-self: center;
+  }
+  @media only screen and (max-width: $bp_medium) {
+    width: 80%;
+    height: auto;
+    justify-self: center;
+  }
+  @media only screen and (max-width: $bp_medium_2) {
+    width: 70%;
+    height: auto;
+    justify-self: center;
+  }
+  @media only screen and (max-width: $bp_large) {
+    width: 60%;
+    height: auto;
+    justify-self: center;
+  }
+
+}
+
+.icono {
+  width: 6rem;
+  height: 6rem;
+  background-color: transparent;
+  color: $color_secondary;
   overflow: hidden;
   transition: all 1s;
 }

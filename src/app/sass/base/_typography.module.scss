@@ -11,8 +11,10 @@ $color-grey-light-1: #3C3C3B; // #f9fafb;
 $color-secondary: #0075C9;
 $color-grey-dark-1: #0C1726;
 $color-secondary-dark: #617af5;
-$bp-medium: 50em; //800/16
-$bp-small: 37.5em; //600/16
+$bp_medium: 50em; //800/16
+$bp_small: 37.5em; //600/16
+$bp_cell: 31.25em; //500/16
+$bp_mini: 25.0em; //400/16
 $color-primary-dark: #FDC921; // #45b8b0;
 $color-primary: #FDC921; //#14e7d7;
 $default-font-size: 1.6rem;
@@ -71,10 +73,10 @@ $default-font-size-md: 1.8rem;
     color: $color-secondary-dark;
     font-weight: 500;
     font-size: 3.3rem;
-    @media only screen and (max-width: $bp-medium) {
+    @media only screen and (max-width: $bp_medium) {
       font-size: 3rem;
     }
-    @media only screen and (max-width: $bp-small) {
+    @media only screen and (max-width: $bp_small) {
       font-size: 2.5rem;
     }
   }
@@ -109,10 +111,10 @@ $default-font-size-md: 1.8rem;
     color: $color-secondary-dark;
     font-weight: 500;
     font-size: 3.3rem;
-    @media only screen and (max-width: $bp-medium) {
+    @media only screen and (max-width: $bp_medium) {
       font-size: 3rem;
     }
-    @media only screen and (max-width: $bp-small) {
+    @media only screen and (max-width: $bp_small) {
       font-size: 2.5rem;
     }
   }
@@ -188,6 +190,7 @@ $default-font-size-md: 1.8rem;
   color: $color-primary;
   text-transform: none;
   font-weight: 600;
+  line-height: normal;
 
   &--mini {
     font-size: 2.1rem;
@@ -212,6 +215,7 @@ $default-font-size-md: 1.8rem;
   color: $color-primary;
   text-transform: none;
   font-weight: 100;
+  line-height: normal;
   &--mini {
     font-size: 2.1rem;
     color: $color-grey-dark-1;
@@ -250,11 +254,12 @@ $default-font-size-md: 1.8rem;
 }
 .tabYellow {  
   @extend %headingspe;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: $color-primary;
   text-transform: none;
   text-align: center;
-  font-weight: 600;
+  letter-spacing: 2px;
+  font-weight: 400;
 }
 .tabBlue {
   @extend %headingspe;
@@ -263,7 +268,8 @@ $default-font-size-md: 1.8rem;
   // color: $color-secondary-dark;
   text-align: center;
   font-weight: 400;
-  font-size: 1.6rem;
+  letter-spacing: 1px;
+  font-size: 1.7rem;
 }
 
 .heading4_center {
@@ -283,7 +289,9 @@ $default-font-size-md: 1.8rem;
   @extend %heading;
   font-size: 1.9rem;
   text-align: justify;
+
   color: $color-grey-dark-1;
+  
   &--light {
     color: $color-grey-light-1;
   }
@@ -296,15 +304,77 @@ $default-font-size-md: 1.8rem;
   font-weight: 300;
   font-size: 2.2rem;
   text-align: justify;
-  color: $color-grey-dark-1;
-  &--light {
-    color: $color-grey-light-1;
+  color: $color-grey-dark-1;  
+  &__light {
+    color: $color-primary;
+    display: inline-block;
+
   }
   &--dark {
     color: $color-grey-dark-1;
   }
 }
 
+.subtitlespecial {
+  @extend %heading;
+  font-weight: 300;
+  font-size: 2.2rem;
+  text-align: justify;
+  color: $color-grey-dark-1;
+  @media only screen and (max-width: $bp_small) {
+    font-size: 2rem;
+  }
+  @media only screen and (max-width: $bp_cell) {
+    font-size: 1.8rem;
+  }
+  @media only screen and (max-width: $bp_mini) {
+    font-size: 1.6rem;
+  }
+  &__light {
+    color: $color-primary;
+    display: inline-block;
+    
+  }
+  &--dark {
+    color: $color-grey-dark-1;
+  }
+}
+
+.titlespecial {  
+  display: block;
+  font-size: 3.8rem;
+  color: $color-primary;
+  text-transform: none;
+  font-weight: 600;
+  line-height: normal;
+  @media only screen and (max-width: $bp_small) {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  @media only screen and (max-width: $bp_cell) {
+    font-size: 2.4rem;
+    font-weight: 500;
+  }
+  @media only screen and (max-width: $bp_mini) {
+    font-size: 2.2rem;
+    font-weight: 400;
+  }
+  &--mini {
+    font-size: 2.1rem;
+    color: $color-primary;
+    text-transform: none;
+    font-weight: 500;
+    text-align: center;
+  }
+  &--secondary {
+    color: $color-primary-dark;
+  }
+  &--highlight {
+    color: $color-secondary-dark;
+    font-weight: 400;
+    font-size: 2.4rem;
+  }
+}
 
 .paragraph {
   transition: all 0.2s;

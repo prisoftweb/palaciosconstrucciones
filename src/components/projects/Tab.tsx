@@ -22,19 +22,19 @@ export default function Tab({option, changeTab, index, text}:
   useEffect(() => {
     if(width < 555){
       const icon = index === 1? <AdjustmentsHorizontalIcon onClick={() => changeTab(index)}
-                                    className={`w-8 h-8 text-slate-600 cursor-pointer 
+                                    className={`w-14 h-14 text-slate-600 cursor-pointer 
                                     ${option===index? 'bg-yellow-950 rounded-lg': ''}`} />: 
                     (index === 2? <BuildingOffice2Icon onClick={() => changeTab(index)}
-                                              className={`w-8 h-8 text-slate-600 cursor-pointer 
+                                              className={`w-14 h-14 text-slate-600 cursor-pointer 
                                               ${option===index? 'bg-yellow-950 rounded-lg': ''}`} />: 
                         (index === 3? <BuildingStorefrontIcon onClick={() => changeTab(index)}
-                                                  className={`w-8 h-8 text-slate-600 cursor-pointer 
+                                                  className={`w-14 h-14 text-slate-600 cursor-pointer 
                                                   ${option===index? 'bg-yellow-950 rounded-lg': ''}`} />: 
                             (index === 4? <AcademicCapIcon onClick={() => changeTab(index)}
-                                                          className={`w-8 h-8 text-slate-600 cursor-pointer 
+                                                          className={`w-14 h-14 text-slate-600 cursor-pointer 
                                                           ${option===index? 'bg-yellow-950 rounded-lg': ''}`} />: 
                                                                 <UserIcon onClick={() => changeTab(index)}
-                                                                  className={`w-8 h-8 text-slate-600 cursor-pointer 
+                                                                  className={`w-14 h-14 text-slate-600 cursor-pointer 
                                                                   ${option===index? 'bg-yellow-950 rounded-lg': ''}`} />)))
       setTab(icon)
     }else{
@@ -43,7 +43,7 @@ export default function Tab({option, changeTab, index, text}:
           // className={`p-1 mx-1 w-24 md:w-32 lg:w-40 xl:w-48 text-xs md:text-sm lg:text-base xl:text-lg mt-2 text-center cursor-pointer
           //         ${option === index? 'text-yellow-950 border-b-2 border-yellow-950'
           //         : 'text-slate-500'}`}>
-          className={`p-1 mx-1 w-24 md:w-32 lg:w-40 xl:w-48 text-xs md:text-sm lg:text-base xl:text-lg mt-2 text-center cursor-pointer
+          className={`p-1 mx-1 md:w-52 lg:w-56 xl:w-60 cursor-pointer
                   ${option === index? `${font.tabYellow} border-b-2 border-yellow-950`
                   : `${font.tabBlue}`}`}>
           {/* // className={`p-1 mx-1 w-24 md:w-32 lg:w-40 xl:w-48 text-xs mt-2 text-center cursor-pointer

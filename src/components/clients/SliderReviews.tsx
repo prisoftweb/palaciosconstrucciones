@@ -1,5 +1,7 @@
 "use client"
-
+import button from '@/app/sass/components/_button.module.scss';
+import font from '@/app/sass/base/_typography.module.scss'
+import util from "@/app/sass/base/_utilities.module.scss";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid"
 import { useEffect, useState } from "react"
 import typography from '@/app/sass/base/_typography.module.scss'
@@ -66,7 +68,17 @@ export default function SliderReviews({reviews}: {reviews:any}){
 
   return(
     <>
-      <h1 className="text-yellow-950 text-4xl mt-5 my-3 font-semibold">Testimonios clientes</h1>
+      <h1 className={`${typography.subtitle} ${util.u_margin_top_md_}`}>Testimonios clientes</h1>
+      <h3 className={`${typography.subtitle_thin}`}>
+        Agregar tu opinion
+      </h3>        
+      <div className={`${button.button__normal} ${util.u_margin_bottom_sm}`}>
+              <a                            
+                className={`${button.button__text}`}
+                href="/reviews"              
+                >Pon tu opinion
+              </a>
+            </div>
       <div className="flex items-center">
         <div className='w-20'>
           <ChevronLeftIcon onClick={Previous}
