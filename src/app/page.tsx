@@ -247,8 +247,9 @@ export default async function Home() {
         <h3 className={`${typography.subtitle_thin} ${util.u_margin_bottom_sm}`}>
           Dejanos tus datos
         </h3>         */}
-        <div className={`${util.u_margin_bottom_md} flex flex-col sm:flex-row`}>
-          <div className="shrink  w-full md:w-1/3 sm:mt-32  pl-5 pr-10 mr-10">
+        <div className={`${util.u_margin_bottom_md} flex flex-col-reverse  sm:flex-row`}>
+          {/* <div className="shrink  w-full flex justify-center md:w-1/3 sm:mt-32 mt-5 sm:mt-0  pl-5 pr-10 mr-10"> */}
+          <div className="shrink  w-full flex justify-center md:w-1/3 mt-5 sm:mt-10  pl-5 pr-10 mr-10">
             <div className={footer.logobox}>
                 <a href="" className={footer.logobox__logohead}>
                     <img
@@ -263,7 +264,7 @@ export default async function Home() {
                 <p className={footer.logobox__text}>San Luis Potosi, S.L.P.</p>
                 <p className={footer.logobox__text}>Mexico, CP. 78360</p>
                 {/* <p className="logo-box__copy"> */}
-                <div className={`${button.button__normal} ${util.u_margin_bottom_sm}`}>
+                <div className={`${button.button__normal} ${util.u_margin_bottom_sm} mt-5`}>
                     <a                            
                     className={`${button.button__text}`}
                     href="https://api.whatsapp.com/send?phone=524442422520&text=Hola"

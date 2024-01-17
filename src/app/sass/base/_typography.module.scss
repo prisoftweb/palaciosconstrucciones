@@ -341,6 +341,31 @@ $default-font-size-md: 1.8rem;
   }
 }
 
+.subtitlespecial_yellow {
+  @extend %heading;
+  font-weight: 300;
+  font-size: 2.2rem;
+  text-align: justify;
+  color: $color-primary;
+  @media only screen and (max-width: $bp_small) {
+    font-size: 2rem;
+  }
+  @media only screen and (max-width: $bp_cell) {
+    font-size: 1.8rem;
+  }
+  @media only screen and (max-width: $bp_mini) {
+    font-size: 1.6rem;
+  }
+  &__light {
+    color: $color-primary;
+    display: inline-block;
+    
+  }
+  &--dark {
+    color: $color-grey-dark-1;
+  }
+}
+
 .titlespecial {  
   display: block;
   font-size: 3.8rem;

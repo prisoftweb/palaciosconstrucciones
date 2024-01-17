@@ -5,7 +5,7 @@ import utilities from "@/app/sass/base/_utilities.module.scss";
 import hg from "@/app/sass/layout/_headergrid.module.scss";
 import img from  "@/app/sass/components/_imagen.module.scss";
 import base from "@/app/sass/base/_base.module.scss";
-import SliderServices from "../ceillings/SliderServices";
+import SliderServices from "../services/SliderServices";
 import ViewSlider from "../sliders/ViewSlider";
 import { getServices } from '@/app/api/RouteServices';
 import { getSliders } from "@/app/api/RouteSliders";
@@ -171,9 +171,8 @@ export default async function Tablaroca(){
             <p className={`${typography.heading4} ${utilities.u_margin_bottom_md}`}>
                 Puedes visiatar nuestra galeria de imagenes, en las cuales podras ver a detalle algunos de los proyectos realizados a nuestros clientes
             </p>              
-                        
+            {showServices}                
         </section> 
-        {showServices}
     </>
     )
 }

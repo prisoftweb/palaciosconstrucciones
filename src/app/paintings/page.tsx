@@ -54,8 +54,8 @@ export default async function Paintigns(){
             en las cuales podras ver a detalle algunos de los proyectos
             realizados a nuestros clientes, detalle de todo tipo de cortes y cambios en pintura.
         </p>
+        {showServices}
       </section>
-      {showServices}
     </>
   )
 }

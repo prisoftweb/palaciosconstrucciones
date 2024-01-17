@@ -7,7 +7,7 @@ import Header from '@/components/Header';
 import { getImagesProjectsByService } from "@/app/api/RouteServices"
 import GalleryProjects from '@/components/ceillings/GalleryProjects';
 import { getServices } from '../api/RouteServices';
-import SliderServices from '@/components/ceillings/SliderServices';
+import SliderServices from '@/components/services/SliderServices';
 
 export default async function Ceilings() {
   let sliders;
@@ -54,7 +54,7 @@ export default async function Ceilings() {
       {slider}
       <section id="section-plafon" className={`p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10 ${base.section}`}>
         <div className='flex flex-wrap mt-5 items-center'>
-          <div className={`${util.u_margin_bottom_sm} w-full md:w-1/2 justify-end`}>
+          <div className={`${util.u_margin_bottom_sm} w-full md:w-1/2 flex justify-center md:justify-end pr-5`}>
             <img src="/plafon.png" alt="ceilings image" />
           </div>
           <div className={`${util.u_margin_bottom_sm} w-full md:w-1/2`}>
@@ -69,8 +69,8 @@ export default async function Ceilings() {
           se pueden hacer en resibidores, habitaciones, hoteles, etc
         </p>
         {gallery}
+        {showServices}
       </section>
-      {showServices}
     </>
   )
 }

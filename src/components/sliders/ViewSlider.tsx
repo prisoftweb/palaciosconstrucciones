@@ -22,7 +22,7 @@ export default function ViewSlider({sliders}: {sliders:any}){
   }, [])
 
   useEffect(() => {
-    width < 300? (setHeightArrow(35), setHeightText(15) ): (width < 400? (setHeightArrow(55), setHeightText(25)): 
+    width < 300? (setHeightArrow(35), setHeightText(15) ): (width < 400? (setHeightArrow(55), setHeightText(19)): 
       (width < 500? (setHeightArrow(70), setHeightText(25)): (width < 600? (setHeightArrow(85), setHeightText(25)): 
         (width < 700? (setHeightArrow(95), setHeightText(25)): (width < 800? (setHeightArrow(110), setHeightText(30)): 
           (width < 1000? (setHeightArrow(130), setHeightText(35)): (width < 1200? (setHeightArrow(170), setHeightText(40)): 

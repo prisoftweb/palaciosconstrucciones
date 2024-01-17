@@ -6,8 +6,7 @@ import ViewSlider from '@/components/sliders/ViewSlider';
 import Header from '@/components/Header';
 import Card from '@/components/finishes/Card';
 import { getServices } from '../api/RouteServices';
-import SliderServices from '@/components/ceillings/SliderServices';
-
+import SliderServices from '@/components/services/SliderServices';
 
 export default async function Finishes() {
 
@@ -62,14 +61,8 @@ export default async function Finishes() {
           <Card image='card5.png' text1='Pisos epoxicos' 
             text2='Recubirmientos epoxicos antiderrapantes, anticorrosivos y pisos industriales'/>
         </div>
+        {showServices}
       </section>
-      {/* <div className={`${ImageStyle.imagentitulotextocard}`} >
-        <img src="/nuevoIcono.jpg" alt="icono" />
-        <p>Pastas en muros & pastas texturizadas</p>
-        <p>Aplicado de todo pasta y basecoat en muros de tablaroca y durock, 
-            aplicado de pastas texturizadas</p>
-      </div> */}
-      {showServices}
     </>
   )
 }

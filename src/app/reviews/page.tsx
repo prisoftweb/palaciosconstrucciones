@@ -2,6 +2,7 @@ import { getIssues } from "@/app/api/RouteReviews";
 import FormReview from "@/components/Reviews/FormReview";
 import { getProjects } from "@/app/api/RouteProyects";
 import Header from "@/components/Header";
+import base from "@/app/sass/base/_base.module.scss";
 
 export default async function Reviews(){
   
@@ -34,9 +35,11 @@ export default async function Reviews(){
   return(
     <>
       <Header />
-      <div className="flex justify-center mt-32">
-        <FormReview issues={issues} projects={projects} />
-      </div>
+      <section id="section-plafon" className={`p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10 ${base.section}`}>
+        <div className="flex justify-center mt-32">
+          <FormReview issues={issues} projects={projects} />
+        </div>
+      </section>
     </>
   )
 }
