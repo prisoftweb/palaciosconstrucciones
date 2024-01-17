@@ -2,6 +2,7 @@
 import button from '@/app/sass/components/_button.module.scss';
 import font from '@/app/sass/base/_typography.module.scss'
 import util from "@/app/sass/base/_utilities.module.scss";
+import base from "@/app/sass/base/_base.module.scss";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid"
 import { useEffect, useState } from "react"
 import typography from '@/app/sass/base/_typography.module.scss'
@@ -68,10 +69,14 @@ export default function SliderReviews({reviews}: {reviews:any}){
 
   return(
     <>
+    <section className={`${util.u_margin_top_md2}`}>
       <h1 className={`${typography.subtitle} ${util.u_margin_top_md_}`}>Testimonios clientes</h1>
       <h3 className={`${typography.subtitle_thin}`}>
         Agregar tu opinion
       </h3>        
+      <p className={`${typography.heading4} ${util.u_margin_bottom_md}`}>
+        Puede dejarnos su opinión sobre nosotros, sobre su experiencia utilizando nuestros servicios de construccion, y sobre sus sentimientos acerca de un proyecto en espesifico. 
+      </p>              
       <div className={`${button.button__normal} ${util.u_margin_bottom_sm}`}>
               <a                            
                 className={`${button.button__text}`}
@@ -100,6 +105,7 @@ export default function SliderReviews({reviews}: {reviews:any}){
             className="w-12 h-12 cursor-pointer text-yellow-950" />
         </div>
       </div>
+    </section>
     </>
   )  
 }

@@ -14,6 +14,9 @@ import TextArea from "../TextArea";
 import SelectProjects from "./SelectProjects";
 import Alert, {showToastMessage, showToastMessageError} from "../Alert";
 import { useRouter } from "next/navigation";
+import typography from "@/app/sass/base/_typography.module.scss";
+import utilities from "@/app/sass/base/_utilities.module.scss";
+
 
 export default function FormReview({issues, projects}: {issues:any, projects:any}){
   
@@ -126,6 +129,15 @@ export default function FormReview({issues, projects}: {issues:any, projects:any
   return (
     <>
       <Alert/>
+      <h3 className={`${typography.subtitle} ${utilities.u_margin_top_md_}`}>
+        Reseña de obra
+      </h3>
+      <h3 className={`${typography.subtitle_thin}`}>
+        Dejanos tus comentarios
+      </h3>        
+      <p className={`${typography.heading4} ${utilities.u_margin_bottom_md}`}>
+        Puede dejarnos su opinión sobre nosotros, sobre su experiencia utilizando nuestros servicios de construccion, y sobre sus sentimientos acerca de un proyecto en espesifico. 
+      </p>              
       <form className="bg-white rounded shadow-md w-full sm:w-10/12 lg:w-10/12 xl:w-1/2 md:px-8 pt-6 pb-3" encType="multipart/form-data" onSubmit={formik.handleSubmit}>                            
         <div>
           <div className="flex flex-wrap">

@@ -228,7 +228,7 @@ export default async function Home() {
         </h3>
         <ListProyects projects={projects} />
       </section>
-      <section id="section-clientes" className="p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10">
+      <section id="section-clientes" className={`p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10 ${base.section}`}>
         <h3 className={`${typography.subtitle} ${util.u_margin_top_md_}`}>
           Nuestros
         </h3>
@@ -240,7 +240,7 @@ export default async function Home() {
         </h4>  
         <Clients />
       </section>
-      <section id="section-contactanos" className="p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10">
+      <section id="section-contactanos" className={`p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10 ${base.section}`}>
         {/* <h3 className={`${typography.subtitle} ${util.u_margin_top_md_}`}>
           Contactanos
         </h3>

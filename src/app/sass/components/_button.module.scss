@@ -28,46 +28,42 @@ $color-grey-dark-1: #0C1726;
         border-color: $color_secondary_dark;
         border-radius: 2.5rem;
         z-index: 100;
-        display: flex;
-        
+        display: flex;        
         flex-direction: row;
         font-size: 1.8rem;
-
         padding: 0.3rem 0.3rem;
         width: 20rem;
         justify-items: center;
-            
-
         @media only screen and (max-width: $bp_large_2) {
             //1100
             font-size: 3.8rem;
         }
         @media only screen and (max-width: $bp_large) {
-            justify-self: end;
+            justify-self: center;
             font-size: 3.5rem;
         }
         @media only screen and (max-width: $bp_medium_2) {
-            justify-self: end;
+            justify-self: center;
             font-size: 3.2rem;
         }
         @media only screen and (max-width: $bp_medium) {
-            justify-self: end;
+            justify-self: center;
             font-size: 3rem;
         }
         @media only screen and (max-width: $bp_small) {
-            justify-self: end;
+            justify-self: center;
             font-size: 2.8rem;
         }
         @media only screen and (max-width: $bp_small_2) {
-            justify-self: end;
+            justify-self: center;
             font-size: 2.3rem;
         }
         @media only screen and (max-width: $bp_small_3) {
-            justify-self: end;
+            justify-self: center;
             font-size: 1.6rem;
         }
         @media only screen and (max-width: $bp_mini) {
-            justify-self: end;
+            justify-self: center;
             font-size: 1.2rem;
         }
     }
