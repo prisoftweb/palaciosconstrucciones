@@ -68,7 +68,7 @@ export default function SliderProjects({projects, idProject}: {projects:any, idP
 
   return(
     <>
-      <h1 className={`${font.subtitle} text-4xl my-5 font-semibold`}>Otros proyectos</h1>
+      <h1 className={`${font.subtitle} text-4xl my-12 font-semibold`}>Otros proyectos</h1>
       <div className="flex items-center">
         <div className='w-20'>
           <ChevronLeftIcon onClick={Previous}
