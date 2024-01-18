@@ -10,6 +10,7 @@ $font_secondary: var(--font-koulen), sans-serif;
 $color_grey_light_1: #3C3C3B; // #f9fafb;
 $color_secondary: #0075C9;
 $color_grey_dark_1: #0C1726;
+$color_black: #000000;
 $color_secondary_dark: #617af5;
 $bp_medium: 50em; //800/16
 $bp_small: 37.5em; //600/16
@@ -27,7 +28,7 @@ $default_font_size_md: 1.8rem;
 }
 %headingneg {
   font-family: $font_primary;
-  font-weight: 500;
+  font-weight: 600;
 }
 %headingthin {
   font-family: $font_primary;
@@ -35,7 +36,7 @@ $default_font_size_md: 1.8rem;
 }
 %headingtit {
   font-family: $font_primary;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 %headingspe {
@@ -192,6 +193,30 @@ $default_font_size_md: 1.8rem;
   font-weight: 600;
   //text-align: center;
 }
+.subtitleslider {  
+  display: block;
+  font-size: 4.2rem;
+  color: $color_primary;
+  text-transform: none;
+  font-weight: 700;
+  line-height: normal;
+
+  &--mini {
+    font-size: 2.1rem;
+    color: $color_primary;
+    text-transform: none;
+    font-weight: 500;
+    text-align: center;
+  }
+  &--secondary {
+    color: $color_primary_dark;
+  }
+  &--highlight {
+    color: $color_secondary_dark;
+    font-weight: 400;
+    font-size: 2.4rem;
+  }
+}
 
 .subtitle {  
   display: block;
@@ -324,9 +349,10 @@ $default_font_size_md: 1.8rem;
 
 .subtitlespecial {
   @extend %headingneg;  
-  font-size: 2.2rem;
+  font-size: 2.4rem;
+  text-decoration: blink;
   text-align: justify;
-  color: $color_grey_dark_1;
+  color: $color_black;
   @media only screen and (max-width: $bp_small) {
     font-size: 2rem;
   }
@@ -373,10 +399,10 @@ $default_font_size_md: 1.8rem;
 
 .titlespecial {  
   display: block;
-  font-size: 3.8rem;
+  font-size: 4.2rem;
   color: $color_primary;
   text-transform: none;
-  font-weight: 600;
+  font-weight: 700;
   line-height: normal;
   @media only screen and (max-width: $bp_small) {
     font-size: 3rem;

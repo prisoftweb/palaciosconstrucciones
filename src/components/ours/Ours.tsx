@@ -94,7 +94,8 @@ export default function Ours(){
                     <div>
                         <h2 className={typography.heading5}>Compromiso</h2>
                         <h4 className={typography.heading4}>
-                            Cuáles son tus objetivos al optimizar tu sitio web. 
+                            Lograr resultados.
+                            No faltar a su palabra y al trabajo.
                         </h4>
                     </div>
                 </div>
@@ -121,8 +122,8 @@ export default function Ours(){
                     <div>
                         <h2 className={typography.heading5}>Honestidad</h2>
                         <h4 className={typography.heading4}>
-                            Predicar con el ejemplo.
-                            Influir de manera positiva en las demas personas
+                            Hablar con la verdad.
+                            Cuidar los recursos de la empresa.
                         </h4>
                     </div>
                 </div>
@@ -136,7 +137,7 @@ export default function Ours(){
                         <h2 className={typography.heading5}>Liderazgo</h2>
                         <h4 className={typography.heading4}>
                             Predicar con el ejemplo.
-                            Influir de manera positiva en las demas personas.
+                            Influir de manera positiva en las demás personas.
                         </h4>
                     </div>
                 </div>
@@ -149,7 +150,7 @@ export default function Ours(){
                     <div>
                         <h2 className={typography.heading5}>Trabajo en equipo</h2>
                         <h4 className={typography.heading4}>
-                            Aceptar otras ideas
+                            Aceptar otras ideas.
                             Llegar a acuerdos en común
                         </h4>
                     </div>
@@ -163,7 +164,7 @@ export default function Ours(){
                     <div>
                         <h2 className={typography.heading5}>Responsabilidad</h2>
                         <h4 className={typography.heading4}>
-                            Seguir las políticas organizacionales
+                            Seguir las políticas organizacionales.
                             Cumplir con los compromisos personales y de la empresa.
                         </h4>
                     </div>
@@ -177,7 +178,7 @@ export default function Ours(){
                     <div>
                         <h2 className={typography.heading5}>Mejora continua</h2>
                         <h4 className={typography.heading4}>
-                            Aceptar retos e ideas de otros
+                            Aceptar retos e ideas de otros.
                             No conformarse con lo alcanzado, siempre buscar más
                         </h4>
                     </div>

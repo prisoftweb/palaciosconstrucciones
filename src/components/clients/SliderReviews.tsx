@@ -75,7 +75,7 @@ export default function SliderReviews({reviews}: {reviews:any}){
         Agregar tu opinion
       </h3>        
       <p className={`${typography.heading4} ${util.u_margin_bottom_md}`}>
-        Puede dejarnos su opinión sobre nosotros, sobre su experiencia utilizando nuestros servicios de construccion, y sobre sus sentimientos acerca de un proyecto en espesifico. 
+      Tu opinión es importante para nosotros, ya que nos ayuda a mejorar nuestros servicios de construccion. Le agradeceríamos que se tomara un minuto para dejar una reseña.
       </p>              
       <div className={`${button.button__normal} ${util.u_margin_bottom_sm}`}>
               <a                            

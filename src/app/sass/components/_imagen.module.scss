@@ -13,6 +13,25 @@ $bp_small: 37.5em; //600/16
   transition: all 1s;
 }
 
+.imagegallery {
+  filter: blur(0.3px) brightness(45%);
+  transition: all 1s;
+    &:hover {
+      filter:blur(0.01px) brightness(100%);
+    }
+}
+
+.imagefull {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -5;
+  opacity: .9;
+  overflow: hidden;
+  filter: blur(.1px) brightness(40%);
+}
+
 .imagenvertical { 
   height: 70rem;
   background-color: transparent;

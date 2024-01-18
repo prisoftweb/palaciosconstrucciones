@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid"
 import font from '@/app/sass/base/_typography.module.scss'
+import img from  "@/app/sass/components/_imagen.module.scss";
 
 export default function ViewSlider({sliders}: {sliders:any}){
   
@@ -63,7 +64,7 @@ export default function ViewSlider({sliders}: {sliders:any}){
     <>
       <div className="pt-20 mt-20">
         <div className="flex justify-center relative w-full">
-          <img src={slider.image} alt="slider" className="w-full h-auto" />
+          <img src={slider.image} alt="slider" className={`${img.imagefull} w-full h-auto`}/>
           {slider.features.map((feature:string, index:number) => (
             <p className={`w-2/3 absolute ${font.subtitlespecial}`} 
               style={{top:`${(index * heightText)}px`}} 
