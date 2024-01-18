@@ -25,6 +25,10 @@ $default_font_size_md: 1.8rem;
   font-family: $font_primary;
   font-weight: 300;
 }
+%headingneg {
+  font-family: $font_primary;
+  font-weight: 500;
+}
 %headingthin {
   font-family: $font_primary;
   font-weight: 100;
@@ -304,8 +308,7 @@ $default_font_size_md: 1.8rem;
   }
 }
 .heading5 {
-  @extend %heading;
-  font-weight: 300;
+  @extend %headingneg;  
   font-size: 2.2rem;
   text-align: justify;
   color: $color_grey_dark_1;  
@@ -320,8 +323,7 @@ $default_font_size_md: 1.8rem;
 }
 
 .subtitlespecial {
-  @extend %heading;
-  font-weight: 300;
+  @extend %headingneg;  
   font-size: 2.2rem;
   text-align: justify;
   color: $color_grey_dark_1;

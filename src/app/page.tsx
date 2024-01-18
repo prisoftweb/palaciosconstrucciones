@@ -132,7 +132,7 @@ export default async function Home() {
               />
             </a>
             <a className="asinstyle" href="/tablaroca">
-              <h2 className={`${typography.heading3} `}>Tablaroca</h2>
+              <h2 className={`${typography.heading5} `}>Tablaroca</h2>
             </a>
             <h4 className={typography.heading4}>
               Servicios de muros de tablaroca y durock, fachadas estructurales, steel framing, limpieza y lavado de muros tilt-up  son algunos de nuestros servicios
@@ -154,7 +154,7 @@ export default async function Home() {
               />
             </a>
             <a className="asinstyle" href="/finishes">
-              <h2 className={`${typography.heading3} `}>Acababados</h2>
+              <h2 className={`${typography.heading5} `}>Acababados</h2>
             </a>
             <h4 className={typography.heading4}>
             Acabados en general en remodelaciones, pasta, texturizados, instalación de pisos y muros cerámicos, instalación de pisos epóxicos e instalación de piso laminado y madera.
@@ -178,7 +178,7 @@ export default async function Home() {
               />
             </a>
             <a className="asinstyle" href="/ceilings">
-              <h2 className={`${typography.heading3} `}>Plafones</h2>
+              <h2 className={`${typography.heading5} `}>Plafones</h2>
             </a>
             <h4 className={typography.heading4}>
               Servicios de lambrines, plafones ciegos, plafones decorativos, plafones reticulados, fachadas estructurales y mas.
@@ -202,7 +202,7 @@ export default async function Home() {
             </a>
 
             <a className="asinstyle" href="/paintings">
-              <h2 className={`${typography.heading3} `}>Pintura</h2>
+              <h2 className={`${typography.heading5} `}>Pintura</h2>
             </a>
 
             <h4 className={typography.heading4}>
