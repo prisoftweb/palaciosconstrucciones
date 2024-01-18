@@ -5,7 +5,7 @@ import utilities from '@/app/sass/base/_utilities.module.scss';
 import base from '@/app/sass/base/_base.module.scss'
 import typography from '@/app/sass/base/_typography.module.scss';
 
-export const dynamic = 'force-dynamic';
+//export const dynamic = 'force-dynamic';
 export default async function Services(){
   
   let services;
