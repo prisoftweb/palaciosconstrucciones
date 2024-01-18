@@ -332,6 +332,36 @@ $default_font_size_md: 1.8rem;
     color: $color_grey_dark_1;
   }
 }
+
+.nameReview {
+  @extend %heading;
+  font-size: 1.2rem;
+  text-align: justify;
+  color: $color_grey_dark_1;
+  
+  &--light {
+    color: $color_grey_light_1;
+  }
+  &--dark {
+    color: $color_grey_dark_1;
+  }
+}
+
+.review {
+  @extend %heading;
+  font-size: 1.9rem;
+  text-align: justify;
+  color: $color_grey_dark_1;
+  font-style: italic;
+  
+  &--light {
+    color: $color_grey_light_1;
+  }
+  &--dark {
+    color: $color_grey_dark_1;
+  }
+}
+
 .heading5 {
   @extend %headingneg;  
   font-size: 2.2rem;
@@ -484,9 +514,10 @@ $default_font_size_md: 1.8rem;
   }
 
   &__list {
-    p {____font_size: $default_font_size_md;
+    p {//____font_size: $default_font_size_md;
       font-weight: 300;
       color: currentColor;
+      font-size: $default_font_size_md;
     }
     &--phone {
       display: flex;
