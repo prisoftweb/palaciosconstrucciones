@@ -13,6 +13,7 @@ import Header from "@/components/Header";
 import FormContact from "@/components/contact/FormContact";
 import Clients from "./clients/page";
 
+export const dynamic = 'force-dynamic';
 export default async function Home() {
   let projects;
   try {
