@@ -29,7 +29,7 @@ export default async function Services(){
         </p>
         <div className='w-full grid gap-4 md:grid-cols-2 xl:grid-cols-3 mt-10'>
           {services.map((service:any) => (
-            <Card service={service} />
+            <Card service={service} key={service._id} />
           ))}
         </div>
       </section>
