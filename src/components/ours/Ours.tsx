@@ -10,10 +10,10 @@ export default function Ours(){
         <>
         <img
             className={hg.headergrid__imagen}
-            src="img/personal-team-palacios.jpg 1x, img/personal-team-palacios.jpg 2x"
+            src="img/personal-team-palacios.jpg"
             alt="Personal de palacios construcciones"
         />
-        <section className={base.section}>
+        <section className={`${base.section} ${utilities.u_margin_bottom_md}`} >
             <></>
             <h3 className={`${typography.heading4}`}>.</h3>
             <h3 className={`${typography.subtitle} ${utilities.u_margin_top_md_}`}>
