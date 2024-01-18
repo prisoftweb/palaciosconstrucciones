@@ -1,4 +1,4 @@
-import { getProject, getProjects } from "../api/RouteProyects"
+import { getProject, getProjects } from "../../api/RouteProyects"
 import SliderProjects from "@/components/projects/SliderProjects";
 import Card_2p from "@/components/projects/Card_2p";
 import ImageLink from "@/components/projects/ImageLink";
@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import font from '@/app/sass/base/_typography.module.scss'
 import util from "@/app/sass/base/_utilities.module.scss";
 
+export const dynamic = 'force-dynamic';
 export default async function Project({ params }: { params: { id: string } }){
   let project;
   const id = params.id;

@@ -9,6 +9,7 @@ import GalleryProjects from '@/components/ceillings/GalleryProjects';
 import { getServices } from '../api/RouteServices';
 import SliderServices from '@/components/services/SliderServices';
 
+export const dynamic = 'force-dynamic';
 export default async function Ceilings() {
   let sliders;
   let slider;

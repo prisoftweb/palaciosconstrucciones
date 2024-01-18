@@ -7,6 +7,7 @@ import Header from '@/components/Header';
 import { getServices } from '../api/RouteServices';
 import SliderServices from '@/components/services/SliderServices';
 
+export const dynamic = 'force-dynamic';
 export default async function Paintigns(){
   
   let sliders;

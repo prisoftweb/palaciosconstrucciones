@@ -3,7 +3,7 @@ import SliderClients from "@/components/clients/SliderClients";
 import SliderReviews from "@/components/clients/SliderReviews";
 import { getProjects } from "../api/RouteProyects";
 
-//export const dynamic = 'force-dynamic';
+export const dynamic = 'force-dynamic';
 export default async function Clients(){
   
   let clients;
