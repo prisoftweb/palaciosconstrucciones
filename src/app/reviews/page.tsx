@@ -4,6 +4,7 @@ import { getProjects } from "@/app/api/RouteProyects";
 import Header from "@/components/Header";
 import base from "@/app/sass/base/_base.module.scss";
 
+export const dynamic = 'force-dynamic';
 export default async function Reviews(){
   
   let projects;

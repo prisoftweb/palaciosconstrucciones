@@ -4,8 +4,28 @@ export async function getSliders(){
   
   const url = `${process.env.NEXT_PUBLIC_API_URL}/api/v1/sliders`;
   
-  const sliders = await axios.get(url)  
-  return sliders.data.data.data;
+  let sliders;
+  try {
+    sliders = await axios.get(url);
+    if(sliders.status===200) return sliders.data.data.data;
+    return sliders.statusText;
+  } catch (error) {
+    return 'Ocurrio un problema al consultar sliders';
+  }  
+}
+
+export async function getSlidersBySegement(segment:string){
+  
+  const url = `${process.env.NEXT_PUBLIC_API_URL}/api/v1/sliders/getSliderBySegment/${segment}`;
+  
+  let sliders;
+  try {
+    sliders = await axios.get(url);
+    if(sliders.status===200) return sliders.data.data.data;
+    return sliders.statusText;
+  } catch (error) {
+    return 'Ocurrio un problema al consultar sliders';
+  }  
 }
 
 export async function getSlider(auth_token: string, id: string) {

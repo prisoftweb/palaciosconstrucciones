@@ -13,6 +13,7 @@ import Header from "@/components/Header";
 import FormContact from "@/components/contact/FormContact";
 import Clients from "./clients/page";
 
+export const dynamic = 'force-dynamic';
 export default async function Home() {
   let projects;
   try {
@@ -26,7 +27,7 @@ export default async function Home() {
   return (
     <> 
       <Header />
-      <ListSliders />
+      <ListSliders segment="index" />
       <section id="section-nosotros" className={`${util.u_margin_bottom_md} ${util.u_margin_top_lg} ${base.section} flex flex-col`}>
         <div className={`flex flex-col md:flex-row`}>
           <div className="shrink  flex flex-col lg:flex-row w-full lg:w-1/2  pr-10 mr-10">

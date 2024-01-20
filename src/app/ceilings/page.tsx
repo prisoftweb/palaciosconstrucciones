@@ -1,7 +1,8 @@
 import font from '@/app/sass/base/_typography.module.scss'
 import util from "@/app/sass/base/_utilities.module.scss";
 import base from "@/app/sass/base/_base.module.scss";
-import { getSliders } from '../api/RouteSliders';
+//import { getSliders } from '../api/RouteSliders';
+import { getSlidersBySegement } from '../api/RouteSliders';
 import ViewSlider from '@/components/sliders/ViewSlider';
 import Header from '@/components/Header';
 import { getImagesProjectsByService } from "@/app/api/RouteServices"
@@ -9,13 +10,19 @@ import GalleryProjects from '@/components/ceillings/GalleryProjects';
 import { getServices } from '../api/RouteServices';
 import SliderServices from '@/components/services/SliderServices';
 
+export const dynamic = 'force-dynamic';
 export default async function Ceilings() {
   let sliders;
   let slider;
   try {
-    sliders = await getSliders();
+    //sliders = await getSliders();
+    sliders = await getSlidersBySegement('ceilings');
     if(typeof(sliders) !== 'string'){
-      slider = <ViewSlider sliders={sliders} />
+      if(sliders.length > 0){
+        slider = <ViewSlider sliders={sliders} />
+      }else{
+        slider = <></>
+      }
     }else{
       return <h1 className="text-center text-red-500">{sliders}</h1>
     }

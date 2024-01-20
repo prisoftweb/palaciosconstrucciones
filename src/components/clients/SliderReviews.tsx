@@ -69,6 +69,7 @@ export default function SliderReviews({reviews}: {reviews:any}){
 
   return(
     <>
+    {/* <img src="img/clients/default.jpg" alt="prueba" /> */}
     <section className={`${util.u_margin_top_md2}`}>
       <h1 className={`${typography.subtitle} ${util.u_margin_top_md_}`}>Testimonios clientes</h1>
       <h3 className={`${typography.subtitle_thin}`}>
@@ -93,9 +94,9 @@ export default function SliderReviews({reviews}: {reviews:any}){
         <div className='w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 mt-10'>
           {showReviews.map((review: any) => (
             <div className='flex flex-col items-center' key={review._id}>
-              <img src={review.photo} alt="logo" className="w-1/3 rounded-md" />
-              <p className={`text-sm px-2 ${typography.heading4}`}>{review.name}</p>
-              <p className={`px-2 ${typography.heading4}`}>{review.review}</p>
+              <img src={review.photo} alt="logo" className="w-1/3 rounded-full" />
+              <p className={`text-sm px-2 ${typography.nameReview}`}>{review.name}</p>
+              <p className={`px-2 ${typography.review}`}>{review.review}</p>
             </div>
           ))}
         </div>

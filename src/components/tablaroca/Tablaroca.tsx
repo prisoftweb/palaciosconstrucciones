@@ -8,7 +8,7 @@ import base from "@/app/sass/base/_base.module.scss";
 import SliderServices from "../services/SliderServices";
 import ViewSlider from "../sliders/ViewSlider";
 import { getServices } from '@/app/api/RouteServices';
-import { getSliders } from "@/app/api/RouteSliders";
+import { getSlidersBySegement } from "@/app/api/RouteSliders";
 
 export default async function Tablaroca(){
     let services;
@@ -27,9 +27,13 @@ export default async function Tablaroca(){
     let sliders;
     let slider;
     try {
-      sliders = await getSliders();
+      sliders = await getSlidersBySegement('tablaroca');
       if(typeof(sliders) !== 'string'){
-        slider = <ViewSlider sliders={sliders} />
+        if(sliders.length > 0){
+            slider = <ViewSlider sliders={sliders} />
+        }else{
+            slider = <></>
+        }
       }else{
         return <h1 className="text-center text-red-500">{sliders}</h1>
       }
