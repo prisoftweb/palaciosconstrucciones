@@ -33,8 +33,7 @@ export default function Footer(){
             </a>
           </p>
         </div>
-        <ul className={footer.navfoot}>
-          {/* <li className="navfoot__item"> */}
+        {/* <ul className={footer.navfoot}>          
           <li className={footer.navfoot__item}>
             <a href="privacidad.html" className={footer.navfoot__link}
               >Privacidad</a>
@@ -53,8 +52,55 @@ export default function Footer(){
           <li className={footer.navfoot__item}>
             <a href="contacto.html" className={footer.navfoot__link}>Contacto</a>
           </li>
-        </ul>
-
+        </ul> */}
+        <div className={footer.saltolinea}>
+          <div className={footer.navbox2__divider_text}>Servicios</div>
+          <ul className={footer.navfoot}>
+            <li className={footer.navfoot__item}>
+              <a href="/paintings" className={footer.navfoot__link}
+              >Pintura</a>
+            </li>
+            <li className={footer.navfoot__item}>
+              <a href="/ceilings" className={footer.navfoot__link}
+              >Muros</a>
+            </li>
+            <li className={footer.navfoot__item}>
+              <a href="/tablaroca" className={footer.navfoot__link}
+                >Fachadas</a
+              >
+            </li>
+            <li className={footer.navfoot__item}>
+              <a href="/acabados" className={footer.navfoot__link}
+                >Acabados</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div className={footer.saltolinea}>
+          <div className={footer.navbox2__divider_text}>Palacios</div>
+          <ul className={footer.navfoot}>
+            <li className={footer.navfoot__item}>
+              <a href="/about" className={footer.navfoot__link}
+              >Nosotros</a>
+            </li>
+            <li className={footer.navfoot__item}>
+              <a href="/services" className={footer.navfoot__link}
+              >Servicios</a>
+            </li>
+            <li className={footer.navfoot__item}>
+              <a href="/projects" className={footer.navfoot__link}
+                >Proyectos</a
+              >
+            </li>
+            <li className={footer.navfoot__item}>
+              <a href="/reviews" className={footer.navfoot__link}
+                >Reseñas</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div className={footer.saltolinea}>
+        <div className={footer.navbox2__divider_text}>Redes</div>
         <ul className={footer.navfoot}>
           <li className={footer.navfoot__item}>
             <a
@@ -96,6 +142,7 @@ export default function Footer(){
             </a>
           </li>
         </ul>
+        </div>
       </footer>
     </>
   )

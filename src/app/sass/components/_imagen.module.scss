@@ -15,9 +15,11 @@ $bp_small: 37.5em; //600/16
 
 .imagegallery {
   filter: blur(0.3px) brightness(45%);
-  transition: all 1s;
+
+  transition: all 0.8s;
     &:hover {
       filter:blur(0.01px) brightness(100%);
+      transform: scale(.99);
     }
 }
 
