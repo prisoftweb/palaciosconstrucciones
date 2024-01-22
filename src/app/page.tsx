@@ -64,7 +64,7 @@ export default async function Home() {
         <div className={`${button.button__normal} ${util.u_margin_bottom_sm}`}>
             <a                            
             className={`${button.button__text}`}
-            href="/nosotros"              
+            href="/about"              
             >Saber mas...
             </a>
         </div>
@@ -89,7 +89,7 @@ export default async function Home() {
             <div className={`${button.button__normal} ${util.u_margin_bottom_sm}`}>
               <a                            
                 className={`${button.button__text}`}
-                href="/nosotros"              
+                href="/services"              
                 >Saber mas...
               </a>
             </div>
@@ -117,7 +117,7 @@ export default async function Home() {
           <div className={`${button.button__normal} ${util.u_margin_bottom_sm}`}>
             <a                            
               className={`${button.button__text}`}
-              href="/nosotros"              
+              href="/services"              
               >Saber mas...
             </a>
           </div>

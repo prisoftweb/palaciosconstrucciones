@@ -191,6 +191,11 @@ $default_font_size_md: 1.8rem;
   color: $color_primary;
   text-transform: none;
   font-weight: 600;
+
+  transition: all 0.75s;
+    &:hover {      
+      transform: translateY(-2rem);
+    }
   //text-align: center;
 }
 .subtitleslider {  

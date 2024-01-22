@@ -188,11 +188,11 @@ $color_secondary: #0075C9;
   grid-auto-rows: min-content;
   grid-auto-flow: dense;
 }
-.nav-box2 {
+.navbox2 {
   display: grid;
   grid-template-columns: 1fr min-content;
   color: $color_grey_dark_2;
-  @media only screen and (max-width: $bp-mini) {
+  @media only screen and (max-width: $bp_mini) {
     grid-template-columns: 1fr;
     //grid-template-rows: repeat(4, min-content);
   }
@@ -202,7 +202,7 @@ $color_secondary: #0075C9;
 
   //flex-direction: row;
   //justify-content: space-around;
-  &__divider-text {
+  &__divider_text {
     display: grid;
     grid-template-columns: 1fr max-content 1fr;
     grid-column-gap: 0.5rem;
@@ -226,10 +226,10 @@ $color_secondary: #0075C9;
   //grid-row: 1/;
   grid-column: 2/-1;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
   grid-gap: 1rem;
   @media only screen and (max-width: $bp_small) {
-    grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
     grid-column-gap: 0.5rem;
   }
   //grid-template-columns: 1fr;
