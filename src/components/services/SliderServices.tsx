@@ -7,7 +7,7 @@ import ittc from "@/app/sass/components/_imagentitulotextocard.module.scss";
 import { getImagesProjectsByService } from "@/app/api/RouteServices"
 import ShowImagesService from "./ShowImagesService"
 
-export default function SliderServices({services}:{services:any}){
+export default function SliderServices({services, namepage}:{services:any, namepage:string}){
   
   const [showServices, setShowServices] = useState<any[]>(services);
   const [index, setIndex] = useState(0);
@@ -26,7 +26,8 @@ export default function SliderServices({services}:{services:any}){
     if(typeof(res)==='string'){
       setGallery(<p>{res}</p>)
     }else{
-      setGallery(<ShowImagesService images={res} service={nameService} />)
+      setGallery(<ShowImagesService images={res} nameService={nameService} 
+                idService={idServ} namepage={namepage} />)
     }
   }
 

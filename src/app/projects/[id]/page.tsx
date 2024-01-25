@@ -102,7 +102,7 @@ export default async function Project({ params }: { params: { id: string } }){
 
         <div className='grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 mt-10'>
           {project.images.map((image: any) => (
-            image.panoramic? '': <ImageLink key={image._id} href={`/${id}/${image._id}`} photo={image.photo} />
+            image.panoramic? '': <ImageLink key={image._id} href={`/projects/${id}/${image._id}`} photo={image.photo} />
           ))}
         </div>
 

@@ -77,7 +77,7 @@ export default function SliderProjects({projects, idProject}: {projects:any, idP
 
         <div className='grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 mt-10'>
           {filter.map((project: any) => (
-            <Link key={project._id} href={`/${project._id}`}>
+            <Link key={project._id} href={`/projects/${project._id}`}>
               <div className=''>
                 <img src={project.images[0].photo} alt="image" className="w-full" />
                 <p className={`${font.subtitle_project}`}>{project.title}</p>

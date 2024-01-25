@@ -18,7 +18,7 @@ export default async function Finishes() {
     if(typeof(services)==='string'){
       showServices = <p>{services}</p>
     }else{
-      showServices = <SliderServices services={services} />
+      showServices = <SliderServices services={services} namepage='finishes' />
     }
   } catch (error) {
     showServices = <p>Error al consultar servicios...</p>
