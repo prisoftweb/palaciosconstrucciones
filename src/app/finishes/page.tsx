@@ -31,7 +31,11 @@ export default async function Finishes() {
     if(typeof(services)==='string'){
       showServices = <p>{services}</p>
     }else{
+<<<<<<< HEAD
       showServices = <SliderServices services={services} name={servicesByCat[0].name} id={servicesByCat[0]._id} />
+=======
+      showServices = <SliderServices services={services} namepage='finishes' />
+>>>>>>> refs/remotes/origin/main
     }
   } catch (error) {
     showServices = <p>Error al consultar servicios...</p>

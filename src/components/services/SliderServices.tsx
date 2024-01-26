@@ -8,7 +8,11 @@ import util from "@/app/sass/base/_utilities.module.scss";
 import { getImagesProjectsByService } from "@/app/api/RouteServices"
 import ShowImagesService from "./ShowImagesService"
 
+<<<<<<< HEAD
 export default function SliderServices({services, name, id}:{services:any, name:string, id:string}){
+=======
+export default function SliderServices({services, namepage}:{services:any, namepage:string}){
+>>>>>>> refs/remotes/origin/main
   
   const [showServices, setShowServices] = useState<any[]>(services);
   const [index, setIndex] = useState(0);
@@ -27,7 +31,8 @@ export default function SliderServices({services, name, id}:{services:any, name:
     if(typeof(res)==='string'){
       setGallery(<p>{res}</p>)
     }else{
-      setGallery(<ShowImagesService images={res} service={nameService} />)
+      setGallery(<ShowImagesService images={res} nameService={nameService} 
+                idService={idServ} namepage={namepage} />)
     }
   }
 

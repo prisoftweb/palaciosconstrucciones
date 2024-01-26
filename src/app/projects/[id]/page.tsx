@@ -43,13 +43,26 @@ export default async function Project({ params }: { params: { id: string } }){
     }
   })
   
+  let panoramic='';
+  project.images.map((img:any) => {
+    try {
+      if(panoramic === ''){
+        if(img.panoramic){
+          panoramic = img.photo;
+        }
+      }
+    } catch (error) {
+      
+    }
+  })
+
   return (
     <>
       <Header />
       <section id="section-projects" className={`${util.u_margin_bottom_md} ${base.section} flex flex-col`}>
       <div >
         <div className="relative">
-          <img src={project.images[0].photo} alt="image" className="w-full" 
+          <img src={panoramic!==''? panoramic: project.images[0].photo} alt="image" className="w-full" 
               style={{filter:'blur(0.3px) brightness(45%)'}} />
           {/* <h1 className={`absolute top-1/2 left-1/3 text-xl ${font.subtitle} font-bold`}>{project.title}</h1> */}
           <div className="absolute top-1/2 w-full text-center">
@@ -92,7 +105,7 @@ export default async function Project({ params }: { params: { id: string } }){
 
         <div className='grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 mt-10'>
           {project.images.map((image: any) => (
-            <ImageLink key={image._id} href={`/${id}/${image._id}`} photo={image.photo} />
+            image.panoramic? '': <ImageLink key={image._id} href={`/projects/${id}/${image._id}`} photo={image.photo} />
           ))}
         </div>
 

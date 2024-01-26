@@ -34,7 +34,7 @@ export default async function Paintigns(){
     if(typeof(services)==='string'){
       showServices = <p>{services}</p>
     }else{
-      showServices = <SliderServices services={services} />
+      showServices = <SliderServices services={services} namepage='paintings' />
     }
   } catch (error) {
     showServices = <p>Error al consultar servicios...</p>
