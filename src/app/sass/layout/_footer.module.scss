@@ -21,17 +21,18 @@ $color_secondary_dark: #617af5;
 $color_secondary: #0075C9;
 
 .footer {
-  // background-color: $color-grey-light-3;
+  
+  //opcion 1
+  // background-image: radial-gradient(
+  //   ellipse farthest-corner at 4.5rem 3rem,
+  //   $color_white 40%,
+  //   rgba(0, 255, 0, 0) 10%,
+  //   $color_grey_light_2 50%,
+  //   $color_grey_light_2 10%,
+  //   $color_grey_light_2 30%
+  // );
 
-  // background: conic-gradient(white, black);
-  background-image: radial-gradient(
-    ellipse farthest-corner at 4.5rem 3rem,
-    $color_white 40%,
-    rgba(0, 255, 0, 0) 10%,
-    $color_grey_light_2 50%,
-    $color_grey_light_2 10%,
-    $color_grey_light_2 30%
-  );
+  //opcion 2
   // background: repeating-radial-gradient(
   //     circle,
   //     hsl(190, 80%, 70%, 0.2) 0px 35px,
@@ -72,7 +73,7 @@ $color_secondary: #0075C9;
   &__logohead {
     grid-column: 1 / span 1;
     grid-row: 1 / span 1;    
-    width: 18rem;
+    width: 24rem;
     padding-top: 2rem;
   }
   &__logo-sm {
@@ -260,7 +261,16 @@ $color_secondary: #0075C9;
     font-weight: 500;
   }
 }
-
+.wave {
+  position: absolute;
+  left: 0;  
+  // min-height: calc(100% - 4rem);
+  padding-bottom: 0;
+  width: 100%;  
+  opacity: 1.0;
+  z-index: -100;
+  
+}
 .redesociales0 {
   flex-grow: 0;
   font-size: 1.4rem;

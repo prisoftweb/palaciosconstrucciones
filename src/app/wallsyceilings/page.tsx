@@ -1,12 +1,12 @@
 import Header from "@/components/Header";
-import Tabla from "@/components/tablaroca/Tablaroca";
+import WallsYCeilings from "@/components/wallsyceilings/WallsYCeilings";
 
 export const dynamic = 'force-dynamic';
-export default function Tablaroca(){
+export default function WallsYCeilingsComp(){
     return (
         <>        
             <Header />
-            <Tabla/>
+            <WallsYCeilings/>
         </>
     )
 }

@@ -29,8 +29,8 @@ export default function Ours(){
                 Desde el año 2008 incursionamos en el mundo de la construcción realizando muros de tablaroca hasta hacer mas de 20 servicios relacionados con la construcción industrial, comercial y particular
             </p>              
             <div className={`flex flex-col md:flex-row ${utilities.u_margin_bottom_md}`}>
-                <div className="shrink  flex flex-col lg:flex-row w-full lg:w-1/2  pr-10 mr-10">
-                    <div className="shrink  w-full lg:w-3/5  pl-5 pr-10 mr-10">
+                <div className="shrink  flex flex-col lg:flex-row w-full lg:w-1/2  pr-10">
+                    <div className="shrink  w-full lg:w-3/5   pr-10">
                         <h3 className={`${typography.subtitle} ${utilities.u_margin_top_md_}`}>
                             Nuestra
                         </h3>
@@ -47,8 +47,8 @@ export default function Ours(){
                             alt="Misison"
                         />
                 </div>
-                <div className="shrink  flex flex-col lg:flex-row w-full lg:w-1/2  pr-10 mr-10">
-                    <div className="shrink  w-full lg:w-3/5  pl-5 pr-10 mr-10">
+                <div className="shrink  flex flex-col lg:flex-row w-full lg:w-1/2  pr-10">
+                    <div className="shrink  w-full lg:w-3/5   pr-10">
                         <h3 className={`${typography.subtitle} ${utilities.u_margin_top_md_}`}>
                             Vision
                         </h3>

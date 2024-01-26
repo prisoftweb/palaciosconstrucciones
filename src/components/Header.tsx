@@ -45,7 +45,7 @@ export default function Header(){
               </a>
             </li>
             <li className={menNav.navegator__item}>
-              <a className={`${menNav.navegator__a} ${menNav.navegator__a__notshow}`} href="#section-clientes"
+              <a className={`${menNav.navegator__a} ${menNav.navegator__a__notshow}`} href="/#section-clientes"
                 >Clientes
               </a>
             </li>

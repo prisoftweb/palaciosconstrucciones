@@ -4,7 +4,9 @@
 // $font_primary: "IBM+Plex+Sans", sans-serif;
 // $font_secondary: var(--font-skranji), system-ui;
 $font_primary: var(--font-ibmsans), sans-serif;
-$font_secondary: var(--font-koulen), sans-serif;
+// $font_secondary: var(--font-koulen), sans-serif;
+$font_secondary: var(--font-staatliches), sans-serif;
+
 
 // $font_secondary: "Courgette", cursive;
 $color_grey_light_1: #3C3C3B; // #f9fafb;
@@ -45,7 +47,7 @@ $default_font_size_md: 1.8rem;
 }
 
 %headingspe2 {
-  font-family: $font_primary;
+  font-family: $font_secondary;
   font-weight: 400;
 }
 
@@ -274,7 +276,7 @@ $default_font_size_md: 1.8rem;
 .headingspecial2 {
   @extend %headingspe;
   color: $color_secondary;
-  text-transform: none;
+  text-transform: uppercase;
   // color: $color_primary_dark;
   text-align: left;
   font-weight: 400;
@@ -285,7 +287,7 @@ $default_font_size_md: 1.8rem;
 .headingspecial {
   @extend %headingspe;
   color: $color_secondary;
-  text-transform: none;
+  text-transform: uppercase;
   // color: $color_secondary_dark;
   text-align: left;
   font-weight: 400;
@@ -335,6 +337,10 @@ $default_font_size_md: 1.8rem;
   }
   &--dark {
     color: $color_grey_dark_1;
+  }
+  &__underline {
+    text-decoration: underline;
+    color: $color_secondary;
   }
 }
 

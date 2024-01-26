@@ -4,10 +4,11 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid"
 import { useEffect, useState } from "react"
 import font from '@/app/sass/base/_typography.module.scss'
 import ittc from "@/app/sass/components/_imagentitulotextocard.module.scss";
+import util from "@/app/sass/base/_utilities.module.scss";
 import { getImagesProjectsByService } from "@/app/api/RouteServices"
 import ShowImagesService from "./ShowImagesService"
 
-export default function SliderServices({services}:{services:any}){
+export default function SliderServices({services, name, id}:{services:any, name:string, id:string}){
   
   const [showServices, setShowServices] = useState<any[]>(services);
   const [index, setIndex] = useState(0);
@@ -15,8 +16,8 @@ export default function SliderServices({services}:{services:any}){
   const [numberServices, setNumberServices] = useState<number>(width<640? 1: (width<768? 2: (width<1024? 3: 4)));
   
   const [gallery, setGallery] = useState<JSX.Element>(<></>);
-  const [idService, setIdService] = useState<string>(services[0].id);
-  const [nameService, setNameService] = useState<string>(services[0].name);
+  const [idService, setIdService] = useState<string>(id);
+  const [nameService, setNameService] = useState<string>(name);
   const handleResize = () => {
     setWidth(window.innerWidth);
   }
@@ -90,7 +91,7 @@ export default function SliderServices({services}:{services:any}){
 
   return(
     <>
-      <div className="flex items-center">
+      <div className={`${util.u_margin_bottom_md} ${util.u_margin_bottom_sm} flex items-center pb-10`}>
         <div className='w-20'>
           <ChevronLeftIcon onClick={Previous}
             className="w-12 h-12 cursor-pointer text-yellow-950" />

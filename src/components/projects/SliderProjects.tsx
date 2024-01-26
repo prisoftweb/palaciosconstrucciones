@@ -4,6 +4,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid"
 import { useEffect, useState } from "react"
 import Link from "next/link";
 import font from '@/app/sass/base/_typography.module.scss'
+import util from "@/app/sass/base/_utilities.module.scss";
 
 export default function SliderProjects({projects, idProject}: {projects:any, idProject:string}){
   
@@ -68,7 +69,20 @@ export default function SliderProjects({projects, idProject}: {projects:any, idP
 
   return(
     <>
-      <h1 className={`${font.subtitle} text-4xl my-12 font-semibold`}>Otros proyectos</h1>
+      <h1 className={`${font.subtitle} ${util.u_margin_top_md_} my-14 font-semibold`}>
+        Otros proyectos
+      </h1>
+      <h3 className={`${font.subtitle_thin} ${util.u_margin_bottom_sm}`}>
+        Explorar otro proyecto
+      </h3>
+      <p className={`${font.heading4} ${util.u_margin_bottom_md}`}>
+        Esperamos que disfrutes explorando estos proyectos tanto como nosotros disfrutamos creándolos. Si tienes preguntas o estás interesado en colaborar en futuros proyectos, no dudes en ponerte en <a className={`${font.heading4} ${font.heading4__underline}`} href="/contact"
+                > contacto
+              </a> con nosotros. ¡Gracias por visitar nuestra galería de construcción!
+      </p>              
+      <h4 className={`${font.headingspecial2} ${util.u_margin_bottom_sm}`}>
+          Selecciona un proyecto
+      </h4>
       <div className="flex items-center">
         <div className='w-20'>
           <ChevronLeftIcon onClick={Previous}

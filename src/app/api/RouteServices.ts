@@ -11,6 +11,16 @@ export async function getServices() {
   }
 }
 
+export async function getServicesByCategory(service:string) {
+  const url = `${process.env.NEXT_PUBLIC_API_URL}/api/v1/services/getServicesByCategory/${service}`;
+  try {
+    const res = await axios.get(url);
+    if(res.status===200) return res.data.data.data;
+      return res.statusText;
+  } catch (error) {
+    return 'Ocurrio un problema al consultar las imagenes';
+  }
+}
 export async function getImagesProjectsByService(id:string) {
   const url = `${process.env.NEXT_PUBLIC_API_URL}/api/v1/projects/getImagesProjectByServices/${id}`;
   try {

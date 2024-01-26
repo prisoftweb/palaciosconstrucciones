@@ -1,3 +1,4 @@
+$color_primary: #FDC921; //#14e7d7;
 $color_secondary: #0075C9;
 $bp_large: 62.5em; //1000px/16
 $bp_medium_2: 56.25em; //900px/16
@@ -10,7 +11,31 @@ $bp_small: 37.5em; //600/16
   height: 18rem;
   background-color: transparent;
   overflow: hidden;
-  transition: all 1s;
+  border-radius:5%;
+  box-shadow: 0px 0px .1rem .1rem $color_primary;
+
+  @media only screen and (max-width: $bp_small) {
+    width: 100%;
+    height: auto;
+    justify-self: center;
+  }
+  @media only screen and (max-width: $bp_medium) {
+    width: 80%;
+    height: auto;
+    justify-self: center;
+  }
+  @media only screen and (max-width: $bp_medium_2) {
+    width: 70%;
+    height: auto;
+    justify-self: center;
+  }
+
+  transition: all 1s ease-in-out;
+  &:hover {
+      filter: grayscale(93%);      
+      transform: translateX(3rem) scale(1.2);
+      
+    }
 }
 
 .imagegallery {
@@ -19,7 +44,17 @@ $bp_small: 37.5em; //600/16
   transition: all 0.8s;
     &:hover {
       filter:blur(0.01px) brightness(100%);
-      transform: scale(.99);
+      transform: scale(1.05);
+    }
+}
+
+.imagenservices {
+  border-radius:15%;
+  box-shadow: 0px 0px .4rem .4rem $color_primary;
+  transition: all .5s ease-in-out;
+    &:hover {
+      filter: grayscale(80%);      
+      transform: translateX(2rem);
     }
 }
 
@@ -31,7 +66,7 @@ $bp_small: 37.5em; //600/16
   z-index: -5;
   opacity: .9;
   overflow: hidden;
-  filter: blur(.1px) brightness(40%);
+  // filter: blur(.1px) brightness(40%);
 }
 
 .imagenvertical { 

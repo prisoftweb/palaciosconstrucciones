@@ -5,8 +5,8 @@ import img from  "@/app/sass/components/_imagen.module.scss";
 export default function Card({service}: {service:any}){
   return (
     <>
-      <div className="shrink flex flex-col w-full  pr-10 mr-10">
-        <div className="shrink w-full pr-10 mr-10">
+      <div className={`shrink flex flex-col w-full  pr-10 mr-10 ${utilities.u_margin_bottom_md}`}>
+        <div className={`shrink w-full pr-10 mr-10`}>
           <h2 className={typography.heading5}>
             {service.name}
           </h2>

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 // import { Inter } from 'next/font/google'
-import {IBM_Plex_Sans, Skranji, Koulen} from 'next/font/google'
+import {IBM_Plex_Sans, Skranji, Koulen, Staatliches} from 'next/font/google'
 import './globals.css'
 import { Suspense } from 'react'
 import Loading from './loading'
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
 }
 const ibmSans = IBM_Plex_Sans({
-  weight: ['100', '200', '300', '400'],
+  weight: ['100', '200', '300', '400', '500', '600', '700'],
   style: ['normal', 'italic'],
   subsets: ['latin'],
   display: 'swap',
@@ -40,6 +40,14 @@ const koulen = Koulen({
   variable: '--font-koulen',
 })
 
+const staatliches = Staatliches({
+  weight: ['400'],
+  style: ['normal'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-staatliches',
+})
+
 //export const dynamic = 'force-dynamic';
 export default function RootLayout({
   children,
@@ -50,7 +58,7 @@ export default function RootLayout({
     <html className={styles.html} lang="en">
       {/* <body className={inter.className}> */}
       {/* <body className={styles.html}> */}
-      <body className={`${styles.body} ${koulen.variable} ${ibmSans.variable} ${skranji.variable}` } >
+      <body className={`${styles.body} ${koulen.variable} ${ibmSans.variable} ${skranji.variable} ${staatliches.variable}`} >
         <Suspense fallback={<Loading/>}>
           {children}
         </Suspense>

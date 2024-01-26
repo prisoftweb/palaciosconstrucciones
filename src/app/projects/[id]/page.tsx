@@ -5,6 +5,8 @@ import ImageLink from "@/components/projects/ImageLink";
 import Header from "@/components/Header";
 import font from '@/app/sass/base/_typography.module.scss'
 import util from "@/app/sass/base/_utilities.module.scss";
+import base from "@/app/sass/base/_base.module.scss";
+
 
 export const dynamic = 'force-dynamic';
 export default async function Project({ params }: { params: { id: string } }){
@@ -44,7 +46,8 @@ export default async function Project({ params }: { params: { id: string } }){
   return (
     <>
       <Header />
-      <div className="p-3 sm:p-5 md:p-7 lg:p-8 xl:p-10 mt-20">
+      <section id="section-projects" className={`${util.u_margin_bottom_md} ${base.section} flex flex-col`}>
+      <div >
         <div className="relative">
           <img src={project.images[0].photo} alt="image" className="w-full" 
               style={{filter:'blur(0.3px) brightness(45%)'}} />
@@ -95,6 +98,7 @@ export default async function Project({ params }: { params: { id: string } }){
 
         <SliderProjects projects={projects} idProject={project._id} />
       </div>
+      </section>
     </>
   )
 }
