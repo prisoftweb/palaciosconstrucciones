@@ -1,4 +1,6 @@
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement>{}
+import button from '@/app/sass/components/_button.module.scss';
+
 
 export default function Button({children, ...props}:Props){
   return(
@@ -7,5 +9,16 @@ export default function Button({children, ...props}:Props){
         text-2xl transition-colors w-52" {...props}>
       {children}
     </button>
+      // <div className={`${button.button__normal} `} {...props}>
+      //       <a                            
+      //       className={`${button.button__text}`}
+      //       href="/about"              
+      //       >
+      //         {children}
+      //       </a>
+      //   </div>
+    // <button className={`${button.button__text}`} {...props}>
+    //   {children}
+    // </button>
   )
 }

@@ -6,11 +6,11 @@ export default function Footer(){
     <>
       <footer className={footer.footer}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className={`${footer.wave} invisible md:visible`}>
-        <path fill="#0075C9" fill-opacity="1" d="M0,96L34.3,96C68.6,96,137,96,206,85.3C274.3,75,343,53,411,42.7C480,32,549,32,617,64C685.7,96,754,160,823,192C891.4,224,960,224,1029,192C1097.1,160,1166,96,1234,90.7C1302.9,85,1371,139,1406,165.3L1440,192L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">      
+        <path fill="#0075C9" fillOpacity="1" d="M0,96L34.3,96C68.6,96,137,96,206,85.3C274.3,75,343,53,411,42.7C480,32,549,32,617,64C685.7,96,754,160,823,192C891.4,224,960,224,1029,192C1097.1,160,1166,96,1234,90.7C1302.9,85,1371,139,1406,165.3L1440,192L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">      
         </path>
       </svg>
         <div className={footer.logobox}>
-          <a href="index.html" className={footer.logobox__logohead}>
+          <a href="/" className={footer.logobox__logohead}>
             <img
               srcSet="img/logo-palaciosconstrucciones-isologo.svg 1x, logo-palaciosconstrucciones-isologo.svg 2x"
               alt="logotipo palacios construcciones"

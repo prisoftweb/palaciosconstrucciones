@@ -40,7 +40,7 @@ const koulen = Koulen({
   variable: '--font-koulen',
 })
 
-const staatliches = Staatliches({
+const staatlichesfont = Staatliches({
   weight: ['400'],
   style: ['normal'],
   subsets: ['latin'],
@@ -58,7 +58,7 @@ export default function RootLayout({
     <html className={styles.html} lang="en">
       {/* <body className={inter.className}> */}
       {/* <body className={styles.html}> */}
-      <body className={`${styles.body} ${koulen.variable} ${ibmSans.variable} ${skranji.variable} ${staatliches.variable}`} >
+      <body className={`${styles.body} ${koulen.variable} ${ibmSans.variable} ${skranji.variable} ${staatlichesfont.variable}`} >
         <Suspense fallback={<Loading/>}>
           {children}
         </Suspense>

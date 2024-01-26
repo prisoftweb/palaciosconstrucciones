@@ -8,20 +8,15 @@ import util from "@/app/sass/base/_utilities.module.scss";
 import { getImagesProjectsByService } from "@/app/api/RouteServices"
 import ShowImagesService from "./ShowImagesService"
 
-<<<<<<< HEAD
-export default function SliderServices({services, name, id}:{services:any, name:string, id:string}){
-=======
 export default function SliderServices({services, namepage}:{services:any, namepage:string}){
->>>>>>> refs/remotes/origin/main
-  
   const [showServices, setShowServices] = useState<any[]>(services);
   const [index, setIndex] = useState(0);
   const [width, setWidth] = useState<number>(0);
   const [numberServices, setNumberServices] = useState<number>(width<640? 1: (width<768? 2: (width<1024? 3: 4)));
   
   const [gallery, setGallery] = useState<JSX.Element>(<></>);
-  const [idService, setIdService] = useState<string>(id);
-  const [nameService, setNameService] = useState<string>(name);
+  const [idService, setIdService] = useState<string>(services[0].id);
+  const [nameService, setNameService] = useState<string>(services[0].name);
   const handleResize = () => {
     setWidth(window.innerWidth);
   }

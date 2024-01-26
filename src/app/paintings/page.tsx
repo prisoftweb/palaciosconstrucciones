@@ -4,12 +4,28 @@ import base from "@/app/sass/base/_base.module.scss";
 import { getSlidersBySegement } from '../api/RouteSliders';
 import ViewSlider from '@/components/sliders/ViewSlider';
 import Header from '@/components/Header';
-import { getServices } from '../api/RouteServices';
+import { getServices, getServicesByCategory } from '../api/RouteServices';
 import SliderServices from '@/components/services/SliderServices';
+import Card from '@/components/finishes/Card';
 
 export const dynamic = 'force-dynamic';
 export default async function Paintigns(){
   
+  let servicesByCat;
+  let showServicesByCat;
+  try {
+    servicesByCat = await getServicesByCategory('Pinturas');
+    if(typeof(servicesByCat)==='string'){
+      showServicesByCat = <p>{servicesByCat}</p>
+    }else{
+      showServicesByCat = <></>
+    }
+  } catch (error) {
+    showServicesByCat = <p>Error al consultar servicios por categoria...</p>
+  }
+
+
+
   let sliders;
   let slider;
   try {
@@ -55,7 +71,7 @@ export default async function Paintigns(){
             <img src="/paint.png" alt="image paint" />
           </div>
         </div>
-        <div className={`${util.u_margin_bottom_md} w-full grid gap-30 md:gap-20 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 mt-5`}>
+        <div className={`${util.u_margin_bottom_md} w-full grid gap-30 md:gap-20 md:grid-cols-2 xl:grid-cols-3  mt-5`}>
           <div className="shrink flex flex-col w-full  pr-10 mr-10">
             <p className={`${font.heading4} ${util.u_margin_bottom_md}`}>Para la aplicacion de la pintura existen diferentes metodos, utilizamos metodos tradicionales como son aplicacion de pintura con brocha, rodillo y pistola aerográfica, tambien utilizamos metodos con equipo profesional como Pulverización de aire.</p>
             <img
@@ -85,6 +101,15 @@ export default async function Paintigns(){
               alt='Ubicacion de servicio de pintura'
             />
           </div>
+        </div>
+
+        <h4 className={`${font.headingspecial2} ${util.u_margin_bottom_sm}`}>
+          Nuestros servicios de pintura:
+        </h4>
+        <div className={`grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 mt-10 w-full ${util.u_margin_bottom_md}`}>
+          {servicesByCat.map((service: any) => (            
+            <Card key={service._id} image={service.logo} text1={service.name} text2={service.description} />                      
+          ))}
         </div>
         <h4 className={`${font.headingspecial2} ${util.u_margin_bottom_sm}`}>
           Galeria de imagenes de aplicacion de pintura

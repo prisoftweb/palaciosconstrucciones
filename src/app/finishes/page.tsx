@@ -30,12 +30,9 @@ export default async function Finishes() {
     services = await getServices();
     if(typeof(services)==='string'){
       showServices = <p>{services}</p>
-    }else{
-<<<<<<< HEAD
-      showServices = <SliderServices services={services} name={servicesByCat[0].name} id={servicesByCat[0]._id} />
-=======
+    } else{
+      // showServices = <SliderServices services={services} name={servicesByCat[0].name} id={servicesByCat[0]._id} />
       showServices = <SliderServices services={services} namepage='finishes' />
->>>>>>> refs/remotes/origin/main
     }
   } catch (error) {
     showServices = <p>Error al consultar servicios...</p>
@@ -63,8 +60,8 @@ export default async function Finishes() {
     <>
       <Header />
       {slider}
-      <section id="section-plafon" className={`${base.section} ${util.u_margin_bottom_md}`}>
-        <p className={`${font.subtitle} ${util.u_margin_top_md_}`}>Acabados</p>
+      <section id="section-plafon" className={`${base.section} `}>
+        <p className={`${font.subtitle} ${util.u_margin_top_md}`}>Acabados</p>
         <p className={`${font.subtitle_thin}`}>Cualquier acabado nosotros los aplicamos</p>
         <p className={`${font.headingspecial} ${util.u_margin_bottom_sm} mt-5`}>ACABADOS EN SAN LUIS POTOSI DE REMODELACIONES, 
             PASTA, TEXTURIZADOS, PISOS Y MAS. </p>

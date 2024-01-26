@@ -66,12 +66,12 @@ export default function SliderOneImage({sliders, indexImage, title, logo, linkRe
             {/* <p className={`absolute ${font.titlespecial} bottom-0 top:1/5 lg:top-1/2`}>{slider.title}</p> */}
             <div className="h-full absolute flex items-center left-0">
               <ChevronLeftIcon onClick={Previous}
-                className="w-6 h-6 sm:w-8 sm:h-8 lg:w-12 lg:h-12 xl:w-16 xl:h-16 bg-slate-700 rounded-md hover:bg-slate-500 left-4 text-white cursor-pointer"
+                className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 xl:w-20 xl:h-20 bg-slate-700 rounded-md hover:bg-slate-500 left-4 text-white cursor-pointer"
               />
             </div>
             <div className="h-full absolute flex items-center right-0">
               <ChevronRightIcon onClick={Next}
-                className="w-6 h-6 sm:w-8 sm:h-8 lg:w-12 lg:h-12 xl:w-16 xl:h-16 bg-slate-700 rounded-md hover:bg-slate-500 right-4 text-white cursor-pointer"
+                className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 xl:w-20 xl:h-20 bg-slate-700 rounded-md hover:bg-slate-500 right-4 text-white cursor-pointer"
               />
             </div>
             <div className="absolute right-3 md:right-9">
