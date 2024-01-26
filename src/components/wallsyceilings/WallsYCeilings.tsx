@@ -18,7 +18,7 @@ export default async function Tablaroca(){
       if(typeof(services)==='string'){
         showServices = <p>{services}</p>
       }else{
-        showServices = <SliderServices services={services} namepage="tablaroca" />
+        showServices = <SliderServices services={services} namepage="wallsyceilings" />
       }
     } catch (error) {
       showServices = <p>Error al consultar servicios...</p>

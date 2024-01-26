@@ -50,7 +50,7 @@ export default async function Frontages() {
     if(typeof(services)==='string'){
       showServices = <p>{services}</p>
     }else{
-      showServices = <SliderServices services={services} />
+      showServices = <SliderServices services={services} namepage='frontages' />
     }
   } catch (error) {
     showServices = <p>Error al consultar servicios...</p>
