@@ -6,9 +6,9 @@ import img from  "@/app/sass/components/_imagen.module.scss";
 import { getSlidersBySegement } from '../api/RouteSliders';
 import ViewSlider from '@/components/sliders/ViewSlider';
 import Header from '@/components/Header';
-import { getImagesProjectsByService } from "@/app/api/RouteServices"
-import GalleryProjects from '@/components/ceillings/GalleryProjects';
-import { getServices } from '../api/RouteServices';
+// import { getImagesProjectsByService } from "@/app/api/RouteServices"
+// import GalleryProjects from '@/components/ceillings/GalleryProjects';
+import { getServices, getServicesByCategory } from '../api/RouteServices';
 import SliderServices from '@/components/services/SliderServices';
 
 export const dynamic = 'force-dynamic';
@@ -31,16 +31,30 @@ export default async function Frontages() {
     return <h1 className=" text-center text-red-500">Error al consulta sliders</h1>
   }
 
-  let gallery;
+  // let gallery;
+  // try {
+  //   const res = await getImagesProjectsByService('657150e1e35e810019bfa56a');
+  //   if(typeof(res)==='string'){
+  //     gallery = <p>{res}</p>
+  //   }else{
+  //     gallery = <GalleryProjects gallery={res} />
+  //   }
+  // } catch (error) {
+  //   gallery = <p>Ocurrio un problema al consultar galeria..</p>
+  // }
+
+  let servicesByCat:any;
+  let showServicesByCat;
+  
   try {
-    const res = await getImagesProjectsByService('657150e1e35e810019bfa56a');
-    if(typeof(res)==='string'){
-      gallery = <p>{res}</p>
+    servicesByCat = await getServicesByCategory('Fachadas');
+    if(typeof(servicesByCat)==='string'){
+      showServicesByCat = <p>{servicesByCat}</p>
     }else{
-      gallery = <GalleryProjects gallery={res} />
+      showServicesByCat = <></>
     }
   } catch (error) {
-    gallery = <p>Ocurrio un problema al consultar galeria..</p>
+    showServicesByCat = <p>Error al consultar servicios por categoria...</p>
   }
 
   let services;
@@ -50,7 +64,15 @@ export default async function Frontages() {
     if(typeof(services)==='string'){
       showServices = <p>{services}</p>
     }else{
-      showServices = <SliderServices services={services} namepage='frontages' />
+      let indexSlider:number = 0;
+      if(servicesByCat){
+        services.map((service:any, index:number) => {
+          if(service._id === servicesByCat[0]._id){
+            indexSlider = index;
+          }
+        })
+      }
+      showServices = <SliderServices services={services} namepage='frontages' indexSlider={indexSlider} />
     }
   } catch (error) {
     showServices = <p>Error al consultar servicios...</p>

@@ -56,11 +56,13 @@ export default async function Project({ params }: { params: { id: string } }){
     }
   })
 
+  console.log('aquiiii');
+
   return (
     <>
       <Header />
-      <section id="section-projects" className={`${util.u_margin_bottom_md} ${base.section} flex flex-col`}>
-      <div >
+      <section id="section-projects" className={`${util.u_margin_top_md2} ${util.u_margin_bottom_md} ${base.section} flex flex-col`}>
+      <div className={``} >
         <div className="relative">
           <img src={panoramic!==''? panoramic: project.images[0].photo} alt="image" className="w-full" 
               style={{filter:'blur(0.3px) brightness(45%)'}} />

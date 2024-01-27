@@ -11,8 +11,9 @@ import Card from '@/components/finishes/Card';
 export const dynamic = 'force-dynamic';
 export default async function Paintigns(){
   
-  let servicesByCat;
+  let servicesByCat:any;
   let showServicesByCat;
+  
   try {
     servicesByCat = await getServicesByCategory('Pinturas');
     if(typeof(servicesByCat)==='string'){
@@ -23,8 +24,6 @@ export default async function Paintigns(){
   } catch (error) {
     showServicesByCat = <p>Error al consultar servicios por categoria...</p>
   }
-
-
 
   let sliders;
   let slider;
@@ -50,7 +49,18 @@ export default async function Paintigns(){
     if(typeof(services)==='string'){
       showServices = <p>{services}</p>
     }else{
-      showServices = <SliderServices services={services} namepage='paintings' />
+
+      let indexSlider:number = 0;
+      if(servicesByCat){
+        services.map((service:any, index:number) => {
+          if(service._id === servicesByCat[0]._id){
+            indexSlider = index;
+          }
+        })
+      }
+      console.log('index slider');
+      console.log(indexSlider);
+      showServices = <SliderServices services={services} namepage='paintings' indexSlider={indexSlider} />
     }
   } catch (error) {
     showServices = <p>Error al consultar servicios...</p>

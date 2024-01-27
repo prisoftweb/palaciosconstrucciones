@@ -11,7 +11,7 @@ import SliderServices from '@/components/services/SliderServices';
 export const dynamic = 'force-dynamic';
 export default async function Finishes() {
 
-  let servicesByCat;
+  let servicesByCat:any;
   let showServicesByCat;
   try {
     servicesByCat = await getServicesByCategory('Acabados');
@@ -32,7 +32,15 @@ export default async function Finishes() {
       showServices = <p>{services}</p>
     } else{
       // showServices = <SliderServices services={services} name={servicesByCat[0].name} id={servicesByCat[0]._id} />
-      showServices = <SliderServices services={services} namepage='finishes' />
+      let indexSlider:number = 0;
+      if(servicesByCat){
+        services.map((service:any, index:number) => {
+          if(service._id === servicesByCat[0]._id){
+            indexSlider = index;
+          }
+        })
+      }
+      showServices = <SliderServices services={services} namepage='finishes' indexSlider={indexSlider} />
     }
   } catch (error) {
     showServices = <p>Error al consultar servicios...</p>

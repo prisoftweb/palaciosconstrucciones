@@ -31,7 +31,7 @@ export default function ShowImagesService({images, nameService, idService, namep
       Nuestra galería de imágenes por <b>{nameService}</b> que ofrecemos en Palacios Construcciones.
       </p>              
       {/* <p className={`${font.subtitle_thin} `}>Aplicado de pintura</p> */}
-      <p className={`${font.subtitle} my-12 `}>Galeria de proyectos de {nameService}</p>
+      {/* <p className={`${font.subtitle} my-12 `}>Galeria de proyectos de {nameService}</p> */}
       <div className='grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 mt-10 mb-5 w-full'>
         {gallery.map((image) => (
           <Link key={image._id} href={`services/${idService}?title=${nameService}&&index=${image.index}&&category=${namepage}`}>

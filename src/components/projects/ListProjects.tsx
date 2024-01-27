@@ -42,7 +42,8 @@ export default function ListProyects({projects}: {projects:any}){
       </div>
       <div className='grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 mt-10'>
         {filter.map((project: any) => (
-          <CardProjectImgClient href={`/projects/${project._id}`} imgProj={project.images[0].photo}
+          <CardProjectImgClient href={`/projects/${project._id}`} 
+                imgProj={project.images[0].panoramic? project.images[1].photo: project.images[0].photo}
             imgClient={project.client? project.client.logo: '/img/clients/default.jpg'} 
             title={project.title} key={project._id} />
         ))}

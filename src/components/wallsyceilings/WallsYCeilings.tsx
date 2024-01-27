@@ -7,10 +7,24 @@ import img from  "@/app/sass/components/_imagen.module.scss";
 import base from "@/app/sass/base/_base.module.scss";
 import SliderServices from "../services/SliderServices";
 import ViewSlider from "../sliders/ViewSlider";
-import { getServices } from '@/app/api/RouteServices';
+import { getServices, getServicesByCategory } from '@/app/api/RouteServices';
 import { getSlidersBySegement } from "@/app/api/RouteSliders";
 
 export default async function Tablaroca(){
+    
+    let servicesByCat:any;
+    let showServicesByCat;
+    try {
+        servicesByCat = await getServicesByCategory('Muros y plafones');
+        if(typeof(servicesByCat)==='string'){
+        showServicesByCat = <p>{servicesByCat}</p>
+        }else{
+        showServicesByCat = <></>
+        }
+    } catch (error) {
+        showServicesByCat = <p>Error al consultar servicios por categoria...</p>
+    }
+    
     let services;
     let showServices;
     try {
@@ -18,7 +32,15 @@ export default async function Tablaroca(){
       if(typeof(services)==='string'){
         showServices = <p>{services}</p>
       }else{
-        showServices = <SliderServices services={services} namepage="wallsyceilings" />
+        let indexSlider:number = 0;
+        if(servicesByCat){
+            services.map((service:any, index:number) => {
+            if(service._id === servicesByCat[0]._id){
+                indexSlider = index;
+            }
+            })
+        }
+        showServices = <SliderServices services={services} namepage="wallsyceilings" indexSlider={indexSlider} />
       }
     } catch (error) {
       showServices = <p>Error al consultar servicios...</p>
@@ -224,7 +246,7 @@ export default async function Tablaroca(){
                 </div>    
             </div>
             <h4 className={`${typography.headingspecial2} ${utilities.u_margin_bottom_sm}`}>
-                Galeria de imagenes de muros de tablaroca y plafones
+                Servicios de muros de tablaroca y plafones
             </h4>
             <p className={`${typography.heading4} ${utilities.u_margin_bottom_md}`}>
             Puedes visitar nuestra galería de imágenes por los servicios que ofrecemos en Palacios Construcciones, en las cuales podrás ver a detalle los proyectos realizados a nuestros clientes
