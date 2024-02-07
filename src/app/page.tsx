@@ -155,7 +155,7 @@ export default async function Home() {
               />
             </a>
             <a className="asinstyle" href="/finishes">
-              <h2 className={`${typography.heading5} `}>Acababados</h2>
+              <h2 className={`${typography.heading5} `}>Acabados</h2>
             </a>
             <h4 className={typography.heading4}>
             Acabados en general en remodelaciones, pasta, texturizados, instalación de pisos y muros cerámicos, instalación de pisos epóxicos e instalación de piso laminado y madera.

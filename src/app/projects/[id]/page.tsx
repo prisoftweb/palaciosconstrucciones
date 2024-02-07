@@ -56,8 +56,6 @@ export default async function Project({ params }: { params: { id: string } }){
     }
   })
 
-  console.log('aquiiii');
-
   return (
     <>
       <Header />

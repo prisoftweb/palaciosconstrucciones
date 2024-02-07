@@ -35,7 +35,7 @@ export default async function Clients(){
       Error al obtener los proyectos!!
     </h1>
   }
-  
+ 
   return(
     <>      
       <SliderClients clients={clients} />

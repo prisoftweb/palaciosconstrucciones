@@ -23,6 +23,14 @@ export default function SliderOneImage({sliders, indexImage, title, logo, linkRe
       }
     }, 5000);
     
+    if(sliders[index].panoramic){
+      if(index >= sliders.length - 1){
+        setIndex(0);
+      }else{
+        setIndex(index + 1);
+      }
+    }
+
     setSlider(sliders[index]);
     return () => clearTimeout(timer);
   }, [index])

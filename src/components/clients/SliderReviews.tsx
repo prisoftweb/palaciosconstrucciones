@@ -41,9 +41,17 @@ export default function SliderReviews({reviews}: {reviews:any}){
     
     if(count < 0){
       count = Math.abs(count);
-      const arr1 = reviews.slice(index, index + numberReviews);
+      //const arr1 = reviews.slice(index, index + numberReviews);
+      const arr1 = reviews.slice(index);
+      if(count >= index){
+        count = index;
+      }
       const arr2 = reviews.slice(0, count);
-      setShowReviews([...arr1, ...arr2]);
+      if(arr2.length === 0){
+        setShowReviews(arr1);
+      }else{
+        setShowReviews([...arr1, ...arr2]);
+      }
     }else{
       setShowReviews(reviews.slice(index, index + numberReviews));
     }
