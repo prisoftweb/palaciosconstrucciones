@@ -58,8 +58,6 @@ export default async function Paintigns(){
           }
         })
       }
-      console.log('index slider');
-      console.log(indexSlider);
       showServices = <SliderServices services={services} namepage='paintings' indexSlider={indexSlider} />
     }
   } catch (error) {
