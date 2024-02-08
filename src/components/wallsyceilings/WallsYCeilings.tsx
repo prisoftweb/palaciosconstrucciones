@@ -96,10 +96,10 @@ export default async function Tablaroca(){
             <div className={`flex flex-col lg:flex-row ${utilities.u_margin_bottom_md}`}>
                 <div className="shrink  flex flex-col lg:flex-row w-full lg:w-1/3  pr-10 mr-10" >
                     <div className={`${utilities.u_margin_bottom_md} shrink w-full grid gap-20 md:gap-3 justify-center sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-2 mt-40`}>
-                        <p className={`${typography.heading5} ${typography.heading5__light} ${utilities.u_margin_bottom_sm} col-start-1 col-end-3 row-start-2 justify-self-center z-10`}>
+                        <p className={`${typography.heading5} ${typography.heading5__light} ${utilities.u_margin_bottom_sm} col-start-1 col-end-3 row-start-2 justify-self-center`}>
                             Mayor durabilidad
                         </p>
-                        <p className={`${typography.heading5} ${typography.heading5__light} ${utilities.u_margin_bottom_sm} col-start-2 row-start-3 justify-self-left z-10`}>
+                        <p className={`${typography.heading5} ${typography.heading5__light} ${utilities.u_margin_bottom_sm} col-start-2 row-start-3 justify-self-left`}>
                             Fachadas modernas
                         </p>
                         <img
@@ -107,13 +107,13 @@ export default async function Tablaroca(){
                         src="img/services/fachaleta.jpg"
                         alt="Fachada principal"
                     />
-                        <p className={`${typography.heading5} ${typography.heading5__light} ${utilities.u_margin_bottom_sm} col-start-1 row-start-3 justify-self-center z-10`}>
+                        <p className={`${typography.heading5} ${typography.heading5__light} ${utilities.u_margin_bottom_sm} col-start-1 row-start-3 justify-self-center`}>
                             Mejores costos
                         </p>
-                        <p className={`${typography.heading5} ${typography.heading5__light} ${utilities.u_margin_bottom_sm} col-start-2 row-start-4 justify-self-left z-10`}>
+                        <p className={`${typography.heading5} ${typography.heading5__light} ${utilities.u_margin_bottom_sm} col-start-2 row-start-4 justify-self-left`}>
                             Menor mantenimiento
                         </p>
-                        <p className={`${typography.heading5} ${typography.heading5__light} ${utilities.u_margin_bottom_sm} col-start-1 row-start-4 justify-self-center z-10`}>
+                        <p className={`${typography.heading5} ${typography.heading5__light} ${utilities.u_margin_bottom_sm} col-start-1 row-start-4 justify-self-center`}>
                             Trabajo garantizado
                         </p>
                     </div>

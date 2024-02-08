@@ -12,7 +12,7 @@ $bp_small-2: 31.25em; //500/16
 }
 
 .menav {
-  z-index: 1000;
+  z-index: 100 !important;
   top: 1px;
   padding-top: 2rem;
   padding-right: 3rem;

@@ -9,8 +9,8 @@ export default function CardProjectImgClient({href, imgProj, imgClient, title}:
       <Link href={href}>
         <img src={imgProj} className={`${img.imagegallery} w-full`}/>
         <img src={imgClient} alt="logo cliente" 
-          className="absolute top-2 left-10 w-1/2" />
-        <p className={`absolute top-1/2 left-1/3 text-xl ${font.subtitle_project} font-bold`}>
+          className="absolute top-2 left-10 w-1/2 z-0" />
+        <p className={`absolute top-1/2 left-1/3 text-xl z-0 ${font.subtitle_project} font-bold`}>
           {title}</p>
       </Link>
     </div>

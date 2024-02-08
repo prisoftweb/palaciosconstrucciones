@@ -5,6 +5,7 @@ import { useState, useEffect} from "react";
 import Input from '../Input';
 import Label from '../Label';
 import FormikErrors from '../FormikErrors';
+import { useRouter } from "next/navigation";
 import Button from '../Button';
 import { createComment } from '@/app/api/RouteContacts';
 
@@ -14,6 +15,7 @@ export default function FormContact(){
   
   const [bandMessage, setBandMessage] = useState<boolean>(false);
   const [message, setMessage]= useState<string>('');
+  const router = useRouter();
   const formikPass = useFormik({
     initialValues: {
       name: '',
@@ -53,9 +55,11 @@ export default function FormContact(){
         if(typeof(res)==='string'){
           setMessage(res);
           setBandMessage(true);
+          router.push('/landingcontact')
         }else{
           setMessage('Mensaje enviado, nosotros nos pondremos en contacto con usted');
-          setBandMessage(true);
+          // setBandMessage(true);
+          router.push('/landingcontact')
         }
       } catch (error) {
         setMessage('Lo sentimos ocurrio un problema al enviar su mensaje!');
@@ -74,7 +78,7 @@ export default function FormContact(){
 
   return(
     <>      
-      <form className="bg-white rounded shadow-md sm:px-8 pt-6 pb-8" 
+      <form className="bg-white rounded shadow-md sm:px-8 pt-6 pb-8 max-w-7xl " 
         onSubmit={formikPass.handleSubmit}>
           {bandMessage? <h1 className='text-xl text-green-500'>{message}</h1>: ''}
         <div className="flex justify-center flex-wrap">

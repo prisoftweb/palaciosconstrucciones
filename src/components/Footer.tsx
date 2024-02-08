@@ -108,7 +108,7 @@ export default function Footer(){
         <ul className={footer.navfoot}>
           <li className={footer.navfoot__item}>
             <a
-              href="https://www.facebook.com/"
+              href="https://www.facebook.com/palaciosconstruccionesoficial"
               target="_blank"
               className={footer.navfoot__link}
             >
@@ -121,7 +121,20 @@ export default function Footer(){
           </li>
           <li className={footer.navfoot__item}>
             <a
-              href="https://www.instagram.com"
+              href="http://linkedin.com/company/palaciosconstruccionesoficial/"
+              target="_blank"
+              className={footer.navfoot__link}
+            >
+              <img
+                src="img/redes-sociales/linkedin.svg"
+                alt="linkedin palacios construcciones"
+                className={footer.redesociales__icon}
+              />
+            </a>
+          </li>
+          <li className={footer.navfoot__item}>
+            <a
+              href="http://instagram.com/palaciosconstruccionesoficial"
               target="_blank"
               className={footer.navfoot__link}
             >
@@ -134,17 +147,18 @@ export default function Footer(){
           </li>
           <li className={footer.navfoot__item}>
             <a
-              href="https://www.youtube.com"
+              href="https://www.tiktok.com/@palaciosconstrucciones"
               target="_blank"
               className={footer.navfoot__link}
             >
               <img
-                src="img/redes-sociales/youtube.svg"
-                alt="youtube palacios construcciones"
+                src="img/redes-sociales/tiktok.svg"
+                alt="tiktok palacios construcciones"
                 className={footer.redesociales__icon}
               />
             </a>
           </li>
+         
         </ul>
         </div>        
       </footer>

@@ -283,6 +283,9 @@ $default_font_size_md: 1.8rem;
   font-size: 2.2rem;
   line-height: 1.2; 
   letter-spacing: 3px;
+  &__center {
+    text-align: center;
+  }
 }
 .headingspecial {
   @extend %headingspe;
@@ -331,7 +334,9 @@ $default_font_size_md: 1.8rem;
   font-size: 1.9rem;
   text-align: justify;
   color: $color_grey_dark_1;
-  
+  &__center {
+    text-align: center;
+  }
   &--light {
     color: $color_grey_light_1;
   }

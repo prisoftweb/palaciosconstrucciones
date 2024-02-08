@@ -12,6 +12,7 @@ import ListSliders from "@/components/sliders/ListSliders";
 import Header from "@/components/Header";
 import FormContact from "@/components/contact/FormContact";
 import Clients from "./clients/page";
+import Balancer from "react-wrap-balancer";
 
 export const dynamic = 'force-dynamic';
 export default async function Home() {
@@ -68,25 +69,40 @@ export default async function Home() {
             >Saber mas...
             </a>
         </div>
-        <div className={`flex flex-col-reverse lg:flex-row`}>
+        <div className={`flex flex-col-reverse lg:flex-row justify-center`}>
           <video className="shrink w-full lg:w-1/2 pr-5 rounded-lg" autoPlay muted loop>
             <source src="img/pexels_videos_2048246 (1080p).mp4" type="video/mp4" />          
             El navegador no es compatible
           </video>
-          <div className="container flex-1 mt-5">
-            <h3 className={`${typography.subtitle} ${util.u_margin_top_md_}`}>
+          <div className="container flex-1 mt-5 justify-self-center">
+            {/* <h3 className={`${typography.subtitle} ${util.u_margin_top_md_}`}>
               Conocenos
             </h3>
             <h3 className={`${typography.subtitle_thin}`}>
               Palacios construcciones
-            </h3>
-            <h4 className={`${typography.headingspecial2} ${util.u_margin_bottom_sm}`}>
+            </h3> */}
+            <h1
+              className="animate-fade-up bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center font-display text-6xl font-bold tracking-[-0.02em] text-transparent opacity-1 drop-shadow-sm md:text-7xl md:leading-[5rem]"
+
+          >
+              <Balancer>Conoce los servicios de Palacios Construcciones</Balancer>          
+            </h1>
+            <p
+              className={`${typography.heading4} ${typography.heading4__center} ${util.u_margin_bottom_sm} mt-10 animate-fade-up text-center`} style={{ animationDelay: "0.55s", animationFillMode: "forwards" }}
+            >
+              <Balancer>
+                Cualquier servicio de construccion de esta categoria en Palacios Construcciones podemos ayudarte.
+                  <a href="https://api.whatsapp.com/send?phone=5244424225200&text=Buen dia, puse una opinion en el proyecto"
+                  target="_blank">  ¡Gracias!  </a>
+              </Balancer>
+            </p>
+            <h4 className={`${typography.headingspecial2} ${typography.headingspecial2__center} ${util.u_margin_bottom_sm}`}>
               Tablaroca, acabados, fachadas, plafones, steel framing y pintura
             </h4>
-            <p className={`${typography.heading4} ${util.u_margin_bottom_sm}`}>
+            {/* <p className={`${typography.heading4} ${util.u_margin_bottom_sm}`}>
               Cualquier servicio de construccion de esta categoria en Palacios Construcciones podemos ayudarte.
-            </p>
-            <div className={`${button.button__normal} ${util.u_margin_bottom_sm}`}>
+            </p> */}
+            <div className={`${button.button__normal} ${util.u_margin_bottom_sm} justify-self-center`}>
               <a                            
                 className={`${button.button__text}`}
                 href="/services"              
@@ -220,8 +236,9 @@ export default async function Home() {
           </div>        
         </div>
       </section>
+
       <section id="section-proyectos" className={`p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10 ${base.section}`}>
-        <h3 className={`${typography.subtitle} ${util.u_margin_top_md_}`}>
+        {/* <h3 className={`${typography.subtitle} ${util.u_margin_top_md_}`}>
           Proyectos
         </h3>
         <h3 className={`${typography.subtitle_thin}`}>
@@ -229,7 +246,28 @@ export default async function Home() {
         </h3>
         <p className={`${typography.heading4} ${util.u_margin_bottom_md} mt-4`}>
           ¡Descubre la excelencia en cada proyecto! en Palacios Construcciones estamos emocionados de presentarte nuestro portafolio de obras de construcción, un testimonio visual de nuestra dedicación, calidad y habilidades en la transformación de espacios. A continuación, te presentamos algunos de nuestros proyectos más destacados
-        </p>
+        </p> */}
+        <div className="flex-1 mt-5 justify-self-center">
+
+          <h1
+              className="animate-fade-up bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center font-display text-6xl font-bold tracking-[-0.02em] text-transparent opacity-1 drop-shadow-sm md:text-7xl md:leading-[5rem]"
+
+          >
+              <Balancer>Conoce nuestras Obras de construccion</Balancer>          
+          </h1>
+          <p
+            className={`${typography.heading4} ${typography.heading4__center} ${util.u_margin_bottom_sm} mt-10 animate-fade-up text-center`} style={{ animationDelay: "0.55s", animationFillMode: "forwards" }}
+          >
+            <Balancer>
+              ¡Descubre la excelencia en cada proyecto! en Palacios Construcciones estamos emocionados de presentarte nuestro portafolio de obras de construcción, un testimonio visual de nuestra dedicación, calidad y habilidades en la transformación de espacios. A continuación, te presentamos algunos de nuestros proyectos más 
+                <a href="https://api.whatsapp.com/send?phone=5244424225200&text=Buen dia, puse una opinion en el proyecto"
+                target="_blank"> destacados </a>
+            </Balancer>
+          </p>
+          <h4 className={`${typography.headingspecial2} ${typography.headingspecial2__center} ${util.u_margin_bottom_sm}`}>
+              En todos los segmentos tanto particular como industrial
+          </h4>
+        </div>
         <ListProyects projects={projects} />
       </section>
       <section id="section-clientes" className={`p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10 ${base.section}`}>
@@ -285,13 +323,30 @@ export default async function Home() {
                 </div>          
             </div>
         </div>
-        <div className="shrink  w-full md:w-2/3  ">
-          <h3 className={`${typography.subtitle} ${util.u_margin_top_md_}`}>
+        <div className="shrink  w-full md:w-2/3  ">        
+          <div className="flex-1 mt-5 justify-self-center">
+            <h1
+                className="animate-fade-up bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center font-display text-6xl font-bold tracking-[-0.02em] text-transparent opacity-1 drop-shadow-sm md:text-7xl md:leading-[5rem]"
+            >
+                <Balancer>¡Ponte en Contacto con Nosotros!</Balancer>          
+            </h1>
+            <p
+              className={`${typography.heading4} ${typography.heading4__center} ${util.u_margin_bottom_sm} mt-10 animate-fade-up text-center`} style={{ animationDelay: "0.55s", animationFillMode: "forwards" }}
+            >
+              <Balancer>
+                ¿Tienes alguna pregunta, comentario o sugerencia? ¡Estamos aquí para ayudarte! No dudes en ponerte en contacto con nosotros a través del siguiente formulario:
+              </Balancer>
+            </p>
+            <h4 className={`${typography.headingspecial2} ${typography.headingspecial2__center} ${util.u_margin_bottom_sm}`}>
+            Dejanos tus datos!
+            </h4>
+          </div>
+          {/* <h3 className={`${typography.subtitle} ${util.u_margin_top_md_}`}>
             Contáctanos
           </h3>
           <h3 className={`${typography.subtitle_thin} ${util.u_margin_bottom_sm}`}>
             Dejanos tus datos
-          </h3> 
+          </h3>  */}
           <FormContact />
         </div>
         </div>

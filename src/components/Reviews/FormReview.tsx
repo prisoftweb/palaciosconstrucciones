@@ -15,7 +15,8 @@ import SelectProjects from "./SelectProjects";
 import Alert, {showToastMessage, showToastMessageError} from "../Alert";
 import { useRouter } from "next/navigation";
 import typography from "@/app/sass/base/_typography.module.scss";
-import utilities from "@/app/sass/base/_utilities.module.scss";
+import util from "@/app/sass/base/_utilities.module.scss";
+import Balancer from "react-wrap-balancer";
 
 
 export default function FormReview({issues, projects}: {issues:any, projects:any}){
@@ -93,8 +94,8 @@ export default function FormReview({issues, projects}: {issues:any, projects:any
             showToastMessageError(res);
           }
           if(res === 201) {
-            showToastMessage('Agradecemos sus comentarios, seguiremos mejorando!!');
-            router.push('/')
+            // showToastMessage('Agradecemos sus comentarios, seguiremos mejorando!!');
+            router.push('/landing')
           }
         }else{
           const res = await createReview(review);
@@ -102,8 +103,8 @@ export default function FormReview({issues, projects}: {issues:any, projects:any
             showToastMessageError(res);
           }
           if(res === 201) {
-            showToastMessage('Agradecemos sus comentarios, seguiremos mejorando!!');
-            router.push('/')
+            // showToastMessage('Agradecemos sus comentarios, seguiremos mejorando!!');
+            router.push('/landing')
           }
         }
       } catch (error) {
@@ -145,7 +146,24 @@ export default function FormReview({issues, projects}: {issues:any, projects:any
     <>
       <Alert/>
       <div className="flex flex-col">
-        <h3 className={`${typography.subtitle} ${utilities.u_margin_top_md_}`}>
+        <div className="flex-1 mt-5 justify-self-center">
+          <h1
+              className="animate-fade-up bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center font-display text-6xl font-bold tracking-[-0.02em] text-transparent opacity-1 drop-shadow-sm md:text-7xl md:leading-[5rem]"
+          >
+              <Balancer>¡Pon una reseña de obra!</Balancer>          
+          </h1>
+          <p
+            className={`${typography.heading4} ${typography.heading4__center} ${util.u_margin_bottom_sm} mt-10 animate-fade-up text-center`} style={{ animationDelay: "0.55s", animationFillMode: "forwards" }}
+          >
+            <Balancer>
+            Puede dejarnos su opinión sobre nosotros, sobre su experiencia utilizando nuestros servicios de construccion, y sobre sus sentimientos acerca de un proyecto en espesifico. 
+            </Balancer>
+          </p>
+          <h4 className={`${typography.headingspecial2} ${typography.headingspecial2__center} ${util.u_margin_bottom_sm}`}>
+            ¡Gracias por elegirnos y confiar en nosotros!
+          </h4>
+        </div>
+        {/* <h3 className={`${typography.subtitle} ${utilities.u_margin_top_md_}`}>
           Reseña de obra
         </h3>
         <h3 className={`${typography.subtitle_thin}`}>
@@ -153,8 +171,8 @@ export default function FormReview({issues, projects}: {issues:any, projects:any
         </h3>        
         <p className={`${typography.heading4} ${utilities.u_margin_bottom_md} mt-5`}>
           Puede dejarnos su opinión sobre nosotros, sobre su experiencia utilizando nuestros servicios de construccion, y sobre sus sentimientos acerca de un proyecto en espesifico. 
-        </p>              
-        <div className="flex justify-center">
+        </p>               */}
+        <div className="flex justify-center ">
           <form className="bg-white rounded shadow-md w-full sm:w-10/12 lg:w-10/12 xl:w-1/2 md:px-8 pt-6 pb-3" encType="multipart/form-data" onSubmit={formik.handleSubmit}>                            
             <div>
               <div className="flex flex-wrap">

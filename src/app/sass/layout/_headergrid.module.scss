@@ -9,7 +9,7 @@ $font-primary: var(--font-ibmsans), sans-serif;
     //position: relative;
     grid-column: full-start / full-end;
     grid-row: 1 / span 2;
-    //z-index: -100;
+    z-index: 10;
     justify-content: center;
     align-content: stretch;
   
@@ -25,8 +25,7 @@ $font-primary: var(--font-ibmsans), sans-serif;
       top: 0;
       left: 0;
       height: 100%;
-      width: 100%;
-      z-index: -10;
+      width: 100%;      
       opacity: 1;
       overflow: hidden;
       grid-row: 1 / span 1;

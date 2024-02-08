@@ -11,7 +11,7 @@ export default function Header(){
     <>
       {/* <img srcSet="next.svg 1x, next.svg 2x" alt="next" /> */}
       {/* <header className="header"> */}
-      <header className={`${styles.header} fixed top-0 w-full`}>
+      <header className={`${styles.header} fixed top-0 z-50 w-full`}>
         <nav className={`${menu.menu} bg-white opacity-80`}>
           {/* <a href="index.html" className="logo-box__logohead"> */}
           <a href="/" className={`${footer.logobox__logohead}`}>

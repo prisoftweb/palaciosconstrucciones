@@ -17,6 +17,7 @@ $bp-mini: 22.5em; //360/16
 $color_grey_dark_1: #3C3C3B;
 $color_grey_dark_2: #0C1726;
 $font_primary: "IBM+Plex+Sans", sans-serif;
+$color_primary: #FDC921; //#14e7d7;
 $color_secondary_dark: #617af5;
 $color_secondary: #0075C9;
 
@@ -301,6 +302,7 @@ $color_secondary: #0075C9;
   grid-column-gap: 1.5rem;
   justify-items: center;
   align-items: center;
+  z-index: 10;
 
   &__link {
     height: 3rem;
@@ -323,7 +325,7 @@ $color_secondary: #0075C9;
     transition: all 0.2s;
     cursor: pointer;
     &:hover {
-      fill: $color_secondary;
+      fill: $color_primary;
       transform: translateY(-0.5rem);
     }
   }
