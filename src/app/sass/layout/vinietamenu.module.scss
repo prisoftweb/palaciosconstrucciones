@@ -7,6 +7,7 @@ $bp_small_2: 31.25em; //500/16
 $bp_small_3: 25em; //400/16
 $bp_mini: 22.5em; //360/16
 $color_secondary_dark: #617af5;
+$color_secondary: #0075C9;
 
 .vinietamenu {
   &__list {
@@ -126,7 +127,7 @@ $color_secondary_dark: #617af5;
       text-overflow: ellipsis;
       overflow: hidden;
 
-      color: $color_secondary_dark;
+      color: $color_secondary;
       @media only screen and (max-width: $bp_large_2) {
         //1100
         font-size: 2.8rem;

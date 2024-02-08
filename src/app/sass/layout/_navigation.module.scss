@@ -7,6 +7,7 @@ $color_white: #fff;
 $color_black: #000;
 $color_grey_light_11: #f9fafb;
 $color_tertiary: #617af5;
+$color_secondary: #0075C9;
 $color_primary: #FDC921; //#14e7d7;
 
 .alcancetext {
@@ -97,8 +98,8 @@ $color_primary: #FDC921; //#14e7d7;
       height: 4rem;
       width: 4rem;
       position: fixed;
-      top: 2.8rem;
-      right: 2rem;
+      top: 2.1rem;
+      right: 2.2rem;
       border-radius: 50%;
       z-index: 100 !important;
       box-shadow: 0 1.5rem 4rem rgba($color_black, 0.15);
@@ -107,19 +108,19 @@ $color_primary: #FDC921; //#14e7d7;
     }
 
     @media only screen and (max-width: $bp_small) {
-      top: 2.8rem;
+      top: 2.1rem;
       right: 1.4rem;
     }
     @media only screen and (max-width: $bp_small-2) {
-      top: 2.8rem;
+      top: 2.1rem;
       right: 1.2rem;
     }
     @media only screen and (max-width: $bp_small-3) {
-      top: 2.8rem;
+      top: 2.1rem;
       right: 1rem;
     }
     @media only screen and (max-width: $bp_mini) {
-      top: 2.8rem;
+      top: 2.1rem;
       right: 0.7rem;
     }
   }
@@ -208,7 +209,7 @@ $color_primary: #FDC921; //#14e7d7;
     &::after {
       width: 2.2rem;
       height: 2px;
-      background-color: $color_primary;
+      background-color: $color_secondary;
       display: inline-block;
     }
 
