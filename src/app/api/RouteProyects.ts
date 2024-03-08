@@ -7,7 +7,7 @@ export async function getProjects() {
     if(res.status===200) return res.data.data.data;
     return res.statusText;
   } catch (error) {
-    return 'Ocurrio un problema al obtener proyectos..';
+    return 'Ocurrio un problema al obtener proyectos...';
   }
 }
 
@@ -19,5 +19,16 @@ export async function getProject(id:string) {
     return res.statusText;
   } catch (error) {
     return 'Ocurrio un problema al consultar proyecto..';
+  }
+}
+
+export async function getProjectsByClient(id:string) {
+  const url = `${process.env.NEXT_PUBLIC_API_URL}/api/v1/projects/getProjectsByClient/${id}`;
+  try {
+    const res = await axios.get(url);
+    if(res.status===200) return res.data.data.data;
+    return res.statusText;
+  } catch (error) {
+    return 'Ocurrio un problema al obtener proyectos..';
   }
 }

@@ -12,7 +12,7 @@ export default function Footer(){
         <div className={footer.logobox}>
           <a href="/" className={footer.logobox__logohead}>
             <img
-              srcSet="img/logo-palaciosconstrucciones-isologo.svg 1x, logo-palaciosconstrucciones-isologo.svg 2x"
+              srcSet="/img/logo-palaciosconstrucciones-isologo.svg 1x, logo-palaciosconstrucciones-isologo.svg 2x"
               alt="logotipo palacios construcciones"
               className={footer.logobox__logobig}
             />
@@ -113,7 +113,7 @@ export default function Footer(){
               className={footer.navfoot__link}
             >
               <img
-                src="img/redes-sociales/facebook.svg"
+                src="/img/redes-sociales/facebook.svg"
                 alt="facebook palacios construcciones"
                 className={footer.redesociales__icon}
               />
@@ -126,7 +126,7 @@ export default function Footer(){
               className={footer.navfoot__link}
             >
               <img
-                src="img/redes-sociales/linkedin.svg"
+                src="/img/redes-sociales/linkedin.svg"
                 alt="linkedin palacios construcciones"
                 className={footer.redesociales__icon}
               />
@@ -139,7 +139,7 @@ export default function Footer(){
               className={footer.navfoot__link}
             >
               <img
-                src="img/redes-sociales/instagram.svg"
+                src="/img/redes-sociales/instagram.svg"
                 alt="instagram palacios construcciones"
                 className={footer.redesociales__icon}
               />
@@ -152,7 +152,7 @@ export default function Footer(){
               className={footer.navfoot__link}
             >
               <img
-                src="img/redes-sociales/tiktok.svg"
+                src="/img/redes-sociales/tiktok.svg"
                 alt="tiktok palacios construcciones"
                 className={footer.redesociales__icon}
               />
