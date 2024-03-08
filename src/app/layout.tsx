@@ -60,8 +60,8 @@ export default function RootLayout({
 
       {/* <body className={inter.className}> */}
       {/* <body className={styles.html}> */}
+      <GTMnoscript />
       <body className={`${styles.body} ${koulen.variable} ${ibmSans.variable} ${skranji.variable} ${staatlichesfont.variable}`} >
-        <GTMnoscript />
         <Suspense fallback={<Loading/>}>
           {children}
         </Suspense>
