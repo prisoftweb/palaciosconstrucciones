@@ -6,6 +6,7 @@ import { Suspense } from 'react'
 import Loading from './loading'
 import Footer from '@/components/Footer'
 import styles from '@/app/sass/base/_base.module.scss';
+import {GTMscript, GTMnoscript} from "@/components/GTM";
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -55,14 +56,17 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html className={styles.html} lang="en">
+    <html className={styles.html} lang="en">      
+
       {/* <body className={inter.className}> */}
       {/* <body className={styles.html}> */}
       <body className={`${styles.body} ${koulen.variable} ${ibmSans.variable} ${skranji.variable} ${staatlichesfont.variable}`} >
+        <GTMnoscript />
         <Suspense fallback={<Loading/>}>
           {children}
         </Suspense>
       </body>
+      <GTMscript />
       <Footer />
     </html>
   )
