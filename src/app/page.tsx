@@ -70,7 +70,7 @@ export default async function Home() {
             </a>
         </div>
         <div className={`flex flex-col-reverse lg:flex-row justify-center`}>
-          <video className="shrink w-full lg:w-1/2 pr-5 rounded-lg" autoPlay muted loop>
+          <video className="shrink w-full lg:w-1/2 pr-5 rounded-lg" autoPlay loop>
             <source src="img/pexels_videos_2048246 (1080p).mp4" type="video/mp4" />          
             El navegador no es compatible
           </video>
