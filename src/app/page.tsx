@@ -238,15 +238,6 @@ export default async function Home() {
       </section>
 
       <section id="section-proyectos" className={`p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10 ${base.section}`}>
-        {/* <h3 className={`${typography.subtitle} ${util.u_margin_top_md_}`}>
-          Proyectos
-        </h3>
-        <h3 className={`${typography.subtitle_thin}`}>
-          Obras de construccion
-        </h3>
-        <p className={`${typography.heading4} ${util.u_margin_bottom_md} mt-4`}>
-          ¡Descubre la excelencia en cada proyecto! en Palacios Construcciones estamos emocionados de presentarte nuestro portafolio de obras de construcción, un testimonio visual de nuestra dedicación, calidad y habilidades en la transformación de espacios. A continuación, te presentamos algunos de nuestros proyectos más destacados
-        </p> */}
         <div className="flex-1 mt-5 justify-self-center">
 
           <h1
@@ -290,12 +281,6 @@ export default async function Home() {
         <Clients />
       </section>
       <section id="section-contactanos" className={`p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10 ${base.section}`}>
-        {/* <h3 className={`${typography.subtitle} ${util.u_margin_top_md_}`}>
-          Contactanos
-        </h3>
-        <h3 className={`${typography.subtitle_thin} ${util.u_margin_bottom_sm}`}>
-          Dejanos tus datos
-        </h3>         */}
         <div className={`${util.u_margin_bottom_md} flex flex-col-reverse  sm:flex-row`}>
           {/* <div className="shrink  w-full flex justify-center md:w-1/3 sm:mt-32 mt-5 sm:mt-0   mr-10"> */}
           <div className="shrink  w-full flex justify-center md:w-1/3 mt-5 sm:mt-10  mr-10">
@@ -341,12 +326,6 @@ export default async function Home() {
             Dejanos tus datos!
             </h4>
           </div>
-          {/* <h3 className={`${typography.subtitle} ${util.u_margin_top_md_}`}>
-            Contáctanos
-          </h3>
-          <h3 className={`${typography.subtitle_thin} ${util.u_margin_bottom_sm}`}>
-            Dejanos tus datos
-          </h3>  */}
           <FormContact />
         </div>
         </div>

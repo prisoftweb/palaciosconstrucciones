@@ -1,5 +1,6 @@
 import footer from '@/app/sass/layout/_footer.module.scss';
 import typography from '@/app/sass/base/_typography.module.scss';
+import Link from 'next/link';
 
 export default function Footer(){
   return (
@@ -19,7 +20,6 @@ export default function Footer(){
           </a>
           <br/>
           <a
-            //className="apersonalizado"
             className={typography.apersonalizado}
             href="https://api.whatsapp.com/send?phone=524442422520&text=Hola"
             target="_blank"
@@ -36,27 +36,12 @@ export default function Footer(){
               >Creado por Prisoft
             </a>
           </p>
+          <Link href={'/regulation'}>
+            <p className={footer.logobox__copy}>
+              Acceso
+            </p>
+          </Link>
         </div>
-        {/* <ul className={footer.navfoot}>          
-          <li className={footer.navfoot__item}>
-            <a href="privacidad.html" className={footer.navfoot__link}
-              >Privacidad</a>
-          </li>
-          <li className={footer.navfoot__item}>
-            <a href="proyectos.html" className={footer.navfoot__link}>Obras</a>
-          </li>
-          <li className={footer.navfoot__item}>
-            <a
-              href="vivienda.html"
-              target="_blank"
-              className={footer.navfoot__link}
-              >Vivienda
-            </a>
-          </li>
-          <li className={footer.navfoot__item}>
-            <a href="contacto.html" className={footer.navfoot__link}>Contacto</a>
-          </li>
-        </ul> */}
         <div className={footer.saltolinea}>
           <div className={footer.navbox2__divider_text}>Servicios</div>
           <ul className={footer.navfoot}>
@@ -70,13 +55,11 @@ export default function Footer(){
             </li>
             <li className={footer.navfoot__item}>
               <a href="/frontages" className={footer.navfoot__link}
-                >Fachadas</a
-              >
+                >Fachadas</a>
             </li>
             <li className={footer.navfoot__item}>
               <a href="/finishes" className={footer.navfoot__link}
-                >Acabados</a
-              >
+                >Acabados</a>
             </li>
           </ul>
         </div>
@@ -93,13 +76,11 @@ export default function Footer(){
             </li>
             <li className={footer.navfoot__item}>
               <a href="/projects" className={footer.navfoot__link}
-                >Proyectos</a
-              >
+                >Proyectos</a>
             </li>
             <li className={footer.navfoot__item}>
               <a href="/contact" className={footer.navfoot__link}
-                >Contáctanos</a
-              >
+                >Contáctanos</a>
             </li>
           </ul>
         </div>

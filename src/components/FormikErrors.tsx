@@ -1,4 +1,5 @@
-import { FormikErrors } from "formik";
+// import { FormikErrors } from "formik";
+// import { Formik, } from "formik"
 
 export default function FormikErrors({error}: {error:any}){
   return(
