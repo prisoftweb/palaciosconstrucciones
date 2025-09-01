@@ -23,7 +23,7 @@ export default function Footer(){
             className={typography.apersonalizado}
             href="https://api.whatsapp.com/send?phone=524442422520&text=Hola"
             target="_blank"
-            >444 242 2520
+            >444 820 4064
           </a>
           <br/>
           <a className={typography.apersonalizado} href="mailto:palaciostablaroca@hotmail.com"
